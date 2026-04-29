@@ -116,7 +116,6 @@ See `scripts/train_qwen25_gfm_lora.py` for full flags (`fp16`, gradient checkpoi
 
 ## More documentation
 
-- **[`PROJECT_REVIEW.md`](./PROJECT_REVIEW.md)** — goals, schema, engineering notes, interview Q&A (Chinese).
 - **[`app/README.md`](./app/README.md)** — compact run notes (env vars; consider aligning wording with this file).
 
 ## License
