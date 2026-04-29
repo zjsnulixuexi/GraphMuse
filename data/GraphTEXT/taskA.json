@@ -1,0 +1,222 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "GraphText: Graph Reasoning in Text Space Jianan Zhao 1, 2, Le Zhuo 3, Yikang Shen 4, Meng Qu 1, 2, Kai Liu 5 Michael Bronstein 6, Zhaocheng Zhu 1, 2, Jian Tang 1, 7, 8 1 Mila - Québec AI Institute, 2 Université de Montréal.",
+        "output": [
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianan Zhao"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Le Zhuo"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Yikang Shen"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Meng Qu"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Kai Liu"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Michael Bronstein"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Zhaocheng Zhu"
+            },
+            {
+                "subject": "GraphText: Graph Reasoning in Text Space",
+                "predicate": "AUTHORED_BY",
+                "object": "Jian Tang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we bridge this gap with a novel framework, GraphText, that translates graphs to natural language. GraphText constructs a graph-syntax tree for each graph, capturing both node features and the complex relationships between nodes.",
+        "output": [
+            {
+                "subject": "GraphText",
+                "predicate": "PROPOSED_BY",
+                "object": "GraphText: Graph Reasoning in Text Space"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验部分描述，提取 GraphText 模型评估时所使用的所有数据集名称，建立 USES_DATASET 关系。",
+        "input": "Specifically, we use two citation datasets (Cora [28] and Citeseer [15]), and three webpage datasets (Texas, Wisconsin, and Cornell [31]). We compare GraphText with two types of baselines.",
+        "output": [
+            {
+                "subject": "GraphText",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "USES_DATASET",
+                "object": "Texas"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "USES_DATASET",
+                "object": "Wisconsin"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "USES_DATASET",
+                "object": "Cornell"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 GraphText 模型引入的核心技术概念（Concept），并建立 ALIGNED_WITH 关系。",
+        "input": "GraphText presents several key benefits. It introduces training-free graph reasoning: even without training on graph data, GraphText with ChatGPT can achieve on par with, or even surpass, the performance of supervised-trained graph neural networks through in-context learning.",
+        "output": [
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Training-free graph reasoning"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "In-context learning (ICL)"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph-syntax tree"
+            }
+        ]
+    },
+    {
+        "instruction": "从文中关于“交互式推理”的描述中，提取相关的技术概念并建立 ALIGNED_WITH 关系。",
+        "input": "Furthermore, GraphText paves the way for interactive graph reasoning, allowing both humans and LLMs to communicate with the model seamlessly using natural language.",
+        "output": [
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Interactive graph reasoning"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Natural language communication"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 GraphText 进行性能对比的基准图神经网络模型，建立 CITED_BY 关系。",
+        "input": "We compare GraphText with two types of baselines: (1) Supervised learning GNNs: including GCN [20] and GAT [38], along with their more recent variants GCNII [7] and GATv2 [3].",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphText"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "GraphText"
+            },
+            {
+                "subject": "GCNII",
+                "predicate": "CITED_BY",
+                "object": "GraphText"
+            },
+            {
+                "subject": "GATv2",
+                "predicate": "CITED_BY",
+                "object": "GraphText"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 GraphText 模型在实验评估中所达成的指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "Notably, GraphText sf+sr, integrating these elements, sets a new benchmark in graph in-context learning, outperforming the best existing ICL baselines by an average of 34.0%. It achieves significant accuracy gains.",
+        "output": [
+            {
+                "subject": "GraphText",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "ACHIEVED_ON",
+                "object": "Graph in-context learning benchmark"
+            }
+        ]
+    },
+    {
+        "instruction": "提取关于“图语法树”构建过程中的核心组件或属性，建立 ALIGNED_WITH 关系。",
+        "input": "GraphText constructs a graph-syntax tree consisting of two types of nodes: leaf nodes that contain the graph features, and the internal nodes that describe the relational semantics of the leaf nodes.",
+        "output": [
+            {
+                "subject": "Graph-syntax tree",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph features"
+            },
+            {
+                "subject": "Graph-syntax tree",
+                "predicate": "ALIGNED_WITH",
+                "object": "Relational semantics"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于“图归纳偏置”的概念及其在 GraphText 中的实现方式。",
+        "input": "GraphText easily incorporates the inductive biases of GNNs through the construction of node text features F and relationships R. For example, we can encode the message-passing prior using the propagated feature AkX.",
+        "output": [
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Inductive bias of GNNs"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Message-passing prior"
+            },
+            {
+                "subject": "GraphText",
+                "predicate": "ALIGNED_WITH",
+                "object": "Propagated feature"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“开放源码模型”的描述中，提取模型名称及其对应的技术策略关系。",
+        "input": "We further explored the potential of instruction tuning on currently available open-source LLMs, such as LLaMA-2 [37]. We freeze the pre-trained LLaMA-2 parameters and fine-tune an MLP encoder.",
+        "output": [
+            {
+                "subject": "LLaMA-2",
+                "predicate": "ALIGNED_WITH",
+                "object": "Instruction tuning"
+            },
+            {
+                "subject": "LLaMA-2",
+                "predicate": "ALIGNED_WITH",
+                "object": "MLP encoder projector"
+            }
+        ]
+    }
+]

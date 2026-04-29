@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphMoRE 模型是在哪篇论文中提出的？",
+        "output": "MATCH (m:Model {name: 'GraphMoRE'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphMoRE 模型在实验中使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'GraphMoRE'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些模型在论文中被 GraphMoRE 引用并作为基准模型进行对比（CITED_BY）？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphMoRE'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询由作者 'Zihao Guo' 参与提出的模型及其达成的评估指标（Metric）。",
+        "output": "MATCH (a:Author {name: 'Zihao Guo'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计 GraphMoRE 模型一共与多少个核心概念（Concept）进行了对齐？",
+        "output": "MATCH (m:Model {name: 'GraphMoRE'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有使用了 'Airport' 数据集且与 'Hyperbolic space' 概念对齐的模型名称。",
+        "output": "MATCH (d:Dataset {name: 'Airport'})<-[:USES_DATASET]-(m:Model)-[:ALIGNED_WITH]->(c:Concept {name: 'Hyperbolic space'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "在 'Cora' 数据集上取得过 'AUC' 指标的所有模型有哪些？",
+        "output": "MATCH (m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'AUC'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询同时应用了 'Mixture of Experts (MoE)' 和 'Riemannian Manifold' 概念的模型及其所属论文。",
+        "output": "MATCH (c1:Concept {name: 'Mixture of Experts (MoE)'})<-[:ALIGNED_WITH]-(m:Model)-[:ALIGNED_WITH]->(c2:Concept {name: 'Riemannian Manifold'}), (m)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算作者 'Qingyun Sun' 参与发表的论文总数。",
+        "output": "MATCH (a:Author {name: 'Qingyun Sun'})<-[:AUTHORED_BY]-(p:Paper) RETURN count(p) AS PaperCount"
+    }
+]

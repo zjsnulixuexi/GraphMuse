@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "OFA 模型是在哪篇论文中被提出的？",
+        "output": "MATCH (m:Model {name: 'OFA'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出 OFA 模型在实验和预训练中使用的所有数据集名称。",
+        "output": "MATCH (m:Model {name: 'OFA'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找作者 'Peng Wang' 参与提出的所有模型及其对应的核心技术概念（Concept）。",
+        "output": "MATCH (a:Author {name: 'Peng Wang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN m.name, c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些模型在论文中被引用并与 OFA 进行了对比（CITED_BY）？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'OFA'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "OFA 模型在 'MSCOCO' 数据集上取得了哪些评估指标（Metric）的结果？",
+        "output": "MATCH (m:Model {name: 'OFA'})-[:USES_DATASET]->(d:Dataset {name: 'MSCOCO'}), (m)-[:ACHIEVED_ON]->(mt:Metric) RETURN mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计一下数据库中一共有多少位作者参与了《OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK》的研究？",
+        "output": "MATCH (p:Paper {title: 'OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有与 'Task-Agnostic (TA)' 概念对齐的模型名称及其所属的论文标题。",
+        "output": "MATCH (c:Concept {name: 'Task-Agnostic (TA)'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询由作者 'Chang Zhou' 合作撰写的论文所提出的所有模型及其达成的 'CIDEr' 指标。",
+        "output": "MATCH (a:Author {name: 'Chang Zhou'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric {name: 'CIDEr'}) RETURN m.name, mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 OFA 模型一共对齐了多少个不同的技术设计属性或范式概念（Concept）？",
+        "output": "MATCH (m:Model {name: 'OFA'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+    }
+]

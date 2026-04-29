@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+transformers
+peft
+torch
+neo4j

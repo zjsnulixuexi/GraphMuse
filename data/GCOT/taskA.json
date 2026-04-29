@@ -1,0 +1,247 @@
+[
+    {
+        "instruction": "请从提供的文本中提取论文标题及其所有作者，并识别它们之间的 AUTHORED_BY 关系。",
+        "input": "GCoT: Chain-of-Thought Prompt Learning for Graphs Xingtong Yu Singapore Management University, Chang Zhou University of Science and Technology of China, Zhongwei Kuai University of Science and Technology of China, Xinming Zhang University of Science and Technology of China, Yuan Fang Singapore Management University.",
+        "output": [
+            {
+                "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingtong Yu"
+            },
+            {
+                "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Chang Zhou"
+            },
+            {
+                "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Zhongwei Kuai"
+            },
+            {
+                "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Xinming Zhang"
+            },
+            {
+                "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Yuan Fang"
+            }
+        ]
+    },
+    {
+        "instruction": "根据摘要内容，提取 GCoT 模型所采用的核心研究概念（Concept），并建立 ALIGNED_WITH 关系。",
+        "input": "In this work, we propose the first CoT prompt learning framework for text-free graphs, GCoT. Specifically, we decompose the adaptation process for each downstream task into a series of inference steps, with each step consisting of prompt-based inference, “thought” generation, and thought-conditioned prompt learning.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Chain-of-Thought (CoT)"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Prompt-based inference"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Thought generation"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Thought-conditioned prompt learning"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的 GCoT 模型在实验中使用的所有数据集（Dataset），并建立 USES_DATASET 关系。",
+        "input": "We conduct experiments on eight widely used benchmark datasets, spanning citation networks, e-commerce, protein structures, and molecular graphs. Cora, Citeseer, and Pubmed are citation networks. Photo is an e-commerce network. PROTEINS is a dataset of protein structures. MUTAG, BZR, and COX2 are molecular graph datasets.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "Pubmed"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "Photo"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "PROTEINS"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "MUTAG"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "BZR"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "COX2"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提及的与 GCoT 进行对比的基准模型（Model），并建立 CITED_BY 关系表示引用对比。",
+        "input": "We compare GCoT with state-of-the-art methods across three categories. Supervised GNNs: GCN and GAT. Graph pre-training models: DGI/InfoGraph and GraphCL. Graph prompt learning models: ProG, GPF, GPF+, and GraphPrompt.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "InfoGraph",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "GraphCL",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "ProG",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "GPF",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "GPF+",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "CITED_BY",
+                "object": "GCoT"
+            }
+        ]
+    },
+    {
+        "instruction": "根据论文结论，识别 GCoT 在实验评估中所达成的指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "We adopt accuracy as the performance metric and report both the mean and standard deviation... To evaluate the efficiency, we perform inference time comparisons. GCoT maintains higher accuracy on the large-scale dataset.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Inference time"
+            }
+        ]
+    },
+    {
+        "instruction": "从文中关于异质图实验的描述中，提取模型使用的数据集及其 USES_DATASET 关系。",
+        "input": "To examine the robustness of GCoT on heterophilic graphs, we conduct one-shot node classification on Wisconsin and Squirrel. Wisconsin is a network of 251 nodes. Squirrel consists of 5,201 Wikipedia pages.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "Wisconsin"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "Squirrel"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的 GCoT 模型的提出背景（Paper）信息，建立 PROPOSED_BY 关系。",
+        "input": "In this work, we propose the first CoT prompt learning framework for text-free graphs, GCoT. ACM Reference Format: Xingtong Yu, et al. 2025. GCoT: Chain-of-Thought Prompt Learning for Graphs. In Proceedings of the 31st ACM SIGKDD Conference.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "PROPOSED_BY",
+                "object": "GCoT: Chain-of-Thought Prompt Learning for Graphs"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文中关于大规模图数据的测试，提取涉及的数据集名称及 USES_DATASET 关系。",
+        "input": "To evaluate the efficiency of GCoT, we perform one-shot node classification on a large-scale dataset called CLUSTER, which comprises 1,172,320 nodes and 43,038,630 edges.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "USES_DATASET",
+                "object": "CLUSTER"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 GCoT 模型在技术实现中与哪些特定的图学习概念（Concept）对齐。",
+        "input": "We propose GCoT, a Graph CoT prompting approach to guide pre-trained graph models... conditioned on this thought, we learn a prompt specific to each node based on the current state via a condition-net.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Condition-net"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node-specific prompt"
+            },
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Pre-trained graph encoder"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提及的模型实现细节，特别是骨干网络与 Model 的 ALIGNED_WITH 关系。",
+        "input": "For our proposed GCoT, we utilize a 3-layer GCN as the backbone for all datasets, with the hidden dimensions set to 256. For baselines, DGI utilizes a 1-layer GCN as the backbone.",
+        "output": [
+            {
+                "subject": "GCoT",
+                "predicate": "ALIGNED_WITH",
+                "object": "GCN"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "ALIGNED_WITH",
+                "object": "GCN"
+            }
+        ]
+    }
+]

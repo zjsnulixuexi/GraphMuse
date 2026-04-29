@@ -1,0 +1,212 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "LLaGA: Large Language and Graph Assistant Runjin Chen 1 Tong Zhao 2 Ajay Jaiswal 1 Neil Shah 2 Zhangyang Wang 1 1 The University of Texas at Austin 2 Snap Inc.",
+        "output": [
+            {
+                "subject": "LLaGA: Large Language and Graph Assistant",
+                "predicate": "AUTHORED_BY",
+                "object": "Runjin Chen"
+            },
+            {
+                "subject": "LLaGA: Large Language and Graph Assistant",
+                "predicate": "AUTHORED_BY",
+                "object": "Tong Zhao"
+            },
+            {
+                "subject": "LLaGA: Large Language and Graph Assistant",
+                "predicate": "AUTHORED_BY",
+                "object": "Ajay Jaiswal"
+            },
+            {
+                "subject": "LLaGA: Large Language and Graph Assistant",
+                "predicate": "AUTHORED_BY",
+                "object": "Neil Shah"
+            },
+            {
+                "subject": "LLaGA: Large Language and Graph Assistant",
+                "predicate": "AUTHORED_BY",
+                "object": "Zhangyang Wang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+        "input": "To this end, we introduce the Large Language and Graph Assistant (LLaGA), an innovative model that effectively integrates LLM capabilities to handle the complexities of graph-structured data.",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "PROPOSED_BY",
+                "object": "LLaGA: Large Language and Graph Assistant"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置段落，提取 LLaGA 模型评估时所使用的所有数据集名称，并建立 USES_DATASET 关系。",
+        "input": "We train and evaluate our model on four widely-recognized graph datasets: ogbn-Arxiv (Hu et al., 2020), ogbn-Products (Hu et al., 2020), Pubmed, and Cora (Yang et al., 2016).",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Arxiv"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Products"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "USES_DATASET",
+                "object": "Pubmed"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 LLaGA 模型为了实现图到文本的转换而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+        "input": "LLaGA achieves this by reorganizing graph nodes to structure-aware sequences and then mapping these into the token embedding space through a versatile projector.",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Structure-aware sequences"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Versatile projector"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Token embedding space"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中关于结构编码的具体模板概念，建立其与模型的 ALIGNED_WITH 关系。",
+        "input": "We developed two node-level templates for analysis on graphs... The first, the Neighborhood Detail Template, provides an in-depth view... The second, the Hop-Field Overview Template, offers a summarized view.",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Neighborhood Detail Template"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Hop-Field Overview Template"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提及的用于对比实验的基准图神经网络模型，并建立 CITED_BY 关系。",
+        "input": "The first category comprises Graph Neural Networks, including GCN, GraphSage, GAT, SGC, and SAGN. The second category encompasses transformer-based graph models, NodeFormer.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            },
+            {
+                "subject": "GraphSage",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            },
+            {
+                "subject": "SGC",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            },
+            {
+                "subject": "SAGN",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            },
+            {
+                "subject": "NodeFormer",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 LLaGA 模型在实验评估中所采用的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "For evaluation metrics, we employ Accuracy for both node classification and link prediction tasks, Sbert score and Description Label Accuracy for the node description task.",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ACHIEVED_ON",
+                "object": "Sbert score"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ACHIEVED_ON",
+                "object": "Description Label Accuracy"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提到的关于结构嵌入增强的技术概念，建立其与模型的 ALIGNED_WITH 关系。",
+        "input": "We further integrate a Laplacian Embedding at each sequence position, enhancing the representation of structural information.",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Laplacian Embedding"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的并行研究或竞争模型（Model），并建立 CITED_BY 关系表示引用对比。",
+        "input": "In addition, we also compare with the concurrent work, GraphGPT (Tang et al., 2023). GraphGPT is a generalizable model designed for solving graph tasks using LLM.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "CITED_BY",
+                "object": "LLaGA"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“对齐微调”的描述中提取涉及的任务类型（Concept），并建立 ALIGNED_WITH 关系。",
+        "input": "In LLaGA, we employ three key tasks on graphs – node classification, link prediction, and node description – to meticulously tune the projector.",
+        "output": [
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node classification"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Link prediction"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node description"
+            },
+            {
+                "subject": "LLaGA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Alignment Tuning"
+            }
+        ]
+    }
+]

@@ -1,0 +1,267 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models. Xingtong Yu, Chang Zhou, Yuan Fang †, and Xinming Zhang †. Singapore Management University, University of Science and Technology of China.",
+        "output": [
+            {
+                "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingtong Yu"
+            },
+            {
+                "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Chang Zhou"
+            },
+            {
+                "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Yuan Fang"
+            },
+            {
+                "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Xinming Zhang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "In this work, we propose MDGPT, a foundational graph framework for Text-Free Multi-Domain Graph Pre-Training, to facilitate downstream adaptation to both seen and unseen domains.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "PROPOSED_BY",
+                "object": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置描述，提取 MDGPT 模型评估时所使用的所有数据集，建立 USES_DATASET 关系。",
+        "input": "We conduct experiments on five benchmark datasets. (1) Cora, (2) Citeseer and (3) Pubmed are citation graphs from different fields... (4) Photo and (5) Computers are both e-commerce networks from Amazon... (6) Reddit is a social network.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Pubmed"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Photo"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Computers"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Reddit"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 MDGPT 模型为了解决多域对齐挑战而引入的核心研究概念（Concept），并建立 ALIGNED_WITH 关系。",
+        "input": "In MDGPT, we propose a series of domain tokens to align node features from different domains. Each domain-specific token is associated with a source domain, serving to bridge the semantic meanings in distinct domains.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Domain tokens"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Multi-domain alignment"
+            },
+            {
+                "subject": "Domain tokens",
+                "predicate": "ALIGNED_WITH",
+                "object": "Semantic unification"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于下游适配的描述中，提取相关的技术概念并建立与模型的 ALIGNED_WITH 关系。",
+        "input": "In MDGPT, we propose dual prompts, consisting of a unifying prompt and a mixing prompt, to align the downstream target domain with the source domains, thus facilitating the transfer of multi-domain knowledge.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dual prompts"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Unifying prompt"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Mixing prompt"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 MDGPT 进行对比的基准模型（Model），建立 CITED_BY 关系表示引用对比。",
+        "input": "We evaluate MDGPT against state-of-the-art approaches... inclusive of GCN, GAT, DGI/InfoGraph, GraphCL, Hassani, GPPT, GPF, GraphPrompt and GCOPE.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "InfoGraph",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "GraphCL",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "Hassani",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "GPPT",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "GPF",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "GCOPE",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 MDGPT 模型在实验评估中所达成的指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "MDGPT surpasses all baseline methods across all settings, outperforming the best competitor by 3.5–37.9% on node classification and 4.3–13.9% on graph classification. Accuracy is reported as the primary metric.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Node classification"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Graph classification"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于特征维度对齐的技术实现手段，建立其与模型的 ALIGNED_WITH 关系。",
+        "input": "A straightforward solution is to use a dimension alignment method to transform the features into consistent dimensions across domains. In our work, each alignment function is implemented using SVD.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dimension alignment"
+            },
+            {
+                "subject": "Dimension alignment",
+                "predicate": "ALIGNED_WITH",
+                "object": "SVD (Singular Value Decomposition)"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于多任务适配的描述中，提取涉及的任务概念及其与模型的关系。",
+        "input": "We conduct two types of downstream task, namely, node classification, and graph classification... we pre-train the graph encoder once and then apply the same pre-trained model for all types of downstream tasks.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node classification"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph classification"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Few-shot adaptation"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中关于异质性鲁棒性的描述，识别对应的 Concept 及其关系。",
+        "input": "To further evaluate the robustness of MDGPT across homophilic and heterophilic graphs, we conduct cross-domain experiments on datasets like Texas, Wisconsin, Cornell, and Squirrel.",
+        "output": [
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Homophily sensitivity"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Heterophilic graphs"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Texas"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Wisconsin"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Cornell"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "USES_DATASET",
+                "object": "Squirrel"
+            }
+        ]
+    }
+]

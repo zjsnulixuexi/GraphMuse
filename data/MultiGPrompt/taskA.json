@@ -1,0 +1,227 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立相应的 AUTHORED_BY 关系。",
+        "input": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs. Xingtong Yu University of Science and Technology of China, Chang Zhou University of Science and Technology of China, Yuan Fang Singapore Management University, Xinming Zhang University of Science and Technology of China.",
+        "output": [
+            {
+                "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingtong Yu"
+            },
+            {
+                "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Chang Zhou"
+            },
+            {
+                "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Yuan Fang"
+            },
+            {
+                "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+                "predicate": "AUTHORED_BY",
+                "object": "Xinming Zhang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+        "input": "Hence, in this paper, we propose MultiGPrompt, a novel multi-task pre-training and prompting framework to exploit multiple pretext tasks for more comprehensive pre-trained knowledge.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "PROPOSED_BY",
+                "object": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置描述，提取 MultiGPrompt 模型评估时所使用的所有数据集名称，并建立 USES_DATASET 关系。",
+        "input": "We employ six benchmark datasets for evaluation. (1) Cora and (2) Citeseer are both citation graphs. (3) PROTEINS comprises 1,113 protein graphs. (4) ENZYMES, (5) BZR, and (6) COX2 are collections of molecular graphs.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "USES_DATASET",
+                "object": "PROTEINS"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "USES_DATASET",
+                "object": "ENZYMES"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "USES_DATASET",
+                "object": "BZR"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "USES_DATASET",
+                "object": "COX2"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 MultiGPrompt 模型为了解决多任务预训练挑战而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+        "input": "First, in pre-training, we design a set of pretext tokens to synergize multiple pretext tasks. Second, we propose a dual-prompt mechanism consisting of composed and open prompts to leverage task-specific and global pre-training knowledge.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Pretext tokens"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dual-prompt mechanism"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Composed prompt"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Open prompt"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 MultiGPrompt 模型在实验评估中所采用的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "Since the m-shot tasks are balanced classification, we simply evaluate the performance using accuracy, in line with previous works [29, 30, 47]. Accuracy is reported for both node and graph classification.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 MultiGPrompt 进行性能对比的基准模型，建立 CITED_BY 关系表示引用对比。",
+        "input": "We evaluate MultiGPrompt against a spectrum of state-of-the-art methods... End-to-end graph neural networks: GCN and GAT. Graph pre-training models: DGI/InfoGraph and GraphCL. Graph prompt-based learning: GPPT and GraphPrompt.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            },
+            {
+                "subject": "InfoGraph",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            },
+            {
+                "subject": "GraphCL",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            },
+            {
+                "subject": "GPPT",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "CITED_BY",
+                "object": "MultiGPrompt"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 MultiGPrompt 在预训练阶段整合的具体代理任务（Pretext Tasks）概念。",
+        "input": "In our experiments, we leverage three well-known pretext tasks, namely, DGI, GraphCL, and link prediction. MultiGPrompt designs pretext tokens to leverage these tasks in a synergistic manner.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "DGI"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "GraphCL"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Link prediction"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中关于“提示微调”阶段所涉及的技术概念，建立其与模型的关系。",
+        "input": "To optimize the downstream loss, both the unifying prompt and the mixing coefficients for the mixing prompt are tunable, whereby the pre-trained weights remain frozen. This is amenable to few-shot settings.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Prompt tuning"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Frozen pre-trained weights"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Few-shot settings"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“开放提示”的描述中提取相关的技术概念并建立 ALIGNED_WITH 关系。",
+        "input": "We propose the concept of open prompt, which aims to transfer global inter-task knowledge to complement the task-specific knowledge of the composed prompt.",
+        "output": [
+            {
+                "subject": "Open prompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Global inter-task knowledge"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Open prompt"
+            }
+        ]
+    },
+    {
+        "instruction": "根据论文结论，识别模型旨在解决的图表示学习核心挑战。",
+        "input": "In this paper, we explored multi-task pre-training on graphs, aiming to encompass a comprehensive range of knowledge from diverse pretext tasks and adapting to unseen domains.",
+        "output": [
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Multi-task pre-training"
+            },
+            {
+                "subject": "MultiGPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Unseen domains adaptation"
+            }
+        ]
+    }
+]

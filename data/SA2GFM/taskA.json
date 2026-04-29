@@ -1,0 +1,222 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取论文标题及其作者，并建立 AUTHORED_BY 关系。",
+        "input": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation. Junhua Shi 1, Qingyun Sun 1*, Haonan Yuan 1, Xingcheng Fu 2. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University, Beijing, China.",
+        "output": [
+            {
+                "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+                "predicate": "AUTHORED_BY",
+                "object": "Junhua Shi"
+            },
+            {
+                "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "In this work, we propose SA 2 GFM, a robust GFM framework that enhances the domain-adaptable representations through Structure-Aware Semantic Augmentation.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "PROPOSED_BY",
+                "object": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation"
+            }
+        ]
+    },
+    {
+        "instruction": "从实验设置段落中提取 SA 2 GFM 模型所使用的引文网络数据集，建立 USES_DATASET 关系。",
+        "input": "To highlight multi-domain pre-training capability, we adopt seven benchmark datasets from three domains: Citation: Cora, CiteSeer, PubMed, ogbn-arXiv.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "CiteSeer"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-arXiv"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，提取 SA 2 GFM 模型使用的非引文领域数据集，建立 USES_DATASET 关系。",
+        "input": "Products: ogbn-Tech, ogbn-Home. Web Page: Wiki-CS.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Tech"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Home"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "USES_DATASET",
+                "object": "Wiki-CS"
+            }
+        ]
+    },
+    {
+        "instruction": "识别模型为了嵌入结构先验而引入的技术概念，建立 ALIGNED_WITH 关系。",
+        "input": "First, to embed the hierarchical structural priors, we transform entropy-based encoding trees into structure-aware textual prompts for feature augmentation.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Entropy-based encoding trees"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Structure-aware textual prompts"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提到的用于特征蒸馏的核心技术机制，并与模型建立 ALIGNED_WITH 关系。",
+        "input": "The enriched inputs are processed by a novel self-supervised Information Bottleneck mechanism that distills the robust and transferable representations through structure-guided compression.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Self-supervised Information Bottleneck"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Structure-guided compression"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的用于缓解负迁移的技术策略，建立 ALIGNED_WITH 关系。",
+        "input": "To mitigate the negative transfer in cross-domain adaptation, we develop an expert adaptive routing mechanism that integrates a mixture-of-experts architecture with a null expert design.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Expert adaptive routing mechanism"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Mixture-of-experts (MoE)"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Null expert design"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验对比部分，提取文中提及的与 SA 2 GFM 进行对比的基准模型，建立 CITED_BY 关系。",
+        "input": "Extensive experiments validate the superiority of SA 2 GFM... compared with 9 state-of-the-art baselines. Baselines: GCN, GAT, DGI, GraphCL, GraphPrompt, MDGPT, GCOPE, GraphBridge, MDGFM.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "GraphCL",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "GCOPE",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "GraphBridge",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "CITED_BY",
+                "object": "SA 2 GFM"
+            }
+        ]
+    },
+    {
+        "instruction": "识别下游适配模块中采用的结构学习概念，建立 ALIGNED_WITH 关系。",
+        "input": "We propose a fine-tuning module that efficiently optimizes the hierarchical structures through the joint intra- and inter-community structure learning.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Intra-community structure learning"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Inter-community structure learning"
+            },
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Hierarchical structure optimization"
+            }
+        ]
+    },
+    {
+        "instruction": "提取论文中用于衡量模型性能的主要指标，建立 ACHIEVED_ON 关系。",
+        "input": "Extensive experiments validate the superiority of SA 2 GFM over effectiveness and robustness against random noise and adversarial perturbations... Accuracy with standard deviation is used for evaluation.",
+        "output": [
+            {
+                "subject": "SA 2 GFM",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            }
+        ]
+    }
+]

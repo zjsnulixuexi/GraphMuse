@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《LLaGA: Large Language and Graph Assistant》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'LLaGA: Large Language and Graph Assistant'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "LLaGA 模型是在哪篇论文中被提出的？",
+        "output": "MATCH (m:Model {name: 'LLaGA'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "LLaGA 模型在实验评估中使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'LLaGA'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找由作者 'Zhangyang Wang' 参与提出的所有模型及其对应的论文标题。",
+        "output": "MATCH (a:Author {name: 'Zhangyang Wang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "LLaGA 模型与哪些核心技术概念 (Concept) 进行了对齐？",
+        "output": "MATCH (m:Model {name: 'LLaGA'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "在 LLaGA 的论文中，有哪些基准模型被引用并进行了对比 (CITED_BY)？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'LLaGA'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询所有使用了 'Cora' 数据集的模型名称及其达成的评估指标 (Metric)。",
+        "output": "MATCH (d:Dataset {name: 'Cora'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计论文《LLaGA: Large Language and Graph Assistant》一共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'LLaGA: Large Language and Graph Assistant'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有与 'Laplacian Embedding' 概念对齐，且被 LLaGA 引用对比的基准模型。",
+        "output": "MATCH (c:Concept {name: 'Laplacian Embedding'})<-[:ALIGNED_WITH]-(m:Model)-[:CITED_BY]->(:Model {name: 'LLaGA'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 LLaGA 模型一共在多少个不同的数据集上取得了性能结果？",
+        "output": "MATCH (m:Model {name: 'LLaGA'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+    }
+]

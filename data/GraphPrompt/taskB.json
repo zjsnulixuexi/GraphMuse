@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "在标题为《GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks》的论文中提出了什么模型？",
+        "output": "MATCH (m:Model)-[:PROPOSED_BY]->(p:Paper {title: 'GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出 GraphPrompt 模型在实验中使用的所有数据集名称。",
+        "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找 GraphPrompt 论文的作者，并检索这些作者参与提出的所有模型名称。",
+        "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:PROPOSED_BY]->(p:Paper)-[:AUTHORED_BY]->(a:Author) MATCH (a)<-[:AUTHORED_BY]-(:Paper)<-[:PROPOSED_BY]-(m2:Model) RETURN DISTINCT a.name, m2.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphPrompt 模型在哪些数据集上评估并取得了 'Accuracy' 指标？",
+        "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}), (m)-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphPrompt 模型与哪些核心技术概念（Concept）进行了对齐？",
+        "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出所有在 GraphPrompt 论文中被引用并作为对比基准（CITED_BY）的模型名称。",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphPrompt'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计 GraphPrompt 模型的实验中一共使用了多少个数据集？",
+        "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算论文《GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks》的署名作者总数。",
+        "output": "MATCH (p:Paper {title: 'GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有使用了 'PROTEINS' 数据集的模型，并展示它们各自对齐的技术概念。",
+        "output": "MATCH (d:Dataset {name: 'PROTEINS'})<-[:USES_DATASET]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN m.name, c.name"
+    }
+]

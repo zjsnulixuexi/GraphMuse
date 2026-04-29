@@ -1,0 +1,202 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning. Xingtong Yu 1, Yuan Fang 2, Zemin Liu 3, Xinming Zhang 1. 1 University of Science and Technology of China, 2 Singapore Management University, 3 National University of Singapore.",
+        "output": [
+            {
+                "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingtong Yu"
+            },
+            {
+                "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+                "predicate": "AUTHORED_BY",
+                "object": "Yuan Fang"
+            },
+            {
+                "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+                "predicate": "AUTHORED_BY",
+                "object": "Zemin Liu"
+            },
+            {
+                "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+                "predicate": "AUTHORED_BY",
+                "object": "Xinming Zhang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we propose HGPROMPT, a novel pre-training and prompting framework to unify not only pre-training and downstream tasks but also homogeneous and heterogeneous graphs via a dual-template design.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "PROPOSED_BY",
+                "object": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning"
+            }
+        ]
+    },
+    {
+        "instruction": "从实验设置部分提取 HGPROMPT 模型所评估的数据集，并建立 USES_DATASET 关系。",
+        "input": "We conduct experiments on three benchmark datasets. (1) ACM serves as a citation network, which comprises papers from five conferences... (2) DBLP serves as an all-encompassing bibliographic database... (3) Freebase (Bollacker et al. 2008) is a functional and scalable tuple database.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "USES_DATASET",
+                "object": "ACM"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "USES_DATASET",
+                "object": "DBLP"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "USES_DATASET",
+                "object": "Freebase"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 HGPROMPT 模型引入的核心研究概念，并建立 ALIGNED_WITH 关系。",
+        "input": "Specifically, HGPROMPT considers two target scenarios... we aim to unify not only the template of the tasks, but also the template of graphs, and propose a dual-template design... In HGPROMPT, we introduce a dual-prompt consisting of a feature prompt and a heterogeneity prompt.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dual-template design"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dual-prompt"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Feature prompt"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Heterogeneity prompt"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本内容，识别用于评估模型性能的指标，建立 ACHIEVED_ON 关系。",
+        "input": "The downstream tasks adhere to a k-shot learning setting... We adopt MicroF and MacroF (Pedregosa et al. 2011; Lv et al. 2021) as the evaluation metrics.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "MicroF"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "MacroF"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 HGPROMPT 进行对比的基准模型，建立 CITED_BY 关系。",
+        "input": "We assess the performance of HGPROMPT against state-of-the-art approaches... including GCN, GAT, Simple-HGN, HAN, GraphPrompt, and GPPT.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "HGPROMPT"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "HGPROMPT"
+            },
+            {
+                "subject": "Simple-HGN",
+                "predicate": "CITED_BY",
+                "object": "HGPROMPT"
+            },
+            {
+                "subject": "HAN",
+                "predicate": "CITED_BY",
+                "object": "HGPROMPT"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "CITED_BY",
+                "object": "HGPROMPT"
+            },
+            {
+                "subject": "GPPT",
+                "predicate": "CITED_BY",
+                "object": "HGPROMPT"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 HGPROMPT 模型所涵盖的下游任务类型，建立 ALIGNED_WITH 关系。",
+        "input": "For downstream tasks, we deal with heterogeneous graphs, and focus on two widely deployed tasks following GraphPrompt (Liu et al. 2023b), namely, node classification and graph classification.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node classification"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph classification"
+            }
+        ]
+    },
+    {
+        "instruction": "提取关于“图模板”的技术实现细节概念，并将其与 HGPROMPT 关联。",
+        "input": "In HGPROMPT we propose a unified graph template to convert a heterogeneous graph into multiple homogeneous subgraphs... Hence, a heterogeneous graph is unified with homogeneous graphs, yet the heterogeneity is still discernible.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph template"
+            },
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Heterogeneous to homogeneous conversion"
+            }
+        ]
+    },
+    {
+        "instruction": "根据预训练阶段的描述，识别模型对齐的核心技术任务。",
+        "input": "In our target scenarios, either homogeneous or heterogeneous graphs can be used for pre-training via a link prediction task. The use of link prediction in pre-training stems from the general availability of links in large-scale graphs.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Link prediction"
+            },
+            {
+                "subject": "Link prediction",
+                "predicate": "ALIGNED_WITH",
+                "object": "Self-supervised pre-training"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提到的针对不同预训练背景的模型变体关系。",
+        "input": "Furthermore, we name our model HGPROMPT and HGPROMPT+: HGPROMPT deals with the target scenario where pre-training graphs are homogeneous, while HGPROMPT+ copes with the scenario where pre-training graphs are heterogeneous.",
+        "output": [
+            {
+                "subject": "HGPROMPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Homogeneous pre-training"
+            },
+            {
+                "subject": "HGPROMPT+",
+                "predicate": "ALIGNED_WITH",
+                "object": "Heterogeneous pre-training"
+            }
+        ]
+    }
+]

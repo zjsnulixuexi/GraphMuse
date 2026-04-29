@@ -1,0 +1,262 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立相应的 AUTHORED_BY 关系。",
+        "input": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK. Peng Wang, An Yang, Rui Men, Junyang Lin, Shuai Bai Zhikang Li, Jianxin Ma, Chang Zhou, Jingren Zhou, Hongxia Yang. DAMO Academy, Alibaba Group.",
+        "output": [
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Peng Wang"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "An Yang"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Rui Men"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Junyang Lin"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Shuai Bai"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Zhikang Li"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Ma"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Chang Zhou"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Jingren Zhou"
+            },
+            {
+                "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+                "predicate": "AUTHORED_BY",
+                "object": "Hongxia Yang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+        "input": "In this work, we pursue a unified paradigm for multimodal pretraining to break the scaffolds of complex task/modality-specific customization. We propose OFA, a Task-Agnostic and Modality-Agnostic framework that supports Task Comprehensiveness.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "PROPOSED_BY",
+                "object": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK"
+            }
+        ]
+    },
+    {
+        "instruction": "根据预训练设置描述，提取 OFA 模型在预训练阶段所使用的图像-文本对数据集名称，并建立 USES_DATASET 关系。",
+        "input": "For the pretraining tasks of image captioning and image-text matching, we collect Conceptual Caption 12M (CC12M), Conceptual Captions (CC3M), SBU, MSCOCO image captions (COCO), and Visual Genome Captions (VG Captions).",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "CC12M"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "CC3M"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "SBU"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "MSCOCO"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "VG Captions"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 OFA 模型旨在实现的三个核心设计属性（Concept），并建立 ALIGNED_WITH 关系。",
+        "input": "We advocate that an omnipotent model should have the following three properties: 1. Task-Agnostic (TA): unified task representation to support different types of tasks... 2. Modality-Agnostic (MA): unified input and output representation... 3. Task Comprehensiveness (TC): enough task variety.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Task-Agnostic (TA)"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Modality-Agnostic (MA)"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Task Comprehensiveness (TC)"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 OFA 在图像描述任务（Image Captioning）中评估所达成的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "We adopt the most widely used MSCOCO Image Caption dataset to evaluate the multi-modal generation capability of OFA. We report BLEU-4, METEOR, CIDEr, and SPICE scores on the Karpathy test split.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "ACHIEVED_ON",
+                "object": "BLEU-4"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ACHIEVED_ON",
+                "object": "METEOR"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ACHIEVED_ON",
+                "object": "CIDEr"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ACHIEVED_ON",
+                "object": "SPICE"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 OFA 进行性能对比的单模态或多模态基准模型，建立 CITED_BY 关系表示引用对比。",
+        "input": "OFA achieves comparable performances on unimodal tasks with SOTA pretrained models in language or vision, e.g., RoBERTa, ELECTRA and DeBERTa for natural language understanding... and MoCo-v3, BEiT and MAE for image classification.",
+        "output": [
+            {
+                "subject": "RoBERTa",
+                "predicate": "CITED_BY",
+                "object": "OFA"
+            },
+            {
+                "subject": "ELECTRA",
+                "predicate": "CITED_BY",
+                "object": "OFA"
+            },
+            {
+                "subject": "DeBERTa",
+                "predicate": "CITED_BY",
+                "object": "OFA"
+            },
+            {
+                "subject": "MoCo-v3",
+                "predicate": "CITED_BY",
+                "object": "OFA"
+            },
+            {
+                "subject": "BEiT",
+                "predicate": "CITED_BY",
+                "object": "OFA"
+            },
+            {
+                "subject": "MAE",
+                "predicate": "CITED_BY",
+                "object": "OFA"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“图像补全”和“目标检测”预训练的描述中，提取相关的数据集名称并建立 USES_DATASET 关系。",
+        "input": "Vision data consists of raw images for image infilling and object-labeled images for object detection. For image infilling, we collect raw images from OpenImages, YFCC100M and ImageNet-21K.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "OpenImages"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "YFCC100M"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "USES_DATASET",
+                "object": "ImageNet-21K"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 OFA 模型在技术架构上采用的核心概念及其学习范式，并建立 ALIGNED_WITH 关系。",
+        "input": "OFA follows the instruction-based learning in both pretraining and finetuning stages, requiring no extra task-specific layers for downstream tasks... formed as Seq2Seq generation.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Instruction-based learning"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Seq2Seq generation"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Encoder-decoder framework"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于提高分类任务推理准确性的特定搜索策略（Concept）。",
+        "input": "To process different modalities without task-specific output schema, it is essential to represent data of various modalities in a unified space... we utilize a Trie-based search strategy to ensure that the answer generated is constrained in the candidate set.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Trie-based search strategy"
+            }
+        ]
+    },
+    {
+        "instruction": "提取关于下游模态任务类型的描述，建立其与模型的功能对齐关系。",
+        "input": "OFA is the first attempt to unify the following vision & language, vision-only and language-only tasks... e.g., text-to-image generation, visual grounding, visual question answering (VQA), and language modeling.",
+        "output": [
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Text-to-image generation"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Visual grounding"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Visual question answering (VQA)"
+            },
+            {
+                "subject": "OFA",
+                "predicate": "ALIGNED_WITH",
+                "object": "Language modeling"
+            }
+        ]
+    }
+]

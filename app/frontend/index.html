@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraphMuse Copilot</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>GraphMuse Copilot</h1>
+      <p>GraphRAG for Graph Foundation Models</p>
+    </header>
+    <main id="chat" class="chat"></main>
+    <form id="form" class="composer">
+      <input id="input" type="text" placeholder="输入问题，例如：MDGPT 讲了什么？" autocomplete="off" />
+      <button type="submit">发送</button>
+    </form>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

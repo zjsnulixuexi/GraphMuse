@@ -1,0 +1,242 @@
+[
+    {
+        "instruction": "请从文本中提取该研究论文的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees Haonan Yuan 1 Qingyun Sun 1 Junhua Shi 1 Xingcheng Fu 2 Bryan Hooi 3 Jianxin Li 1 Philip S. Yu 4",
+        "output": [
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Junhua Shi"
+            },
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            },
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Bryan Hooi"
+            },
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Li"
+            },
+            {
+                "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+                "predicate": "AUTHORED_BY",
+                "object": "Philip S. Yu"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文中描述，提取 BRIDGE 模型所使用的实验数据集，并建立 USES_DATASET 关系。",
+        "input": "Academic Domain: three citation networks Cora (McCallum et al., 2000), CiteSeer (Giles et al., 1998), and PubMed (Sen et al., 2008)... E-Commerce Domain: two Amazon product networks Photo (Shchur et al., 2018) and Computers (Shchur et al., 2018)... Social Network Domain: including Reddit (Hamilton et al., 2017).",
+        "output": [
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "CiteSeer"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "Photo"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "Computers"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "Reddit"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的核心算法组件及其所属的模型，建立 PROPOSED_BY 关系。",
+        "input": "To address these challenges above, we introduce BRIDGE... To capture discriminative source domain knowledge, we align multi-domain graph features with a set of domain-invariant aligners. We then introduce a lightweight MoE network to enhance prompting.",
+        "output": [
+            {
+                "subject": "Domain-invariant aligners",
+                "predicate": "PROPOSED_BY",
+                "object": "BRIDGE"
+            },
+            {
+                "subject": "Lightweight MoE network",
+                "predicate": "PROPOSED_BY",
+                "object": "BRIDGE"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提及的与 BRIDGE 模型进行对比的基准模型 (Baselines)，并建立 CITED_BY 关系表示引用对比。",
+        "input": "We compare BRIDGE with four primary categories, 15 state-of-the-art baselines. Specifically, Vanilla Graph Neural Networks: including GCN and GAT... Multi-Domain Graph Pre-training: we select the most closely related baselines, including GCOPE and MDGPT.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "BRIDGE"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "BRIDGE"
+            },
+            {
+                "subject": "GCOPE",
+                "predicate": "CITED_BY",
+                "object": "BRIDGE"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "CITED_BY",
+                "object": "BRIDGE"
+            }
+        ]
+    },
+    {
+        "instruction": "根据论文对理论部分的描述，提取模型与核心研究概念之间的 ALIGNED_WITH 关系。",
+        "input": "To determine the maximum amount of transferable knowledge, we derive an optimizable generalization error upper bound from a graph spectral perspective given the Lipschitz continuity.",
+        "output": [
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Generalization error upper bound"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph spectral perspective"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Lipschitz continuity"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中用于评估模型性能的指标，并建立 ACHIEVED_ON 关系。",
+        "input": "We assess the model performance by accuracy (Acc.) as few-shot is intrinsically a balanced classification. Extensive experiments demonstrate the superiority of BRIDGE on both node and graph classification.",
+        "output": [
+            {
+                "subject": "BRIDGE",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy (Acc.)"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node classification"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph classification"
+            }
+        ]
+    },
+    {
+        "instruction": "提取 BRIDGE 模型在预训练阶段采用的关键技术概念。",
+        "input": "To learn discriminative source knowledge, we align multi-domain graph features with domain-invariant aligners during pre-training... Specifically, given a graph Gi... Ad first acts dimension-wise alignment... As designed for semantic-wise alignment.",
+        "output": [
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dimension-wise feature alignment"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Semantic-wise feature alignment"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Domain-invariant aligner"
+            }
+        ]
+    },
+    {
+        "instruction": "从实验分析段落中提取 BRIDGE 与其他模型的竞争关系及其在特定数据集上的优势。",
+        "input": "Overall, BRIDGE outperforms all 15 baselines in both node and graph classification... The most closely related GCOPE and MDGPT fail in both tasks. MDGPT collapses mainly because its shallow SVD dimension-wise feature alignment.",
+        "output": [
+            {
+                "subject": "BRIDGE",
+                "predicate": "CITED_BY",
+                "object": "GCOPE"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "CITED_BY",
+                "object": "MDGPT"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "SVD dimension-wise feature alignment"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中关于“知识迁移”理论探讨中所涉及的核心数学或图论概念。",
+        "input": "The amount of transferable knowledge depends on the empirical adaptation errors. To this end, we leverage graph spectral theory and Lipschitz continuity to derive an upper bound.",
+        "output": [
+            {
+                "subject": "Transferable knowledge",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph spectral theory"
+            },
+            {
+                "subject": "Transferable knowledge",
+                "predicate": "ALIGNED_WITH",
+                "object": "Lipschitz continuity"
+            }
+        ]
+    },
+    {
+        "instruction": "提取关于 MoE 网络在下游任务适配中的作用描述及其关联实体。",
+        "input": "We introduce a lightweight MoE network that selectively assembles source domain aligners (experts) to facilitate feature adaptation in the target domain.",
+        "output": [
+            {
+                "subject": "Lightweight MoE network",
+                "predicate": "ALIGNED_WITH",
+                "object": "Selective knowledge assembly"
+            },
+            {
+                "subject": "Lightweight MoE network",
+                "predicate": "ALIGNED_WITH",
+                "object": "Feature adaptation"
+            },
+            {
+                "subject": "BRIDGE",
+                "predicate": "USES_DATASET",
+                "object": "Source domain aligners"
+            }
+        ]
+    }
+]

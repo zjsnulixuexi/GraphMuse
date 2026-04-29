@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《GraphText: Graph Reasoning in Text Space》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'GraphText: Graph Reasoning in Text Space'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphText 模型是在哪篇论文中被提出的？",
+        "output": "MATCH (m:Model {name: 'GraphText'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出 GraphText 模型在实验中使用的所有数据集名称。",
+        "output": "MATCH (m:Model {name: 'GraphText'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找由作者 'Jian Tang' 参与提出的模型所关联的所有核心研究概念（Concept）。",
+        "output": "MATCH (a:Author {name: 'Jian Tang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN DISTINCT c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些基准模型在论文中被引用并与 GraphText 进行了性能对比（CITED_BY）？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphText'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphText 模型在哪些数据集上评估并取得了 'Accuracy' 指标的结果？",
+        "output": "MATCH (m:Model {name: 'GraphText'})-[:USES_DATASET]->(d:Dataset) MATCH (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计一下数据库中一共有多少位作者参与了《GraphText: Graph Reasoning in Text Space》的研究？",
+        "output": "MATCH (p:Paper {title: 'GraphText: Graph Reasoning in Text Space'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有与 'In-context learning (ICL)' 概念对齐，并使用了 'Cora' 数据集的模型名称。",
+        "output": "MATCH (c:Concept {name: 'In-context learning (ICL)'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询由作者 'Michael Bronstein' 合作撰写的论文所提出的模型名称及其所属的论文标题。",
+        "output": "MATCH (a:Author {name: 'Michael Bronstein'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 GraphText 模型一共在多少个不同的数据集上进行了实验验证？",
+        "output": "MATCH (m:Model {name: 'GraphText'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS TotalDatasets"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "RAG-GFM 模型是在哪篇论文中被提出的？",
+        "output": "MATCH (m:Model {name: 'RAG-GFM'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出 RAG-GFM 模型在实验中使用的所有数据集名称。",
+        "output": "MATCH (m:Model {name: 'RAG-GFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找由作者 'Jianxin Li' 参与提出的模型，并展示这些模型所对齐的核心研究概念（Concept）。",
+        "output": "MATCH (a:Author {name: 'Jianxin Li'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN m.name, c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些基准模型在论文中被引用并与 RAG-GFM 进行了性能对比（CITED_BY）？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'RAG-GFM'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些模型既对齐了 'Retrieval-Augmented Generation (RAG)' 概念，又在 'ogbn-arXiv' 数据集上进行了评估？",
+        "output": "MATCH (c:Concept {name: 'Retrieval-Augmented Generation (RAG)'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'ogbn-arXiv'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计论文《RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation》共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询由作者 'Haonan Yuan' 参与研发的模型所达成的所有性能维度指标（Metric）名称。",
+        "output": "MATCH (a:Author {name: 'Haonan Yuan'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有既被 'RAG-GFM' 引用对比，也使用了 'Cora' 数据集的基准模型。",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'RAG-GFM'}) MATCH (m)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 RAG-GFM 模型一共对齐了多少个不同的技术组件或理论概念（Concept）？",
+        "output": "MATCH (m:Model {name: 'RAG-GFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+    }
+]

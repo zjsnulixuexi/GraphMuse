@@ -1,0 +1,252 @@
+[
+    {
+        "instruction": "请从文本中提取论文标题及其所有作者，并建立相应的 AUTHORED_BY 关系。",
+        "input": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation Haonan Yuan 1, Qingyun Sun 1, Jiacheng Tao 1, Xingcheng Fu 2, Jianxin Li 1*. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University.",
+        "output": [
+            {
+                "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+                "predicate": "AUTHORED_BY",
+                "object": "Jiacheng Tao"
+            },
+            {
+                "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            },
+            {
+                "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Li"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "In this work, we propose RAG-GFM, a Retrieval-Augmented Generation aided Graph Foundation Model that offloads knowledge from parameters and complements parameterized learning.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "PROPOSED_BY",
+                "object": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置描述，提取 RAG-GFM 模型评估时所使用的所有数据集名称，并建立 USES_DATASET 关系。",
+        "input": "We conduct experiments on seven benchmark datasets to highlight RAG-GFM's multi-domain pre-training: Cora, CiteSeer, PubMed, ogbn-arXiv, ogbn-Products, and Wiki-CS.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "USES_DATASET",
+                "object": "CiteSeer"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-arXiv"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Products"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "USES_DATASET",
+                "object": "Wiki-CS"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 RAG-GFM 模型为了解决内存瓶颈而引入的核心研究概念（Concept），并建立 ALIGNED_WITH 关系。",
+        "input": "GFMs remain constrained by in-memory bottlenecks: they attempt to encode knowledge into model parameters... we propose RAG-GFM to offload knowledge from parameters by building externalized knowledge bases: a semantic database and a structural database.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Retrieval-Augmented Generation (RAG)"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "In-memory bottlenecks"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Externalized knowledge bases"
+            },
+            {
+                "subject": "Externalized knowledge bases",
+                "predicate": "ALIGNED_WITH",
+                "object": "Semantic database"
+            },
+            {
+                "subject": "Externalized knowledge bases",
+                "predicate": "ALIGNED_WITH",
+                "object": "Structural database"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别 RAG-GFM 模型在实验评估中所关注的性能维度（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "Extensive experiments demonstrate the superiority of RAG-GFM over effectiveness, robustness, and efficiency on downstream few-shot node and graph classification tasks compared with 15 state-of-the-art baselines.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ACHIEVED_ON",
+                "object": "Effectiveness"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ACHIEVED_ON",
+                "object": "Robustness"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ACHIEVED_ON",
+                "object": "Efficiency"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 RAG-GFM 进行对比的基准模型名称，并建立 CITED_BY 关系。",
+        "input": "We compare RAG-GFM with 15 state-of-the-art baselines, including vanilla GNNs like GCN and GAT, graph pre-training models like DGI and GraphCL, and multi-domain models such as GCOPE and MDGPT.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "RAG-GFM"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "RAG-GFM"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "RAG-GFM"
+            },
+            {
+                "subject": "GraphCL",
+                "predicate": "CITED_BY",
+                "object": "RAG-GFM"
+            },
+            {
+                "subject": "GCOPE",
+                "predicate": "CITED_BY",
+                "object": "RAG-GFM"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "CITED_BY",
+                "object": "RAG-GFM"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中关于“预训练目标”的描述，提取涉及的技术组件（Concept）并建立 ALIGNED_WITH 关系。",
+        "input": "The overall pre-training objective combines the cross-view information bottleneck loss and the domain-token regularizer to ensure discriminative and transferable representations.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Cross-view information bottleneck loss"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Domain-token regularizer"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“下游适配”的描述中提取相关的技术策略，并将其与模型关联。",
+        "input": "For each query node, we retrieve k query-answer pairs from both semantic and structural databases, which are fused to form retrieval-augmented prompts for few-shot adaptation.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Retrieval-augmented prompts"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Few-shot adaptation"
+            },
+            {
+                "subject": "Retrieval-augmented prompts",
+                "predicate": "ALIGNED_WITH",
+                "object": "Query-answer pairs"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提到的关于架构实现的细节信息。",
+        "input": "Both semantic and structural encoders in RAG-GFM are implemented as 2-layer GNNs. The semantic encoder maps node attributes to a shared embedding space.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Semantic encoder"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Structural encoder"
+            },
+            {
+                "subject": "Semantic encoder",
+                "predicate": "ALIGNED_WITH",
+                "object": "2-layer GNN"
+            },
+            {
+                "subject": "Structural encoder",
+                "predicate": "ALIGNED_WITH",
+                "object": "2-layer GNN"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于“特征对齐”所使用的具体技术概念。",
+        "input": "To align node features across diverse domains, we utilize LLM-enhanced raw text and a set of learnable domain tokens as part of our alignment projector.",
+        "output": [
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "LLM-enhanced raw text"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Learnable domain tokens"
+            },
+            {
+                "subject": "RAG-GFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Alignment projector"
+            }
+        ]
+    }
+]

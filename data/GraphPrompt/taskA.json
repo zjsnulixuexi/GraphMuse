@@ -1,0 +1,217 @@
+[
+    {
+        "instruction": "请从给定的论文片段中提取标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "GraphPrompt : Unifying Pre-Training and Downstream Tasks for Graph Neural Networks Zemin Liu 1 National University of Singapore, Xingtong Yu 2 University of Science and Technology of China, Yuan Fang 3 Singapore Management University, Xinming Zhang 2 University of Science and Technology of China",
+        "output": [
+            {
+                "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+                "predicate": "AUTHORED_BY",
+                "object": "Zemin Liu"
+            },
+            {
+                "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingtong Yu"
+            },
+            {
+                "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+                "predicate": "AUTHORED_BY",
+                "object": "Yuan Fang"
+            },
+            {
+                "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+                "predicate": "AUTHORED_BY",
+                "object": "Xinming Zhang"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的核心模型及其发表的论文，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we propose GraphPrompt, a novel pre-training and prompting framework on graphs. GraphPrompt not only unifies pre-training and downstream tasks into a common task template...",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "PROPOSED_BY",
+                "object": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks"
+            }
+        ]
+    },
+    {
+        "instruction": "根据描述，提取 GraphPrompt 模型在实验中所使用的所有公开数据集，建立 USES_DATASET 关系。",
+        "input": "Finally, we conduct extensive experiments on five public datasets to evaluate and analyze GraphPrompt. (1) Flickr is an image sharing network. (2) PROTEINS is a collection of protein graphs. (3) COX2 is a dataset of molecular structures. (4) ENZYMES is a dataset of 600 enzymes. (5) BZR is a collection of 405 ligands.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "USES_DATASET",
+                "object": "Flickr"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "USES_DATASET",
+                "object": "PROTEINS"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "USES_DATASET",
+                "object": "COX2"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "USES_DATASET",
+                "object": "ENZYMES"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "USES_DATASET",
+                "object": "BZR"
+            }
+        ]
+    },
+    {
+        "instruction": "从文中提取与 GraphPrompt 模型相关的核心技术概念，并建立 ALIGNED_WITH 关系。",
+        "input": "GraphPrompt unifies both the node- and graph-level tasks... into the same template: the similarity calculation of (sub)graph representations. Toward the second challenge, we distinguish different downstream tasks by way of the ReadOut operation on subgraphs.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Unified task template"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Subgraph similarity learning"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "ReadOut operation"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提及的与 GraphPrompt 进行对比的基准模型（Baselines），建立 CITED_BY 关系表示引用对比。",
+        "input": "We evaluate GraphPrompt against the state-of-the-art approaches... End-to-end graph neural networks: GCN, GraphSAGE, GAT and GIN. Graph pre-training models: DGI, InfoGraph, and GraphCL. Graph prompt models: GPPT.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "GraphSAGE",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "GIN",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "InfoGraph",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "GraphCL",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            },
+            {
+                "subject": "GPPT",
+                "predicate": "CITED_BY",
+                "object": "GraphPrompt"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的模型评估指标，并建立 ACHIEVED_ON 关系。",
+        "input": "Table 2 illustrates the results of few-shot node classification. Our proposed GraphPrompt outperforms all the baselines across the three datasets (Flickr, PROTEINS, ENZYMES) in terms of accuracy.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            }
+        ]
+    },
+    {
+        "instruction": "根据对预训练阶段的描述，识别 GraphPrompt 模型采用的具体自监督任务概念。",
+        "input": "In this work, we adopt link prediction as the self-supervised pre-training task, given that links are readily available in any graph without additional annotation cost.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Link prediction"
+            },
+            {
+                "subject": "Link prediction",
+                "predicate": "ALIGNED_WITH",
+                "object": "Self-supervised learning"
+            }
+        ]
+    },
+    {
+        "instruction": "提取关于“提示设计”的技术细节概念，建立其与模型的 ALIGNED_WITH 关系。",
+        "input": "Formally, let p_t denote a learnable prompt vector for a downstream task t. The prompt-assisted ReadOut operation on a subgraph S_x for task t performs a feature weighted summation of node representations.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Learnable prompt vector"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Feature weighted summation"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中关于下游任务适配的概念，并将其与模型关联。",
+        "input": "We focus on the popular node classification and graph classification as downstream tasks. GraphPrompt employs a learnable prompt to assist a downstream task in locating the most relevant knowledge.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Node classification"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph classification"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“参数效率”的分析中提取涉及的概念，并建立 ALIGNED_WITH 关系。",
+        "input": "The prompt tuning loss is only parameterized by the learnable prompt vector p_t, without the GNN weights. Instead, the pre-trained GNN weights are frozen for downstream tasks. This significantly improves computational efficiency.",
+        "output": [
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Prompt tuning"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Frozen pre-trained weights"
+            },
+            {
+                "subject": "GraphPrompt",
+                "predicate": "ALIGNED_WITH",
+                "object": "Parameter efficiency"
+            }
+        ]
+    }
+]

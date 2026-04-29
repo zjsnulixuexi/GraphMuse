@@ -1,0 +1,44 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "BRIDGE 模型在实验中使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'BRIDGE'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "BRIDGE 模型在论文中与哪些核心概念（Concept）对齐？",
+        "output": "MATCH (m:Model {name: 'BRIDGE'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "论文中提到的所有评估指标（Metric）有哪些？",
+        "output": "MATCH (mt:Metric) RETURN DISTINCT mt.name"
+    },
+    {
+        "instruction": "哪些模型在实验中被 BRIDGE 模型引用并进行了对比（CITED_BY）？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'BRIDGE'}) RETURN m.name"
+    },
+    {
+        "instruction": "找出由作者 'Haonan Yuan' 参与的研究中，所提出的模型名称是什么？",
+        "output": "MATCH (a:Author {name: 'Haonan Yuan'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name"
+    },
+    {
+        "instruction": "查询使用了 'Cora' 数据集的所有模型，并列出它们达成的评估指标。",
+        "output": "MATCH (d:Dataset {name: 'Cora'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+    },
+    {
+        "instruction": "统计 BRIDGE 论文中一共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "哪些模型既使用了 'Academic' 领域的数据集（如 Cora），又与 'Graph Spectral Theory' 概念相关？",
+        "output": "MATCH (c:Concept {name: 'Graph Spectral Theory'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+    },
+    {
+        "instruction": "列出所有与 'Lipschitz Continuity' 概念相关的模型，并查询这些模型发表在哪些论文中？",
+        "output": "MATCH (c:Concept {name: 'Lipschitz Continuity'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+    }
+]

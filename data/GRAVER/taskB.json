@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GRAVER 模型是在哪篇论文中被提出的？",
+        "output": "MATCH (m:Model {name: 'GRAVER'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出 GRAVER 模型在实验中使用的所有数据集。",
+        "output": "MATCH (m:Model {name: 'GRAVER'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找由作者 'Haonan Yuan' 提出的所有模型及其在哪些数据集上进行了实验。",
+        "output": "MATCH (a:Author {name: 'Haonan Yuan'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:USES_DATASET]->(d:Dataset) RETURN m.name, d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GRAVER 模型与哪些核心研究概念（Concept）相对齐？",
+        "output": "MATCH (m:Model {name: 'GRAVER'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "在论文中，有哪些基准模型被引用并与 GRAVER 进行了对比（CITED_BY）？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GRAVER'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些模型在 'ogbn-arXiv' 数据集上取得了性能指标（Metric）？",
+        "output": "MATCH (d:Dataset {name: 'ogbn-arXiv'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计论文《GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning》一共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有既使用了 'Wiki-CS' 数据集，又对齐了 'Ego-graph disentanglement' 概念的模型。",
+        "output": "MATCH (d:Dataset {name: 'Wiki-CS'})<-[:USES_DATASET]-(m:Model)-[:ALIGNED_WITH]->(c:Concept {name: 'Ego-graph disentanglement'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询作者 'Philip S. Yu' 参与的研究中，提出了哪些对齐了 'Multi-domain pre-training' 概念的模型？",
+        "output": "MATCH (a:Author {name: 'Philip S. Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept {name: 'Multi-domain pre-training'}) RETURN m.name"
+    }
+]

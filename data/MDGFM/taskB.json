@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "MDGFM 模型在实验中使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'MDGFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "MDGFM 模型与哪些核心研究概念（Concept）进行了对齐？",
+        "output": "MATCH (m:Model {name: 'MDGFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出由作者 'Zhao Kang' 参与提出的模型名称及其所属的论文标题。",
+        "output": "MATCH (a:Author {name: 'Zhao Kang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出所有在论文中被 MDGFM 引用并作为基准对比（CITED_BY）的模型。",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'MDGFM'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计论文《Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment》一共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些模型既对齐了 'Topology alignment' 概念，又在 'Cornell' 数据集上取得了性能结果？",
+        "output": "MATCH (c:Concept {name: 'Topology alignment'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cornell'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询由作者 'Shuo Wang' 提出的模型所达成的所有评估指标（Metric）。",
+        "output": "MATCH (a:Author {name: 'Shuo Wang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "MDGFM 模型在哪些数据集上评估了 'Mean accuracy' 指标？",
+        "output": "MATCH (m:Model {name: 'MDGFM'})-[:USES_DATASET]->(d:Dataset), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Mean accuracy'}) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 MDGFM 模型一共在多少个不同的数据集上进行了实验验证？",
+        "output": "MATCH (m:Model {name: 'MDGFM'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+    }
+]

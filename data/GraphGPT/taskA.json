@@ -1,0 +1,217 @@
+[
+    {
+        "instruction": "请从文本中提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "GraphGPT: Graph Instruction Tuning for Large Language Models Jiabin Tang, Yuhao Yang, Wei Wei, Lei Shi, Lixin Su, Suqi Cheng, Dawei Yin, Chao Huang. University of Hong Kong, Baidu Inc.",
+        "output": [
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Jiabin Tang"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Yuhao Yang"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Wei Wei"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Lei Shi"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Lixin Su"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Suqi Cheng"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Dawei Yin"
+            },
+            {
+                "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+                "predicate": "AUTHORED_BY",
+                "object": "Chao Huang"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的核心模型及其所提出的论文，并建立 PROPOSED_BY 关系。",
+        "input": "We introduce the GraphGPT framework, which integrates LLMs with graph structural knowledge through graph instruction tuning. The open-sourced model implementation of our GraphGPT is available at https://github.com/HKUDS/GraphGPT.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "PROPOSED_BY",
+                "object": "GraphGPT: Graph Instruction Tuning for Large Language Models"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置段落，提取 GraphGPT 模型评估时所使用的所有数据集（Dataset）。",
+        "input": "We evaluate our GraphGPT using three datasets: OGB-arxiv, PubMed, and Cora. The OGB-arxiv dataset represents a directed graph capturing the citation network among computer science arXiv papers. PubMed consists of 19,717 scientific publications. Cora comprises 25,120 research papers.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "USES_DATASET",
+                "object": "OGB-arxiv"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            }
+        ]
+    },
+    {
+        "instruction": "提取 GraphGPT 模型在评估中所采用的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "To evaluate our model's performance, we utilize three commonly used metrics: Accuracy and Macro F1 for node classification, and AUC for link prediction.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Accuracy"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Macro F1"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "AUC"
+            }
+        ]
+    },
+    {
+        "instruction": "识别论文中定义的 GraphGPT 核心架构组件与技术概念，建立 ALIGNED_WITH 关系。",
+        "input": "This framework includes a text-graph grounding component to link textual and graph structures and a dual-stage instruction tuning approach with a lightweight graph-text alignment projector.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Text-graph grounding"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dual-stage instruction tuning"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Lightweight graph-text alignment projector"
+            }
+        ]
+    },
+    {
+        "instruction": "从文中关于推理能力的描述中，识别模型引入的特定策略（Concept）。",
+        "input": "By incorporating the Chain-of-Thought (COT) distillation into our framework, GraphGPT enhances its step-by-step reasoning abilities and improves its performance in the face of distribution shift.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Chain-of-Thought (CoT) distillation"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提及的用于对比实验的基准模型（Baselines），并建立 CITED_BY 关系。",
+        "input": "We consider various state-of-the-art methods for comprehensive evaluation. The second category comprises representative graph neural encoders, including GraphSAGE, GCN, GAT, and RevGNN. We also consider self-supervised approach DGI and graph transformer networks such as NodeFormer and DIFFormer.",
+        "output": [
+            {
+                "subject": "GraphSAGE",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            },
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            },
+            {
+                "subject": "RevGNN",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            },
+            {
+                "subject": "DGI",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            },
+            {
+                "subject": "NodeFormer",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            },
+            {
+                "subject": "DIFFormer",
+                "predicate": "CITED_BY",
+                "object": "GraphGPT"
+            }
+        ]
+    },
+    {
+        "instruction": "根据“第一阶段微调”的描述，提取相关的任务概念及其与模型的关系。",
+        "input": "In the initial stage of our graph instruction tuning, we introduce self-supervised instruction tuning... specifically, we design a structure-aware graph matching task that guides the language model in differentiating between graph tokens.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Self-supervised instruction tuning"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Structure-aware graph matching task"
+            }
+        ]
+    },
+    {
+        "instruction": "提取论文中提到的模型在零-shot（Zero-shot）场景下的表现与数据集关系。",
+        "input": "Our framework demonstrates superior generalization in both supervised and zero-shot graph learning tasks... surpassing existing benchmarks in zero-shot graph learning scenario, achieving a remarkable 2-10 times increase in accuracy.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Zero-shot graph learning"
+            },
+            {
+                "subject": "GraphGPT",
+                "predicate": "ACHIEVED_ON",
+                "object": "Generalization"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中描述的用于对齐图结构与语言空间的具体投影器组件。",
+        "input": "To align the graph tokens with the language tokens, we employ a projector fP, which can be as simple as a single linear layer. This projector establishes correspondence between the graph tokens and the language tokens.",
+        "output": [
+            {
+                "subject": "GraphGPT",
+                "predicate": "ALIGNED_WITH",
+                "object": "Linear layer alignment projector"
+            }
+        ]
+    }
+]

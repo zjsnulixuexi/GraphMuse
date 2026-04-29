@@ -1,0 +1,257 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts Zihao Guo 1, Qingyun Sun 1*, Haonan Yuan 1, Xingcheng Fu 2, Min Zhou 3, Yisen Gao 4, Jianxin Li 1. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University, China.",
+        "output": [
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Zihao Guo"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Min Zhou"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Yisen Gao"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Li"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，识别文中提出的模型及其所属的论文，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we propose a novel Graph Mixture of Riemannian Experts (GraphMoRE) framework to effectively tackle topological heterogeneity by personalized fine-grained topology geometry pattern preservation.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "PROPOSED_BY",
+                "object": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts"
+            }
+        ]
+    },
+    {
+        "instruction": "提取 GraphMoRE 模型在实验评估中使用的所有数据集名称，并建立 USES_DATASET 关系。",
+        "input": "We conduct experiments on a variety of real-world datasets, including citation networks (Cora, Citeseer, PubMed), airline networks (Airport) and co-purchase networks (Photo). In addition, we generate graphs with topological heterogeneity... Syn.Small, Syn.Middle, Syn.Large.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Airport"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Photo"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Syn.Small"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Syn.Middle"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Syn.Large"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 GraphMoRE 模型引入的核心技术概念，并建立 ALIGNED_WITH 关系。",
+        "input": "Specifically, to minimize the embedding distortion, we propose a topology-aware gating mechanism... By fusing the outputs of diverse Riemannian experts... we construct personalized mixed curvature spaces for nodes.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Topology-aware gating mechanism"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Riemannian experts"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Personalized mixed curvature spaces"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Embedding distortion minimization"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提及的与 GraphMoRE 进行性能对比的基准黎曼图模型，并建立 CITED_BY 关系表示引用对比。",
+        "input": "HNN, HGCN, κ-GCN, LGCN, Q-GCN, MotifRGC are competitive Riemannian methods, where Q-GCN and MotifRGC consider the topological heterogeneity. We select them as baselines.",
+        "output": [
+            {
+                "subject": "HNN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "HGCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "κ-GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "LGCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "Q-GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "MotifRGC",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            }
+        ]
+    },
+    {
+        "instruction": "根据论文实验结论，提取 GraphMoRE 评估所达成的性能指标，并建立 ACHIEVED_ON 关系。",
+        "input": "GraphMoRE achieves the best results on all datasets among 9 baselines, and compared with the runner-up method, we achieve gains in AUC score and AP. For the node classification task, we report Weighted-F1 and Micro-F1.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "AUC"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "AP"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "Weighted-F1"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "Micro-F1"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中关于“拓扑异质性”处理中所涉及的核心数学或空间概念。",
+        "input": "According to the sign of curvature κ, constant curvature spaces can be divided into three categories: spherical space (κ > 0), hyperbolic space (κ < 0), and Euclidean space (κ = 0).",
+        "output": [
+            {
+                "subject": "Topological heterogeneity",
+                "predicate": "ALIGNED_WITH",
+                "object": "Spherical space"
+            },
+            {
+                "subject": "Topological heterogeneity",
+                "predicate": "ALIGNED_WITH",
+                "object": "Hyperbolic space"
+            },
+            {
+                "subject": "Topological heterogeneity",
+                "predicate": "ALIGNED_WITH",
+                "object": "Euclidean space"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“门控机制”的描述中，提取对应的技术组件及其关系。",
+        "input": "we first propose a topology-aware gating mechanism, consisting of a multi-resolution local topology encoding module to estimate local geometric properties and a gating network.",
+        "output": [
+            {
+                "subject": "Topology-aware gating mechanism",
+                "predicate": "ALIGNED_WITH",
+                "object": "Multi-resolution local topology encoding module"
+            },
+            {
+                "subject": "Topology-aware gating mechanism",
+                "predicate": "ALIGNED_WITH",
+                "object": "Gating network"
+            }
+        ]
+    },
+    {
+        "instruction": "提取 GraphMoRE 旨在解决的图表示学习中的核心挑战（Concept）。",
+        "input": "Real-world graphs have inherently complex and diverse topological patterns, known as topological heterogeneity... existing works learn graph representation in a single constant curvature space that is insufficient.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Topological heterogeneity"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Complex topological patterns"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于“对齐策略”的概念及其作用描述。",
+        "input": "Furthermore, to fairly measure pairwise distances between different embedding spaces, we present a concise and effective alignment strategy.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Alignment strategy"
+            },
+            {
+                "subject": "Alignment strategy",
+                "predicate": "ALIGNED_WITH",
+                "object": "Pairwise distance measurement"
+            }
+        ]
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "HGPROMPT 模型在实验中使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'HGPROMPT'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "查询 HGPROMPT+ 模型与哪些核心技术概念（Concept）进行了对齐？",
+        "output": "MATCH (m:Model {name: 'HGPROMPT+'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "查找 HGPROMPT 论文的作者，并列出这些作者参与提出的所有模型。",
+        "output": "MATCH (m:Model {name: 'HGPROMPT'})-[:PROPOSED_BY]->(p:Paper)-[:AUTHORED_BY]->(a:Author) MATCH (a)<-[:AUTHORED_BY]-(:Paper)<-[:PROPOSED_BY]-(m2:Model) RETURN DISTINCT a.name, m2.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "在 HGPROMPT 论文中被引用的基准模型中，有哪些使用了 'DBLP' 数据集？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'HGPROMPT'}) MATCH (m)-[:USES_DATASET]->(d:Dataset {name: 'DBLP'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "由作者 'Xingtong Yu' 提出的模型在 'ACM' 数据集上取得了哪些指标（Metric）？",
+        "output": "MATCH (a:Author {name: 'Xingtong Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'ACM'}) MATCH (m)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+    },
+    {
+        "instruction": "找出所有既对齐了 'Dual-template design' 又对齐了 'Few-shot learning' 的模型名称。",
+        "output": "MATCH (m:Model)-[:ALIGNED_WITH]->(c1:Concept {name: 'Dual-template design'}), (m)-[:ALIGNED_WITH]->(c2:Concept {name: 'Few-shot learning'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计论文《HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning》一共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计与 HGPROMPT 模型对齐的技术概念（Concept）总数。",
+        "output": "MATCH (m:Model {name: 'HGPROMPT'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+    },
+    {
+        "instruction": "哪些被 HGPROMPT 引用对比的模型也与 'Heterogeneous graph pre-training' 概念对齐？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'HGPROMPT'}) MATCH (m)-[:ALIGNED_WITH]->(c:Concept {name: 'Heterogeneous graph pre-training'}) RETURN m.name"
+    }
+]

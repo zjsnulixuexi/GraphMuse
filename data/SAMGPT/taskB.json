@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "SA 2 GFM 模型是在哪篇论文中被提出的？",
+        "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出 SA 2 GFM 模型在实验评估中使用的所有数据集名称。",
+        "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "SA 2 GFM 模型与哪些核心技术概念（Concept）进行了对齐？",
+        "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查找由作者 'Junhua Shi' 参与提出的模型，并列出这些模型所达成的性能指标（Metric）。",
+        "output": "MATCH (a:Author {name: 'Junhua Shi'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有与 'Information Bottleneck' 概念对齐，且在 'Cora' 数据集上进行了评估的模型名称。",
+        "output": "MATCH (c:Concept {name: 'Information Bottleneck'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些被 SA 2 GFM 引用对比（CITED_BY）的基准模型也使用了 'PubMed' 数据集？",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'SA 2 GFM'}) MATCH (m)-[:USES_DATASET]->(d:Dataset {name: 'PubMed'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计论文《SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation》一共有多少位署名作者？",
+        "output": "MATCH (p:Paper {title: 'SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 SA 2 GFM 模型一共在多少个不同的数据集上取得了性能结果？",
+        "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS TotalDatasets"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询所有对齐了 'Robustness' 概念的模型及其所属的论文标题。",
+        "output": "MATCH (c:Concept {name: 'Robustness'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+    }
+]

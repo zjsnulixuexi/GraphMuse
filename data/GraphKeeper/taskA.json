@@ -1,0 +1,277 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation Zihao Guo 1, Qingyun Sun 1*, Ziwei Zhang 1, Haonan Yuan 1, Huiping Zhuang 2, Xingcheng Fu 3, Jianxin Li 1. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University.",
+        "output": [
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Zihao Guo"
+            },
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Ziwei Zhang"
+            },
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Huiping Zhuang"
+            },
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            },
+            {
+                "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Li"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we propose Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation (GraphKeeper), to address catastrophic forgetting in Domain-IL scenario from the perspectives of embedding shifts and decision boundary deviations.",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "PROPOSED_BY",
+                "object": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation"
+            }
+        ]
+    },
+    {
+        "instruction": "从文中关于学术网络数据集的描述中，提取模型所使用的数据集名称，并建立 USES_DATASET 关系。",
+        "input": "We conduct experiments on 15 real-world datasets... including academic networks (Cora [26], Citeseer [12], PubMed [21], CoauthorCS [27], and DBLP [7]).",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "CoauthorCS"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "DBLP"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 GraphKeeper 模型为了解决增量学习挑战而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+        "input": "Specifically, to prevent embedding shifts and confusion across incremental graph domains, we first propose the domain-specific parameter-efficient fine-tuning together with intra- and inter-domain disentanglement objectives.",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Parameter-efficient fine-tuning (PEFT)"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Intra-domain disentanglement"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Inter-domain disentanglement"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Embedding shifts"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，提取文中用于评估模型性能的指标，并与模型建立 ACHIEVED_ON 关系。",
+        "input": "We adopt two commonly used metrics in GIL: Average Accuracy (AA) and Average Forgetting (AF). Higher AA indicates better performance, and higher AF indicates less forgetting.",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ACHIEVED_ON",
+                "object": "Average Accuracy (AA)"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ACHIEVED_ON",
+                "object": "Average Forgetting (AF)"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 GraphKeeper 进行对比实验的基准模型，建立 CITED_BY 关系。",
+        "input": "We choose a variety of baselines, including general IL methods EWC, MAS, GEM, LWF and representative GIL methods TWP, ER-GNN, SSM, DeLoMe, PDGNNs, TPP.",
+        "output": [
+            {
+                "subject": "EWC",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "MAS",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "GEM",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "LWF",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "TWP",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "ER-GNN",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "SSM",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "DeLoMe",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "PDGNNs",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            },
+            {
+                "subject": "TPP",
+                "predicate": "CITED_BY",
+                "object": "GraphKeeper"
+            }
+        ]
+    },
+    {
+        "instruction": "分析关于决策边界挑战的描述，提取相关的技术概念并建立 ALIGNED_WITH 关系。",
+        "input": "To address the decision boundary deviation challenge, we separate the decision module from the embedding model and continuously fit incremental domains through the analytical solution of ridge regression.",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Decision boundary deviation"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Deviation-free knowledge preservation"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Ridge regression"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的模型与其他图基础模型（GFM）的集成关系。",
+        "input": "To further explore the potential of GraphKeeper, we integrate it with two representative GFMs, GCOPE [49] and MDGPT [39], to equip them with the continuous updating capability.",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "GCOPE"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "MDGPT"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于网络数据集的分类描述中，提取相关的数据集名称及 USES_DATASET 关系。",
+        "input": "web networks (WikiCS [20], Facebook [24], Chameleon [24], and Squirrel [24]), social networks (GitHub [24], LastFMAsia [25], and DeezerEurope [25]).",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "WikiCS"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "Facebook"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "Chameleon"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "Squirrel"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "GitHub"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "LastFMAsia"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "USES_DATASET",
+                "object": "DeezerEurope"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中关于未观测领域处理的技术策略，并识别对应的 Concept。",
+        "input": "Lastly, we perform domain-aware distribution discrimination on graphs with unobservable domain to facilitate the precise embedding and prediction.",
+        "output": [
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Domain-aware distribution discrimination"
+            },
+            {
+                "subject": "GraphKeeper",
+                "predicate": "ALIGNED_WITH",
+                "object": "Unobservable domains"
+            }
+        ]
+    }
+]

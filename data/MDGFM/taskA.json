@@ -1,0 +1,222 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment. Shuo Wang 1, Bokui Wang 1, Zhixiang Shen 1, Boyan Deng 1, Zhao Kang 1. 1 University of Electronic Science and Technology of China, Chengdu, China.",
+        "output": [
+            {
+                "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+                "predicate": "AUTHORED_BY",
+                "object": "Shuo Wang"
+            },
+            {
+                "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+                "predicate": "AUTHORED_BY",
+                "object": "Bokui Wang"
+            },
+            {
+                "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+                "predicate": "AUTHORED_BY",
+                "object": "Zhixiang Shen"
+            },
+            {
+                "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+                "predicate": "AUTHORED_BY",
+                "object": "Boyan Deng"
+            },
+            {
+                "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+                "predicate": "AUTHORED_BY",
+                "object": "Zhao Kang"
+            }
+        ]
+    },
+    {
+        "instruction": "分析提供的文本，识别其中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+        "input": "To tackle these challenges, we propose the Multi-Domain Graph Foundation Model (MDGFM), a unified framework designed to effectively align and leverage structural knowledge across domains. Theoretical analyses provide guarantees of MDGFM’s effectiveness.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "PROPOSED_BY",
+                "object": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置段落，提取 MDGFM 模型评估时所使用的所有数据集名称，建立 USES_DATASET 关系。",
+        "input": "To ensure a comprehensive comparison, we conduct experiments on six primary datasets, including three homophilic graphs—Cora (Sen et al., 2008), Citeseer (Sen et al., 2008), and Pubmed (Namata et al., 2012)—and three heterophilic graphs—Cornell, Chameleon, and Squirrel (Pei et al., 2020). Additionally, we include Penn94.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Pubmed"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Cornell"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Chameleon"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Squirrel"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "USES_DATASET",
+                "object": "Penn94"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的 MDGFM 模型为了解决拓扑对齐挑战而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+        "input": "First, we introduce a decoupled embedding mechanism incorporating an adaptive balance token that dynamically weighs feature and topology information. To address inherent noise and achieve topology alignment, we integrate a Graph Structure Learning module.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Decoupled embedding mechanism"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Adaptive balance token"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graph Structure Learning (GSL)"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Topology alignment"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中关于模型评估指标的描述，识别对应的 Metric 并建立 ACHIEVED_ON 关系。",
+        "input": "We compare our proposed MDGFM against all baselines on 1-shot and K-shot node classification tasks. Each experiment is repeated five times, and we report the average results... Quantitatively, across the seven datasets, MDGFM outperforms the second-best model in mean accuracy.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "ACHIEVED_ON",
+                "object": "Mean accuracy"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ACHIEVED_ON",
+                "object": "Node classification"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提及的用于对比实验的基准图基础模型或预训练方法，并建立 CITED_BY 关系。",
+        "input": "We compare our method against four categories of approaches... Multi-domain Pre-training Methods: these methods integrate multiple source domains during upstream pre-training... For instance, GCOPE (Zhao et al., 2024) and MDGPT (Yu et al., 2025).",
+        "output": [
+            {
+                "subject": "GCOPE",
+                "predicate": "CITED_BY",
+                "object": "MDGFM"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "CITED_BY",
+                "object": "MDGFM"
+            }
+        ]
+    },
+    {
+        "instruction": "根据理论分析部分的描述，识别 MDGFM 遵循的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+        "input": "To minimize the upper error bound, we introduce the concept of invariant graph learning, which is highlighted in our work: Assumption 5.2. Given a graph G, there exists an optimal Φ*(G) satisfying Invariance Property and Sufficient Property.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Invariant graph learning"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Invariance Property"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Sufficient Property"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于特征对齐的描述中提取相关的技术概念，并将其与模型关联。",
+        "input": "To achieve semantic alignment, we propose the concept of domain tokens t_Di, which encode domain-specific characteristics. Specifically, we introduce the shared token t_S which acts as a common semantic anchor to bridge discrepancies between domains.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Domain tokens"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Shared token"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Semantic alignment"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中关于下游迁移策略的概念，识别对应的 Concept 类型。",
+        "input": "To bridge the gap between source and target domains, we propose a dual-stream prompt framework. This framework combines meta prompts, which transfer broadly learned knowledge, with task-specific prompts.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Dual-stream prompt framework"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Meta prompt"
+            },
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Task-specific prompt"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于鲁棒性分析的特定实验概念（Concept）。",
+        "input": "Furthermore, we employ Metattack (Zügner & Günnemann, 2019), an advanced adversarial attack that perturbs the training data. notably, our model is quite stable across all attack scenarios, which can be attributed to our proposed topology alignment.",
+        "output": [
+            {
+                "subject": "MDGFM",
+                "predicate": "ALIGNED_WITH",
+                "object": "Adversarial robustness"
+            },
+            {
+                "subject": "Metattack",
+                "predicate": "CITED_BY",
+                "object": "MDGFM"
+            }
+        ]
+    }
+]

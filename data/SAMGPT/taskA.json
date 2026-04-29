@@ -1,0 +1,212 @@
+[
+    {
+        "instruction": "请从下文中提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+        "input": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts Zihao Guo 1, Qingyun Sun 1*, Haonan Yuan 1, Xingcheng Fu 2, Min Zhou 3, Yisen Gao 4, Jianxin Li 1. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University, China.",
+        "output": [
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Zihao Guo"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Min Zhou"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Yisen Gao"
+            },
+            {
+                "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Li"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中提到的核心模型及其发表的论文，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we propose a novel Graph Mixture of Riemannian Experts (GraphMoRE) framework to effectively tackle topological heterogeneity by personalized fine-grained topology geometry pattern preservation.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "PROPOSED_BY",
+                "object": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts"
+            }
+        ]
+    },
+    {
+        "instruction": "根据实验设置片段，提取模型所使用的所有真实世界数据集，并建立 USES_DATASET 关系。",
+        "input": "Datasets. We conduct experiments on a variety of real-world datasets, including citation networks (Cora (Sen et al. 2008), Citeseer (Kipf and Welling 2017), PubMed (Namata et al. 2012)), airline networks (Airport (Chami et al. 2019)) and co-purchase networks (Photo (Shchur et al. 2018)).",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Citeseer"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Airport"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Photo"
+            }
+        ]
+    },
+    {
+        "instruction": "从文中提取 GraphMoRE 模型引入的核心技术概念，建立 ALIGNED_WITH 关系。",
+        "input": "Specifically, we first propose a topology-aware gating mechanism, consisting of a multi-resolution local topology encoding module to estimate local geometric properties and a gating network which assigns Riemannian expert weights for nodes to route them to corresponding optimal embedding space.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Topology-aware gating mechanism"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Multi-resolution local topology encoding module"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Gating network"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文本中作为对比基准且被 GraphMoRE 引用（CITED_BY）的黎曼流形相关模型。",
+        "input": "To address the limitation of single constant curvature spaces in topological heterogeneity, Q-GCN (Xiong et al. 2022) introduces the pseudo-Riemannian manifold into GNNs. κHGCN (Yang et al. 2023) utilizes discrete curvature to improve message passing.",
+        "output": [
+            {
+                "subject": "Q-GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "κHGCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            }
+        ]
+    },
+    {
+        "instruction": "提取论文提及的模型评估指标，并建立其与模型的 ACHIEVED_ON 关系。",
+        "input": "For the link prediction task, we use Fermi-Dirac decoder where the distance between two nodes in our method is calculated by Eq. (9) and (10). As observed, GraphMoRE achieves the best results on all datasets among 9 baselines, and compared with the runner-up method, we achieve gains in AUC score and AP score.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "AUC score"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "AP score"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的关于“流形混合”的技术概念及其与模型的关系。",
+        "input": "By fusing the outputs of diverse Riemannian experts with learned gating weights, we construct personalized mixed curvature spaces for nodes, effectively embedding the graph into a heterogeneous manifold with varying curvatures at different points.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Personalized mixed curvature spaces"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Heterogeneous manifold"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ALIGNED_WITH",
+                "object": "Riemannian experts"
+            }
+        ]
+    },
+    {
+        "instruction": "根据合成实验部分的描述，提取涉及的合成数据集名称并建立关系。",
+        "input": "Performance on Synthetic Graphs. To further verify the ability to model mixed heterogeneous topologies, we evaluate our method on three different scale synthetic graphs with topological heterogeneity: Syn.Small, Syn.Middle, and Syn.Large.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Syn.Small"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Syn.Middle"
+            },
+            {
+                "subject": "GraphMoRE",
+                "predicate": "USES_DATASET",
+                "object": "Syn.Large"
+            }
+        ]
+    },
+    {
+        "instruction": "提取文中提及的欧几里得空间基准模型，建立 CITED_BY 关系。",
+        "input": "Baselines. We choose a variety of baselines including Euclidean methods and Riemannian methods. GCN (Kipf and Welling 2017), GAT (Veličković et al. 2018), SAGE (Hamilton, Ying, and Leskovec 2017) are representatives of Euclidean GNNs.",
+        "output": [
+            {
+                "subject": "GCN",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "GAT",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            },
+            {
+                "subject": "SAGE",
+                "predicate": "CITED_BY",
+                "object": "GraphMoRE"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中提到的用于评估嵌入质量的特定指标，建立关系。",
+        "input": "Comparison of Embedding Distortion. Embedding distortion reflects the expressive ability for the graph structure, and lower embedding distortion indicates better preservation of the graph structure. Obviously, GraphMoRE has the lowest average embedding distortion on all datasets.",
+        "output": [
+            {
+                "subject": "GraphMoRE",
+                "predicate": "ACHIEVED_ON",
+                "object": "Embedding distortion"
+            }
+        ]
+    }
+]

@@ -1,0 +1,247 @@
+[
+    {
+        "instruction": "请阅读以下论文片段，提取论文标题及其所有作者，并识别它们之间的 AUTHORED_BY 关系。",
+        "input": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning Haonan Yuan 1, Qingyun Sun 1*, Junhua Shi 1, Xingcheng Fu 2, Bryan Hooi 3, Jianxin Li 1, Philip S. Yu 4. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University.",
+        "output": [
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Haonan Yuan"
+            },
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Qingyun Sun"
+            },
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Junhua Shi"
+            },
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Xingcheng Fu"
+            },
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Bryan Hooi"
+            },
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Jianxin Li"
+            },
+            {
+                "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+                "predicate": "AUTHORED_BY",
+                "object": "Philip S. Yu"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+        "input": "In this paper, we propose GRAVER, a novel Generative graph VocabulariEs for Robust GFM fine-tuning framework that tackles the aforementioned instability via generative augmentations.",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "PROPOSED_BY",
+                "object": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning"
+            }
+        ]
+    },
+    {
+        "instruction": "从实验设置部分提取 GRAVER 模型所使用的引文网络数据集，并建立 USES_DATASET 关系。",
+        "input": "Citation Domain: Cora [65], CiteSeer [16], PubMed [73], and the large-scale ogbn-arXiv [28]. Co-purchase Domain: ogbn-Tech and ogbn-Home from large-scale co-purchase network [28]. Web Link Domain: Wiki-CS [66].",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "Cora"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "CiteSeer"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "PubMed"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-arXiv"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Tech"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "ogbn-Home"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "USES_DATASET",
+                "object": "Wiki-CS"
+            }
+        ]
+    },
+    {
+        "instruction": "识别 GRAVER 模型为了解决微调不稳定性而引入的核心技术概念，并建立 ALIGNED_WITH 关系。",
+        "input": "We propose GRAVER... specifically, to identify transferable units, we analyze and extract key class-specific subgraph patterns by ego-graph disentanglement and validate their transferability both theoretically and empirically.",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Ego-graph disentanglement"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Class-specific subgraph patterns"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Transferable units"
+            }
+        ]
+    },
+    {
+        "instruction": "根据文本描述，提取 GRAVER 模型评估中所关注的性能维度（Metric），并建立 ACHIEVED_ON 关系。",
+        "input": "Extensive experiments demonstrate the superiority of GRAVER over effectiveness, robustness, and efficiency on downstream few-shot node and graph classification tasks compared with 15 state-of-the-art baselines.",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "ACHIEVED_ON",
+                "object": "Effectiveness"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ACHIEVED_ON",
+                "object": "Robustness"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ACHIEVED_ON",
+                "object": "Efficiency"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ACHIEVED_ON",
+                "object": "Node classification"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ACHIEVED_ON",
+                "object": "Graph classification"
+            }
+        ]
+    },
+    {
+        "instruction": "识别文中关于“图词汇表”构建所采用的生成技术概念，并将其与模型关联。",
+        "input": "To enable effective pre-training across diverse domains, we leverage a universal task template based on ego-graph similarity and construct graph vocabularies via graphon-based generative experts.",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Graphon-based generative experts"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Generative graph vocabularies"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Ego-graph similarity"
+            }
+        ]
+    },
+    {
+        "instruction": "提取片段中提及的与 GRAVER 模型进行对比的代表性多域基准模型，建立 CITED_BY 关系。",
+        "input": "We compare GRAVER with 15 state-of-the-art baselines... including multi-domain graph pre-training models: GCOPE [136], MDGPT [123], and SAMGPT [119].",
+        "output": [
+            {
+                "subject": "GCOPE",
+                "predicate": "CITED_BY",
+                "object": "GRAVER"
+            },
+            {
+                "subject": "MDGPT",
+                "predicate": "CITED_BY",
+                "object": "GRAVER"
+            },
+            {
+                "subject": "SAMGPT",
+                "predicate": "CITED_BY",
+                "object": "GRAVER"
+            }
+        ]
+    },
+    {
+        "instruction": "分析文中关于“路由机制”的描述，提取涉及的技术组件（Concept）并建立 ALIGNED_WITH 关系。",
+        "input": "To facilitate robust and efficient prompt fine-tuning, we grave the support samples with in-context vocabularies, where the lightweight MoE-CoE network attentively routes knowledge from source domains.",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "MoE-CoE network"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "In-context vocabularies"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Knowledge routing"
+            }
+        ]
+    },
+    {
+        "instruction": "从关于“语义对齐”的描述中提取 GRAVER 使用的技术策略，并建立 ALIGNED_WITH 关系。",
+        "input": "To establish a unified representation space, we introduce a set of shared aligners that consequently unify dimension- and semantic-wise features... where LLM(·) is implemented by retrieving feature-related raw texts and enhancing class-aware semantics by large language models (GPT-4).",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "LLM-enhanced text"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Class-aware semantics enhancement"
+            },
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Semantic alignment"
+            }
+        ]
+    },
+    {
+        "instruction": "根据论文对理论部分的总结，提取关于“迁移性”证明的概念及关系。",
+        "input": "Proposition 1 (Vocabulary Transferability). We first analyze and validate the key transferable patterns from an ego-graph disentanglement perspective, rigorously exploring their transferability theoretical foundations and empirical utility.",
+        "output": [
+            {
+                "subject": "GRAVER",
+                "predicate": "ALIGNED_WITH",
+                "object": "Vocabulary Transferability"
+            },
+            {
+                "subject": "Vocabulary Transferability",
+                "predicate": "ALIGNED_WITH",
+                "object": "Ego-graph disentanglement"
+            }
+        ]
+    }
+]

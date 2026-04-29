@@ -1,0 +1,52 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "MultiGPrompt 模型是在哪篇论文中提出的？",
+        "output": "MATCH (m:Model {name: 'MultiGPrompt'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "列出所有在 MultiGPrompt 论文中被引用并作为对比基准 (CITED_BY) 的模型。",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'MultiGPrompt'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询由作者 'Xingtong Yu' 参与提出的所有模型名称及其发表的论文标题。",
+        "output": "MATCH (a:Author {name: 'Xingtong Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "MultiGPrompt 模型在实验评估中使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'MultiGPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "统计一下数据库中一共有多少位作者参与了《Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs》研究的撰写？",
+        "output": "MATCH (p:Paper {title: 'Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "找出所有与 'Open prompt' 概念对齐，并使用了 'ENZYMES' 数据集的模型名称。",
+        "output": "MATCH (c:Concept {name: 'Open prompt'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'ENZYMES'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "计算 MultiGPrompt 模型一共在多少个不同的数据集上取得了评估结果？",
+        "output": "MATCH (m:Model {name: 'MultiGPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS TotalDatasets"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "查询在 'BZR' 数据集上取得过 'Accuracy' 指标的所有模型有哪些？",
+        "output": "MATCH (m:Model)-[:USES_DATASET]->(d:Dataset {name: 'BZR'}), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN m.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "哪些模型既对齐了 'Few-shot learning' 概念，又与 'Composed prompt' 技术相关？",
+        "output": "MATCH (m:Model)-[:ALIGNED_WITH]->(c1:Concept {name: 'Few-shot learning'}), (m)-[:ALIGNED_WITH]->(c2:Concept {name: 'Composed prompt'}) RETURN m.name"
+    }
+]

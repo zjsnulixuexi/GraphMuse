@@ -1,0 +1,44 @@
+[
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "谁是论文《GraphGPT: Graph Instruction Tuning for Large Language Models》的所有作者？",
+        "output": "MATCH (p:Paper {title: 'GraphGPT: Graph Instruction Tuning for Large Language Models'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+    },
+    {
+        "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+        "input": "GraphGPT 模型在实验中主要使用了哪些数据集？",
+        "output": "MATCH (m:Model {name: 'GraphGPT'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+    },
+    {
+        "instruction": "统计一下数据库中由作者 'Chao Huang' 参与撰写的论文总数。",
+        "output": "MATCH (a:Author {name: 'Chao Huang'})<-[:AUTHORED_BY]-(p:Paper) RETURN count(p) AS PaperCount"
+    },
+    {
+        "instruction": "哪些模型在 'OGB-arxiv' 数据集上评估了 'Accuracy' 指标？",
+        "output": "MATCH (m:Model)-[:USES_DATASET]->(d:Dataset {name: 'OGB-arxiv'}), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN m.name"
+    },
+    {
+        "instruction": "由作者 'Jiabin Tang' 参与提出的模型与哪些核心技术概念（Concept）进行了对齐？",
+        "output": "MATCH (a:Author {name: 'Jiabin Tang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+    },
+    {
+        "instruction": "列出所有在论文中被 GraphGPT 引用对比（CITED_BY），且同样使用了 'Cora' 数据集的基准模型名称。",
+        "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphGPT'}), (m)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+    },
+    {
+        "instruction": "哪些模型与 'Chain-of-Thought' 概念相关？请展示它们所属的论文标题。",
+        "output": "MATCH (c:Concept {name: 'Chain-of-Thought'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+    },
+    {
+        "instruction": "查询由作者 'Wei Wei' 参与研发的模型所达成的所有性能指标（Metric）名称。",
+        "output": "MATCH (a:Author {name: 'Wei Wei'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+    },
+    {
+        "instruction": "计算 GraphGPT 模型一共对齐了多少个不同的技术概念（Concept）？",
+        "output": "MATCH (m:Model {name: 'GraphGPT'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+    },
+    {
+        "instruction": "找出所有既被 'GraphGPT' 使用，也被基准模型 'GAT' 使用过的数据集名称。",
+        "output": "MATCH (m1:Model {name: 'GraphGPT'})-[:USES_DATASET]->(d:Dataset)<-[:USES_DATASET]-(m2:Model {name: 'GAT'}) RETURN d.name"
+    }
+]

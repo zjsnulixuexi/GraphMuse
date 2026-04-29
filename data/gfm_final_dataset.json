@@ -1,0 +1,4786 @@
+[
+  {
+    "instruction": "请从文本中提取该研究论文的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees Haonan Yuan 1 Qingyun Sun 1 Junhua Shi 1 Xingcheng Fu 2 Bryan Hooi 3 Jianxin Li 1 Philip S. Yu 4",
+    "output": [
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Junhua Shi"
+      },
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      },
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Bryan Hooi"
+      },
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Li"
+      },
+      {
+        "subject": "BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees",
+        "predicate": "AUTHORED_BY",
+        "object": "Philip S. Yu"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文中描述，提取 BRIDGE 模型所使用的实验数据集，并建立 USES_DATASET 关系。",
+    "input": "Academic Domain: three citation networks Cora (McCallum et al., 2000), CiteSeer (Giles et al., 1998), and PubMed (Sen et al., 2008)... E-Commerce Domain: two Amazon product networks Photo (Shchur et al., 2018) and Computers (Shchur et al., 2018)... Social Network Domain: including Reddit (Hamilton et al., 2017).",
+    "output": [
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "CiteSeer"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "Photo"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "Computers"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "Reddit"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的核心算法组件及其所属的模型，建立 PROPOSED_BY 关系。",
+    "input": "To address these challenges above, we introduce BRIDGE... To capture discriminative source domain knowledge, we align multi-domain graph features with a set of domain-invariant aligners. We then introduce a lightweight MoE network to enhance prompting.",
+    "output": [
+      {
+        "subject": "Domain-invariant aligners",
+        "predicate": "PROPOSED_BY",
+        "object": "BRIDGE"
+      },
+      {
+        "subject": "Lightweight MoE network",
+        "predicate": "PROPOSED_BY",
+        "object": "BRIDGE"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提及的与 BRIDGE 模型进行对比的基准模型 (Baselines)，并建立 CITED_BY 关系表示引用对比。",
+    "input": "We compare BRIDGE with four primary categories, 15 state-of-the-art baselines. Specifically, Vanilla Graph Neural Networks: including GCN and GAT... Multi-Domain Graph Pre-training: we select the most closely related baselines, including GCOPE and MDGPT.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "BRIDGE"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "BRIDGE"
+      },
+      {
+        "subject": "GCOPE",
+        "predicate": "CITED_BY",
+        "object": "BRIDGE"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "CITED_BY",
+        "object": "BRIDGE"
+      }
+    ]
+  },
+  {
+    "instruction": "根据论文对理论部分的描述，提取模型与核心研究概念之间的 ALIGNED_WITH 关系。",
+    "input": "To determine the maximum amount of transferable knowledge, we derive an optimizable generalization error upper bound from a graph spectral perspective given the Lipschitz continuity.",
+    "output": [
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Generalization error upper bound"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph spectral perspective"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Lipschitz continuity"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中用于评估模型性能的指标，并建立 ACHIEVED_ON 关系。",
+    "input": "We assess the model performance by accuracy (Acc.) as few-shot is intrinsically a balanced classification. Extensive experiments demonstrate the superiority of BRIDGE on both node and graph classification.",
+    "output": [
+      {
+        "subject": "BRIDGE",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy (Acc.)"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node classification"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph classification"
+      }
+    ]
+  },
+  {
+    "instruction": "提取 BRIDGE 模型在预训练阶段采用的关键技术概念。",
+    "input": "To learn discriminative source knowledge, we align multi-domain graph features with domain-invariant aligners during pre-training... Specifically, given a graph Gi... Ad first acts dimension-wise alignment... As designed for semantic-wise alignment.",
+    "output": [
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dimension-wise feature alignment"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Semantic-wise feature alignment"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Domain-invariant aligner"
+      }
+    ]
+  },
+  {
+    "instruction": "从实验分析段落中提取 BRIDGE 与其他模型的竞争关系及其在特定数据集上的优势。",
+    "input": "Overall, BRIDGE outperforms all 15 baselines in both node and graph classification... The most closely related GCOPE and MDGPT fail in both tasks. MDGPT collapses mainly because its shallow SVD dimension-wise feature alignment.",
+    "output": [
+      {
+        "subject": "BRIDGE",
+        "predicate": "CITED_BY",
+        "object": "GCOPE"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "SVD dimension-wise feature alignment"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中关于“知识迁移”理论探讨中所涉及的核心数学或图论概念。",
+    "input": "The amount of transferable knowledge depends on the empirical adaptation errors. To this end, we leverage graph spectral theory and Lipschitz continuity to derive an upper bound.",
+    "output": [
+      {
+        "subject": "Transferable knowledge",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph spectral theory"
+      },
+      {
+        "subject": "Transferable knowledge",
+        "predicate": "ALIGNED_WITH",
+        "object": "Lipschitz continuity"
+      }
+    ]
+  },
+  {
+    "instruction": "提取关于 MoE 网络在下游任务适配中的作用描述及其关联实体。",
+    "input": "We introduce a lightweight MoE network that selectively assembles source domain aligners (experts) to facilitate feature adaptation in the target domain.",
+    "output": [
+      {
+        "subject": "Lightweight MoE network",
+        "predicate": "ALIGNED_WITH",
+        "object": "Selective knowledge assembly"
+      },
+      {
+        "subject": "Lightweight MoE network",
+        "predicate": "ALIGNED_WITH",
+        "object": "Feature adaptation"
+      },
+      {
+        "subject": "BRIDGE",
+        "predicate": "USES_DATASET",
+        "object": "Source domain aligners"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "BRIDGE 模型在实验中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'BRIDGE'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "BRIDGE 模型在论文中与哪些核心概念（Concept）对齐？",
+    "output": "MATCH (m:Model {name: 'BRIDGE'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "论文中提到的所有评估指标（Metric）有哪些？",
+    "output": "MATCH (mt:Metric) RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "哪些模型在实验中被 BRIDGE 模型引用并进行了对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'BRIDGE'}) RETURN m.name"
+  },
+  {
+    "instruction": "找出由作者 'Haonan Yuan' 参与的研究中，所提出的模型名称是什么？",
+    "output": "MATCH (a:Author {name: 'Haonan Yuan'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name"
+  },
+  {
+    "instruction": "查询使用了 'Cora' 数据集的所有模型，并列出它们达成的评估指标。",
+    "output": "MATCH (d:Dataset {name: 'Cora'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "统计 BRIDGE 论文中一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'How Much Can Transfer? BRIDGE: Bounded Multi-Domain Graph Foundation Model with Generalization Guarantees'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "哪些模型既使用了 'Academic' 领域的数据集（如 Cora），又与 'Graph Spectral Theory' 概念相关？",
+    "output": "MATCH (c:Concept {name: 'Graph Spectral Theory'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "列出所有与 'Lipschitz Continuity' 概念相关的模型，并查询这些模型发表在哪些论文中？",
+    "output": "MATCH (c:Concept {name: 'Lipschitz Continuity'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请从提供的文本中提取论文标题及其所有作者，并识别它们之间的 AUTHORED_BY 关系。",
+    "input": "GCoT: Chain-of-Thought Prompt Learning for Graphs Xingtong Yu Singapore Management University, Chang Zhou University of Science and Technology of China, Zhongwei Kuai University of Science and Technology of China, Xinming Zhang University of Science and Technology of China, Yuan Fang Singapore Management University.",
+    "output": [
+      {
+        "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingtong Yu"
+      },
+      {
+        "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Chang Zhou"
+      },
+      {
+        "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Zhongwei Kuai"
+      },
+      {
+        "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Xinming Zhang"
+      },
+      {
+        "subject": "GCoT: Chain-of-Thought Prompt Learning for Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Yuan Fang"
+      }
+    ]
+  },
+  {
+    "instruction": "根据摘要内容，提取 GCoT 模型所采用的核心研究概念（Concept），并建立 ALIGNED_WITH 关系。",
+    "input": "In this work, we propose the first CoT prompt learning framework for text-free graphs, GCoT. Specifically, we decompose the adaptation process for each downstream task into a series of inference steps, with each step consisting of prompt-based inference, “thought” generation, and thought-conditioned prompt learning.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Chain-of-Thought (CoT)"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Prompt-based inference"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Thought generation"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Thought-conditioned prompt learning"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的 GCoT 模型在实验中使用的所有数据集（Dataset），并建立 USES_DATASET 关系。",
+    "input": "We conduct experiments on eight widely used benchmark datasets, spanning citation networks, e-commerce, protein structures, and molecular graphs. Cora, Citeseer, and Pubmed are citation networks. Photo is an e-commerce network. PROTEINS is a dataset of protein structures. MUTAG, BZR, and COX2 are molecular graph datasets.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "Pubmed"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "Photo"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "PROTEINS"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "MUTAG"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "BZR"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "COX2"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提及的与 GCoT 进行对比的基准模型（Model），并建立 CITED_BY 关系表示引用对比。",
+    "input": "We compare GCoT with state-of-the-art methods across three categories. Supervised GNNs: GCN and GAT. Graph pre-training models: DGI/InfoGraph and GraphCL. Graph prompt learning models: ProG, GPF, GPF+, and GraphPrompt.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "InfoGraph",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "GraphCL",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "ProG",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "GPF",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "GPF+",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "CITED_BY",
+        "object": "GCoT"
+      }
+    ]
+  },
+  {
+    "instruction": "根据论文结论，识别 GCoT 在实验评估中所达成的指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "We adopt accuracy as the performance metric and report both the mean and standard deviation... To evaluate the efficiency, we perform inference time comparisons. GCoT maintains higher accuracy on the large-scale dataset.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Inference time"
+      }
+    ]
+  },
+  {
+    "instruction": "从文中关于异质图实验的描述中，提取模型使用的数据集及其 USES_DATASET 关系。",
+    "input": "To examine the robustness of GCoT on heterophilic graphs, we conduct one-shot node classification on Wisconsin and Squirrel. Wisconsin is a network of 251 nodes. Squirrel consists of 5,201 Wikipedia pages.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "Wisconsin"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "Squirrel"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的 GCoT 模型的提出背景（Paper）信息，建立 PROPOSED_BY 关系。",
+    "input": "In this work, we propose the first CoT prompt learning framework for text-free graphs, GCoT. ACM Reference Format: Xingtong Yu, et al. 2025. GCoT: Chain-of-Thought Prompt Learning for Graphs. In Proceedings of the 31st ACM SIGKDD Conference.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "PROPOSED_BY",
+        "object": "GCoT: Chain-of-Thought Prompt Learning for Graphs"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文中关于大规模图数据的测试，提取涉及的数据集名称及 USES_DATASET 关系。",
+    "input": "To evaluate the efficiency of GCoT, we perform one-shot node classification on a large-scale dataset called CLUSTER, which comprises 1,172,320 nodes and 43,038,630 edges.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "USES_DATASET",
+        "object": "CLUSTER"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 GCoT 模型在技术实现中与哪些特定的图学习概念（Concept）对齐。",
+    "input": "We propose GCoT, a Graph CoT prompting approach to guide pre-trained graph models... conditioned on this thought, we learn a prompt specific to each node based on the current state via a condition-net.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Condition-net"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node-specific prompt"
+      },
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Pre-trained graph encoder"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提及的模型实现细节，特别是骨干网络与 Model 的 ALIGNED_WITH 关系。",
+    "input": "For our proposed GCoT, we utilize a 3-layer GCN as the backbone for all datasets, with the hidden dimensions set to 256. For baselines, DGI utilizes a 1-layer GCN as the backbone.",
+    "output": [
+      {
+        "subject": "GCoT",
+        "predicate": "ALIGNED_WITH",
+        "object": "GCN"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "ALIGNED_WITH",
+        "object": "GCN"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《GCoT: Chain-of-Thought Prompt Learning for Graphs》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'GCoT: Chain-of-Thought Prompt Learning for Graphs'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GCoT 模型在实验中使用了哪些数据集进行验证？",
+    "output": "MATCH (m:Model {name: 'GCoT'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "查询所有与 'Chain-of-Thought' 概念对齐的模型名称及其发表的论文标题。",
+    "output": "MATCH (c:Concept {name: 'Chain-of-Thought'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "在论文中，有哪些模型被 GCoT 引用并作为基准模型进行对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GCoT'}) RETURN m.name"
+  },
+  {
+    "instruction": "由作者 'Xingtong Yu' 提出的模型在哪些评估指标（Metric）上取得了结果？",
+    "output": "MATCH (a:Author {name: 'Xingtong Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "统计 GCoT 模型在实验中涉及的数据集总数。",
+    "output": "MATCH (m:Model {name: 'GCoT'})-[:USES_DATASET]->(d:Dataset) RETURN count(DISTINCT d) AS DatasetCount"
+  },
+  {
+    "instruction": "找出所有既使用了 'Cora' 数据集，又被 GCoT 模型引用的基准模型。",
+    "output": "MATCH (d:Dataset {name: 'Cora'})<-[:USES_DATASET]-(m:Model)-[:CITED_BY]->(:Model {name: 'GCoT'}) RETURN m.name"
+  },
+  {
+    "instruction": "哪些研究概念（Concept）同时与 GCoT 和 GraphPrompt 这两个模型对齐？",
+    "output": "MATCH (m1:Model {name: 'GCoT'})-[:ALIGNED_WITH]->(c:Concept)<-[:ALIGNED_WITH]-(m2:Model {name: 'GraphPrompt'}) RETURN c.name"
+  },
+  {
+    "instruction": "查询在异质图（如 'Squirrel'）上进行过测试的模型所达成的指标。",
+    "output": "MATCH (d:Dataset {name: 'Squirrel'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "计算《GCoT: Chain-of-Thought Prompt Learning for Graphs》这篇论文的合作作者数量。",
+    "output": "MATCH (p:Paper {title: 'GCoT: Chain-of-Thought Prompt Learning for Graphs'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS TotalAuthors"
+  },
+  {
+    "instruction": "请从文本中提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "GraphGPT: Graph Instruction Tuning for Large Language Models Jiabin Tang, Yuhao Yang, Wei Wei, Lei Shi, Lixin Su, Suqi Cheng, Dawei Yin, Chao Huang. University of Hong Kong, Baidu Inc.",
+    "output": [
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Jiabin Tang"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Yuhao Yang"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Wei Wei"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Lei Shi"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Lixin Su"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Suqi Cheng"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Dawei Yin"
+      },
+      {
+        "subject": "GraphGPT: Graph Instruction Tuning for Large Language Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Chao Huang"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的核心模型及其所提出的论文，并建立 PROPOSED_BY 关系。",
+    "input": "We introduce the GraphGPT framework, which integrates LLMs with graph structural knowledge through graph instruction tuning. The open-sourced model implementation of our GraphGPT is available at https://github.com/HKUDS/GraphGPT.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "PROPOSED_BY",
+        "object": "GraphGPT: Graph Instruction Tuning for Large Language Models"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置段落，提取 GraphGPT 模型评估时所使用的所有数据集（Dataset）。",
+    "input": "We evaluate our GraphGPT using three datasets: OGB-arxiv, PubMed, and Cora. The OGB-arxiv dataset represents a directed graph capturing the citation network among computer science arXiv papers. PubMed consists of 19,717 scientific publications. Cora comprises 25,120 research papers.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "USES_DATASET",
+        "object": "OGB-arxiv"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      }
+    ]
+  },
+  {
+    "instruction": "提取 GraphGPT 模型在评估中所采用的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "To evaluate our model's performance, we utilize three commonly used metrics: Accuracy and Macro F1 for node classification, and AUC for link prediction.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Macro F1"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "AUC"
+      }
+    ]
+  },
+  {
+    "instruction": "识别论文中定义的 GraphGPT 核心架构组件与技术概念，建立 ALIGNED_WITH 关系。",
+    "input": "This framework includes a text-graph grounding component to link textual and graph structures and a dual-stage instruction tuning approach with a lightweight graph-text alignment projector.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Text-graph grounding"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dual-stage instruction tuning"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Lightweight graph-text alignment projector"
+      }
+    ]
+  },
+  {
+    "instruction": "从文中关于推理能力的描述中，识别模型引入的特定策略（Concept）。",
+    "input": "By incorporating the Chain-of-Thought (COT) distillation into our framework, GraphGPT enhances its step-by-step reasoning abilities and improves its performance in the face of distribution shift.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Chain-of-Thought (CoT) distillation"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提及的用于对比实验的基准模型（Baselines），并建立 CITED_BY 关系。",
+    "input": "We consider various state-of-the-art methods for comprehensive evaluation. The second category comprises representative graph neural encoders, including GraphSAGE, GCN, GAT, and RevGNN. We also consider self-supervised approach DGI and graph transformer networks such as NodeFormer and DIFFormer.",
+    "output": [
+      {
+        "subject": "GraphSAGE",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      },
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      },
+      {
+        "subject": "RevGNN",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      },
+      {
+        "subject": "NodeFormer",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      },
+      {
+        "subject": "DIFFormer",
+        "predicate": "CITED_BY",
+        "object": "GraphGPT"
+      }
+    ]
+  },
+  {
+    "instruction": "根据“第一阶段微调”的描述，提取相关的任务概念及其与模型的关系。",
+    "input": "In the initial stage of our graph instruction tuning, we introduce self-supervised instruction tuning... specifically, we design a structure-aware graph matching task that guides the language model in differentiating between graph tokens.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Self-supervised instruction tuning"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Structure-aware graph matching task"
+      }
+    ]
+  },
+  {
+    "instruction": "提取论文中提到的模型在零-shot（Zero-shot）场景下的表现与数据集关系。",
+    "input": "Our framework demonstrates superior generalization in both supervised and zero-shot graph learning tasks... surpassing existing benchmarks in zero-shot graph learning scenario, achieving a remarkable 2-10 times increase in accuracy.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Zero-shot graph learning"
+      },
+      {
+        "subject": "GraphGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Generalization"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中描述的用于对齐图结构与语言空间的具体投影器组件。",
+    "input": "To align the graph tokens with the language tokens, we employ a projector fP, which can be as simple as a single linear layer. This projector establishes correspondence between the graph tokens and the language tokens.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Linear layer alignment projector"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《GraphGPT: Graph Instruction Tuning for Large Language Models》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'GraphGPT: Graph Instruction Tuning for Large Language Models'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphGPT 模型在实验中主要使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'GraphGPT'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "统计一下数据库中由作者 'Chao Huang' 参与撰写的论文总数。",
+    "output": "MATCH (a:Author {name: 'Chao Huang'})<-[:AUTHORED_BY]-(p:Paper) RETURN count(p) AS PaperCount"
+  },
+  {
+    "instruction": "哪些模型在 'OGB-arxiv' 数据集上评估了 'Accuracy' 指标？",
+    "output": "MATCH (m:Model)-[:USES_DATASET]->(d:Dataset {name: 'OGB-arxiv'}), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN m.name"
+  },
+  {
+    "instruction": "由作者 'Jiabin Tang' 参与提出的模型与哪些核心技术概念（Concept）进行了对齐？",
+    "output": "MATCH (a:Author {name: 'Jiabin Tang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "列出所有在论文中被 GraphGPT 引用对比（CITED_BY），且同样使用了 'Cora' 数据集的基准模型名称。",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphGPT'}), (m)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "哪些模型与 'Chain-of-Thought' 概念相关？请展示它们所属的论文标题。",
+    "output": "MATCH (c:Concept {name: 'Chain-of-Thought'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "查询由作者 'Wei Wei' 参与研发的模型所达成的所有性能指标（Metric）名称。",
+    "output": "MATCH (a:Author {name: 'Wei Wei'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "计算 GraphGPT 模型一共对齐了多少个不同的技术概念（Concept）？",
+    "output": "MATCH (m:Model {name: 'GraphGPT'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+  },
+  {
+    "instruction": "找出所有既被 'GraphGPT' 使用，也被基准模型 'GAT' 使用过的数据集名称。",
+    "output": "MATCH (m1:Model {name: 'GraphGPT'})-[:USES_DATASET]->(d:Dataset)<-[:USES_DATASET]-(m2:Model {name: 'GAT'}) RETURN d.name"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation Zihao Guo 1, Qingyun Sun 1*, Ziwei Zhang 1, Haonan Yuan 1, Huiping Zhuang 2, Xingcheng Fu 3, Jianxin Li 1. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University.",
+    "output": [
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Zihao Guo"
+      },
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Ziwei Zhang"
+      },
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Huiping Zhuang"
+      },
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      },
+      {
+        "subject": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Li"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we propose Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation (GraphKeeper), to address catastrophic forgetting in Domain-IL scenario from the perspectives of embedding shifts and decision boundary deviations.",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "PROPOSED_BY",
+        "object": "GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation"
+      }
+    ]
+  },
+  {
+    "instruction": "从文中关于学术网络数据集的描述中，提取模型所使用的数据集名称，并建立 USES_DATASET 关系。",
+    "input": "We conduct experiments on 15 real-world datasets... including academic networks (Cora [26], Citeseer [12], PubMed [21], CoauthorCS [27], and DBLP [7]).",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "CoauthorCS"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "DBLP"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 GraphKeeper 模型为了解决增量学习挑战而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+    "input": "Specifically, to prevent embedding shifts and confusion across incremental graph domains, we first propose the domain-specific parameter-efficient fine-tuning together with intra- and inter-domain disentanglement objectives.",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Parameter-efficient fine-tuning (PEFT)"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Intra-domain disentanglement"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Inter-domain disentanglement"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Embedding shifts"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，提取文中用于评估模型性能的指标，并与模型建立 ACHIEVED_ON 关系。",
+    "input": "We adopt two commonly used metrics in GIL: Average Accuracy (AA) and Average Forgetting (AF). Higher AA indicates better performance, and higher AF indicates less forgetting.",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ACHIEVED_ON",
+        "object": "Average Accuracy (AA)"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ACHIEVED_ON",
+        "object": "Average Forgetting (AF)"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 GraphKeeper 进行对比实验的基准模型，建立 CITED_BY 关系。",
+    "input": "We choose a variety of baselines, including general IL methods EWC, MAS, GEM, LWF and representative GIL methods TWP, ER-GNN, SSM, DeLoMe, PDGNNs, TPP.",
+    "output": [
+      {
+        "subject": "EWC",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "MAS",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "GEM",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "LWF",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "TWP",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "ER-GNN",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "SSM",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "DeLoMe",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "PDGNNs",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      },
+      {
+        "subject": "TPP",
+        "predicate": "CITED_BY",
+        "object": "GraphKeeper"
+      }
+    ]
+  },
+  {
+    "instruction": "分析关于决策边界挑战的描述，提取相关的技术概念并建立 ALIGNED_WITH 关系。",
+    "input": "To address the decision boundary deviation challenge, we separate the decision module from the embedding model and continuously fit incremental domains through the analytical solution of ridge regression.",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Decision boundary deviation"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Deviation-free knowledge preservation"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Ridge regression"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的模型与其他图基础模型（GFM）的集成关系。",
+    "input": "To further explore the potential of GraphKeeper, we integrate it with two representative GFMs, GCOPE [49] and MDGPT [39], to equip them with the continuous updating capability.",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "GCOPE"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "MDGPT"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于网络数据集的分类描述中，提取相关的数据集名称及 USES_DATASET 关系。",
+    "input": "web networks (WikiCS [20], Facebook [24], Chameleon [24], and Squirrel [24]), social networks (GitHub [24], LastFMAsia [25], and DeezerEurope [25]).",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "WikiCS"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "Facebook"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "Chameleon"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "Squirrel"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "GitHub"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "LastFMAsia"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "USES_DATASET",
+        "object": "DeezerEurope"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中关于未观测领域处理的技术策略，并识别对应的 Concept。",
+    "input": "Lastly, we perform domain-aware distribution discrimination on graphs with unobservable domain to facilitate the precise embedding and prediction.",
+    "output": [
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Domain-aware distribution discrimination"
+      },
+      {
+        "subject": "GraphKeeper",
+        "predicate": "ALIGNED_WITH",
+        "object": "Unobservable domains"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "论文《GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation》的所有作者是谁？",
+    "output": "MATCH (p:Paper {title: 'GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphKeeper 模型在评估过程中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'GraphKeeper'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "查询由作者 'Zihao Guo' 参与提出的模型及其发表的论文标题。",
+    "output": "MATCH (a:Author {name: 'Zihao Guo'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "列出所有在论文中被 GraphKeeper 引用并作为基准对比（CITED_BY）的模型名称。",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphKeeper'}) RETURN m.name"
+  },
+  {
+    "instruction": "统计一下数据库中一共有多少位作者参与了 GraphKeeper 相关研究的撰写？",
+    "output": "MATCH (p:Paper {title: 'GraphKeeper: Graph Domain-Incremental Learning via Knowledge Disentanglement and Preservation'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "找出所有与 'Ridge regression' 概念对齐，并且被 'GraphKeeper' 引用的模型。",
+    "output": "MATCH (c:Concept {name: 'Ridge regression'})<-[:ALIGNED_WITH]-(m:Model)-[:CITED_BY]->(:Model {name: 'GraphKeeper'}) RETURN m.name"
+  },
+  {
+    "instruction": "查询作者 'Qingyun Sun' 提出的模型主要与哪些核心研究概念（Concept）相关？",
+    "output": "MATCH (a:Author {name: 'Qingyun Sun'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN DISTINCT c.name"
+  },
+  {
+    "instruction": "哪些模型在 'Cora' 数据集上取得了性能指标？",
+    "output": "MATCH (d:Dataset {name: 'Cora'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "计算 GraphKeeper 模型一共对齐了多少个不同的技术或理论概念？",
+    "output": "MATCH (m:Model {name: 'GraphKeeper'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+  },
+  {
+    "instruction": "查询使用了 'Academic' 类别数据集（如 Cora, Citeseer）的模型所达成的所有评估指标（Metric）。",
+    "output": "MATCH (d:Dataset)<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) WHERE d.name IN ['Cora', 'Citeseer', 'PubMed'] RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts Zihao Guo 1, Qingyun Sun 1*, Haonan Yuan 1, Xingcheng Fu 2, Min Zhou 3, Yisen Gao 4, Jianxin Li 1. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University, China.",
+    "output": [
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Zihao Guo"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Min Zhou"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Yisen Gao"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Li"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别文中提出的模型及其所属的论文，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we propose a novel Graph Mixture of Riemannian Experts (GraphMoRE) framework to effectively tackle topological heterogeneity by personalized fine-grained topology geometry pattern preservation.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "PROPOSED_BY",
+        "object": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts"
+      }
+    ]
+  },
+  {
+    "instruction": "提取 GraphMoRE 模型在实验评估中使用的所有数据集名称，并建立 USES_DATASET 关系。",
+    "input": "We conduct experiments on a variety of real-world datasets, including citation networks (Cora, Citeseer, PubMed), airline networks (Airport) and co-purchase networks (Photo). In addition, we generate graphs with topological heterogeneity... Syn.Small, Syn.Middle, Syn.Large.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Airport"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Photo"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Syn.Small"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Syn.Middle"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Syn.Large"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 GraphMoRE 模型引入的核心技术概念，并建立 ALIGNED_WITH 关系。",
+    "input": "Specifically, to minimize the embedding distortion, we propose a topology-aware gating mechanism... By fusing the outputs of diverse Riemannian experts... we construct personalized mixed curvature spaces for nodes.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Topology-aware gating mechanism"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Riemannian experts"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Personalized mixed curvature spaces"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Embedding distortion minimization"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提及的与 GraphMoRE 进行性能对比的基准黎曼图模型，并建立 CITED_BY 关系表示引用对比。",
+    "input": "HNN, HGCN, κ-GCN, LGCN, Q-GCN, MotifRGC are competitive Riemannian methods, where Q-GCN and MotifRGC consider the topological heterogeneity. We select them as baselines.",
+    "output": [
+      {
+        "subject": "HNN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "HGCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "κ-GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "LGCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "Q-GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "MotifRGC",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      }
+    ]
+  },
+  {
+    "instruction": "根据论文实验结论，提取 GraphMoRE 评估所达成的性能指标，并建立 ACHIEVED_ON 关系。",
+    "input": "GraphMoRE achieves the best results on all datasets among 9 baselines, and compared with the runner-up method, we achieve gains in AUC score and AP. For the node classification task, we report Weighted-F1 and Micro-F1.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "AUC"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "AP"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "Weighted-F1"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "Micro-F1"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中关于“拓扑异质性”处理中所涉及的核心数学或空间概念。",
+    "input": "According to the sign of curvature κ, constant curvature spaces can be divided into three categories: spherical space (κ > 0), hyperbolic space (κ < 0), and Euclidean space (κ = 0).",
+    "output": [
+      {
+        "subject": "Topological heterogeneity",
+        "predicate": "ALIGNED_WITH",
+        "object": "Spherical space"
+      },
+      {
+        "subject": "Topological heterogeneity",
+        "predicate": "ALIGNED_WITH",
+        "object": "Hyperbolic space"
+      },
+      {
+        "subject": "Topological heterogeneity",
+        "predicate": "ALIGNED_WITH",
+        "object": "Euclidean space"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“门控机制”的描述中，提取对应的技术组件及其关系。",
+    "input": "we first propose a topology-aware gating mechanism, consisting of a multi-resolution local topology encoding module to estimate local geometric properties and a gating network.",
+    "output": [
+      {
+        "subject": "Topology-aware gating mechanism",
+        "predicate": "ALIGNED_WITH",
+        "object": "Multi-resolution local topology encoding module"
+      },
+      {
+        "subject": "Topology-aware gating mechanism",
+        "predicate": "ALIGNED_WITH",
+        "object": "Gating network"
+      }
+    ]
+  },
+  {
+    "instruction": "提取 GraphMoRE 旨在解决的图表示学习中的核心挑战（Concept）。",
+    "input": "Real-world graphs have inherently complex and diverse topological patterns, known as topological heterogeneity... existing works learn graph representation in a single constant curvature space that is insufficient.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Topological heterogeneity"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Complex topological patterns"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于“对齐策略”的概念及其作用描述。",
+    "input": "Furthermore, to fairly measure pairwise distances between different embedding spaces, we present a concise and effective alignment strategy.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Alignment strategy"
+      },
+      {
+        "subject": "Alignment strategy",
+        "predicate": "ALIGNED_WITH",
+        "object": "Pairwise distance measurement"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphMoRE 模型是在哪篇论文中提出的？",
+    "output": "MATCH (m:Model {name: 'GraphMoRE'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphMoRE 模型在实验中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'GraphMoRE'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型在论文中被 GraphMoRE 引用并作为基准模型进行对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphMoRE'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Zihao Guo' 参与提出的模型及其达成的评估指标（Metric）。",
+    "output": "MATCH (a:Author {name: 'Zihao Guo'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计 GraphMoRE 模型一共与多少个核心概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'GraphMoRE'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有使用了 'Airport' 数据集且与 'Hyperbolic space' 概念对齐的模型名称。",
+    "output": "MATCH (d:Dataset {name: 'Airport'})<-[:USES_DATASET]-(m:Model)-[:ALIGNED_WITH]->(c:Concept {name: 'Hyperbolic space'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在 'Cora' 数据集上取得过 'AUC' 指标的所有模型有哪些？",
+    "output": "MATCH (m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'AUC'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询同时应用了 'Mixture of Experts (MoE)' 和 'Riemannian Manifold' 概念的模型及其所属论文。",
+    "output": "MATCH (c1:Concept {name: 'Mixture of Experts (MoE)'})<-[:ALIGNED_WITH]-(m:Model)-[:ALIGNED_WITH]->(c2:Concept {name: 'Riemannian Manifold'}), (m)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算作者 'Qingyun Sun' 参与发表的论文总数。",
+    "output": "MATCH (a:Author {name: 'Qingyun Sun'})<-[:AUTHORED_BY]-(p:Paper) RETURN count(p) AS PaperCount"
+  },
+  {
+    "instruction": "请从给定的论文片段中提取标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "GraphPrompt : Unifying Pre-Training and Downstream Tasks for Graph Neural Networks Zemin Liu 1 National University of Singapore, Xingtong Yu 2 University of Science and Technology of China, Yuan Fang 3 Singapore Management University, Xinming Zhang 2 University of Science and Technology of China",
+    "output": [
+      {
+        "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+        "predicate": "AUTHORED_BY",
+        "object": "Zemin Liu"
+      },
+      {
+        "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingtong Yu"
+      },
+      {
+        "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+        "predicate": "AUTHORED_BY",
+        "object": "Yuan Fang"
+      },
+      {
+        "subject": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks",
+        "predicate": "AUTHORED_BY",
+        "object": "Xinming Zhang"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的核心模型及其发表的论文，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we propose GraphPrompt, a novel pre-training and prompting framework on graphs. GraphPrompt not only unifies pre-training and downstream tasks into a common task template...",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "PROPOSED_BY",
+        "object": "GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks"
+      }
+    ]
+  },
+  {
+    "instruction": "根据描述，提取 GraphPrompt 模型在实验中所使用的所有公开数据集，建立 USES_DATASET 关系。",
+    "input": "Finally, we conduct extensive experiments on five public datasets to evaluate and analyze GraphPrompt. (1) Flickr is an image sharing network. (2) PROTEINS is a collection of protein graphs. (3) COX2 is a dataset of molecular structures. (4) ENZYMES is a dataset of 600 enzymes. (5) BZR is a collection of 405 ligands.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "USES_DATASET",
+        "object": "Flickr"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "USES_DATASET",
+        "object": "PROTEINS"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "USES_DATASET",
+        "object": "COX2"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "USES_DATASET",
+        "object": "ENZYMES"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "USES_DATASET",
+        "object": "BZR"
+      }
+    ]
+  },
+  {
+    "instruction": "从文中提取与 GraphPrompt 模型相关的核心技术概念，并建立 ALIGNED_WITH 关系。",
+    "input": "GraphPrompt unifies both the node- and graph-level tasks... into the same template: the similarity calculation of (sub)graph representations. Toward the second challenge, we distinguish different downstream tasks by way of the ReadOut operation on subgraphs.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Unified task template"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Subgraph similarity learning"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "ReadOut operation"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提及的与 GraphPrompt 进行对比的基准模型（Baselines），建立 CITED_BY 关系表示引用对比。",
+    "input": "We evaluate GraphPrompt against the state-of-the-art approaches... End-to-end graph neural networks: GCN, GraphSAGE, GAT and GIN. Graph pre-training models: DGI, InfoGraph, and GraphCL. Graph prompt models: GPPT.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "GraphSAGE",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "GIN",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "InfoGraph",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "GraphCL",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      },
+      {
+        "subject": "GPPT",
+        "predicate": "CITED_BY",
+        "object": "GraphPrompt"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的模型评估指标，并建立 ACHIEVED_ON 关系。",
+    "input": "Table 2 illustrates the results of few-shot node classification. Our proposed GraphPrompt outperforms all the baselines across the three datasets (Flickr, PROTEINS, ENZYMES) in terms of accuracy.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      }
+    ]
+  },
+  {
+    "instruction": "根据对预训练阶段的描述，识别 GraphPrompt 模型采用的具体自监督任务概念。",
+    "input": "In this work, we adopt link prediction as the self-supervised pre-training task, given that links are readily available in any graph without additional annotation cost.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Link prediction"
+      },
+      {
+        "subject": "Link prediction",
+        "predicate": "ALIGNED_WITH",
+        "object": "Self-supervised learning"
+      }
+    ]
+  },
+  {
+    "instruction": "提取关于“提示设计”的技术细节概念，建立其与模型的 ALIGNED_WITH 关系。",
+    "input": "Formally, let p_t denote a learnable prompt vector for a downstream task t. The prompt-assisted ReadOut operation on a subgraph S_x for task t performs a feature weighted summation of node representations.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Learnable prompt vector"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Feature weighted summation"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中关于下游任务适配的概念，并将其与模型关联。",
+    "input": "We focus on the popular node classification and graph classification as downstream tasks. GraphPrompt employs a learnable prompt to assist a downstream task in locating the most relevant knowledge.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node classification"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph classification"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“参数效率”的分析中提取涉及的概念，并建立 ALIGNED_WITH 关系。",
+    "input": "The prompt tuning loss is only parameterized by the learnable prompt vector p_t, without the GNN weights. Instead, the pre-trained GNN weights are frozen for downstream tasks. This significantly improves computational efficiency.",
+    "output": [
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Prompt tuning"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Frozen pre-trained weights"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Parameter efficiency"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在标题为《GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks》的论文中提出了什么模型？",
+    "output": "MATCH (m:Model)-[:PROPOSED_BY]->(p:Paper {title: 'GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 GraphPrompt 模型在实验中使用的所有数据集名称。",
+    "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找 GraphPrompt 论文的作者，并检索这些作者参与提出的所有模型名称。",
+    "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:PROPOSED_BY]->(p:Paper)-[:AUTHORED_BY]->(a:Author) MATCH (a)<-[:AUTHORED_BY]-(:Paper)<-[:PROPOSED_BY]-(m2:Model) RETURN DISTINCT a.name, m2.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphPrompt 模型在哪些数据集上评估并取得了 'Accuracy' 指标？",
+    "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}), (m)-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphPrompt 模型与哪些核心技术概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出所有在 GraphPrompt 论文中被引用并作为对比基准（CITED_BY）的模型名称。",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphPrompt'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计 GraphPrompt 模型的实验中一共使用了多少个数据集？",
+    "output": "MATCH (m:Model {name: 'GraphPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算论文《GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks》的署名作者总数。",
+    "output": "MATCH (p:Paper {title: 'GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有使用了 'PROTEINS' 数据集的模型，并展示它们各自对齐的技术概念。",
+    "output": "MATCH (d:Dataset {name: 'PROTEINS'})<-[:USES_DATASET]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN m.name, c.name"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "GraphText: Graph Reasoning in Text Space Jianan Zhao 1, 2, Le Zhuo 3, Yikang Shen 4, Meng Qu 1, 2, Kai Liu 5 Michael Bronstein 6, Zhaocheng Zhu 1, 2, Jian Tang 1, 7, 8 1 Mila - Québec AI Institute, 2 Université de Montréal.",
+    "output": [
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianan Zhao"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Le Zhuo"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Yikang Shen"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Meng Qu"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Kai Liu"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Michael Bronstein"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Zhaocheng Zhu"
+      },
+      {
+        "subject": "GraphText: Graph Reasoning in Text Space",
+        "predicate": "AUTHORED_BY",
+        "object": "Jian Tang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we bridge this gap with a novel framework, GraphText, that translates graphs to natural language. GraphText constructs a graph-syntax tree for each graph, capturing both node features and the complex relationships between nodes.",
+    "output": [
+      {
+        "subject": "GraphText",
+        "predicate": "PROPOSED_BY",
+        "object": "GraphText: Graph Reasoning in Text Space"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验部分描述，提取 GraphText 模型评估时所使用的所有数据集名称，建立 USES_DATASET 关系。",
+    "input": "Specifically, we use two citation datasets (Cora [28] and Citeseer [15]), and three webpage datasets (Texas, Wisconsin, and Cornell [31]). We compare GraphText with two types of baselines.",
+    "output": [
+      {
+        "subject": "GraphText",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "USES_DATASET",
+        "object": "Texas"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "USES_DATASET",
+        "object": "Wisconsin"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "USES_DATASET",
+        "object": "Cornell"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 GraphText 模型引入的核心技术概念（Concept），并建立 ALIGNED_WITH 关系。",
+    "input": "GraphText presents several key benefits. It introduces training-free graph reasoning: even without training on graph data, GraphText with ChatGPT can achieve on par with, or even surpass, the performance of supervised-trained graph neural networks through in-context learning.",
+    "output": [
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Training-free graph reasoning"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "In-context learning (ICL)"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph-syntax tree"
+      }
+    ]
+  },
+  {
+    "instruction": "从文中关于“交互式推理”的描述中，提取相关的技术概念并建立 ALIGNED_WITH 关系。",
+    "input": "Furthermore, GraphText paves the way for interactive graph reasoning, allowing both humans and LLMs to communicate with the model seamlessly using natural language.",
+    "output": [
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Interactive graph reasoning"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Natural language communication"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 GraphText 进行性能对比的基准图神经网络模型，建立 CITED_BY 关系。",
+    "input": "We compare GraphText with two types of baselines: (1) Supervised learning GNNs: including GCN [20] and GAT [38], along with their more recent variants GCNII [7] and GATv2 [3].",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphText"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "GraphText"
+      },
+      {
+        "subject": "GCNII",
+        "predicate": "CITED_BY",
+        "object": "GraphText"
+      },
+      {
+        "subject": "GATv2",
+        "predicate": "CITED_BY",
+        "object": "GraphText"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 GraphText 模型在实验评估中所达成的指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "Notably, GraphText sf+sr, integrating these elements, sets a new benchmark in graph in-context learning, outperforming the best existing ICL baselines by an average of 34.0%. It achieves significant accuracy gains.",
+    "output": [
+      {
+        "subject": "GraphText",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "ACHIEVED_ON",
+        "object": "Graph in-context learning benchmark"
+      }
+    ]
+  },
+  {
+    "instruction": "提取关于“图语法树”构建过程中的核心组件或属性，建立 ALIGNED_WITH 关系。",
+    "input": "GraphText constructs a graph-syntax tree consisting of two types of nodes: leaf nodes that contain the graph features, and the internal nodes that describe the relational semantics of the leaf nodes.",
+    "output": [
+      {
+        "subject": "Graph-syntax tree",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph features"
+      },
+      {
+        "subject": "Graph-syntax tree",
+        "predicate": "ALIGNED_WITH",
+        "object": "Relational semantics"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于“图归纳偏置”的概念及其在 GraphText 中的实现方式。",
+    "input": "GraphText easily incorporates the inductive biases of GNNs through the construction of node text features F and relationships R. For example, we can encode the message-passing prior using the propagated feature AkX.",
+    "output": [
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Inductive bias of GNNs"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Message-passing prior"
+      },
+      {
+        "subject": "GraphText",
+        "predicate": "ALIGNED_WITH",
+        "object": "Propagated feature"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“开放源码模型”的描述中，提取模型名称及其对应的技术策略关系。",
+    "input": "We further explored the potential of instruction tuning on currently available open-source LLMs, such as LLaMA-2 [37]. We freeze the pre-trained LLaMA-2 parameters and fine-tune an MLP encoder.",
+    "output": [
+      {
+        "subject": "LLaMA-2",
+        "predicate": "ALIGNED_WITH",
+        "object": "Instruction tuning"
+      },
+      {
+        "subject": "LLaMA-2",
+        "predicate": "ALIGNED_WITH",
+        "object": "MLP encoder projector"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《GraphText: Graph Reasoning in Text Space》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'GraphText: Graph Reasoning in Text Space'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphText 模型是在哪篇论文中被提出的？",
+    "output": "MATCH (m:Model {name: 'GraphText'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 GraphText 模型在实验中使用的所有数据集名称。",
+    "output": "MATCH (m:Model {name: 'GraphText'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找由作者 'Jian Tang' 参与提出的模型所关联的所有核心研究概念（Concept）。",
+    "output": "MATCH (a:Author {name: 'Jian Tang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN DISTINCT c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些基准模型在论文中被引用并与 GraphText 进行了性能对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GraphText'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GraphText 模型在哪些数据集上评估并取得了 'Accuracy' 指标的结果？",
+    "output": "MATCH (m:Model {name: 'GraphText'})-[:USES_DATASET]->(d:Dataset) MATCH (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计一下数据库中一共有多少位作者参与了《GraphText: Graph Reasoning in Text Space》的研究？",
+    "output": "MATCH (p:Paper {title: 'GraphText: Graph Reasoning in Text Space'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有与 'In-context learning (ICL)' 概念对齐，并使用了 'Cora' 数据集的模型名称。",
+    "output": "MATCH (c:Concept {name: 'In-context learning (ICL)'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Michael Bronstein' 合作撰写的论文所提出的模型名称及其所属的论文标题。",
+    "output": "MATCH (a:Author {name: 'Michael Bronstein'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 GraphText 模型一共在多少个不同的数据集上进行了实验验证？",
+    "output": "MATCH (m:Model {name: 'GraphText'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS TotalDatasets"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取论文标题及其所有作者，并识别它们之间的 AUTHORED_BY 关系。",
+    "input": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning Haonan Yuan 1, Qingyun Sun 1*, Junhua Shi 1, Xingcheng Fu 2, Bryan Hooi 3, Jianxin Li 1, Philip S. Yu 4. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University.",
+    "output": [
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Junhua Shi"
+      },
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      },
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Bryan Hooi"
+      },
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Li"
+      },
+      {
+        "subject": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning",
+        "predicate": "AUTHORED_BY",
+        "object": "Philip S. Yu"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we propose GRAVER, a novel Generative graph VocabulariEs for Robust GFM fine-tuning framework that tackles the aforementioned instability via generative augmentations.",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "PROPOSED_BY",
+        "object": "G RAVER : Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning"
+      }
+    ]
+  },
+  {
+    "instruction": "从实验设置部分提取 GRAVER 模型所使用的引文网络数据集，并建立 USES_DATASET 关系。",
+    "input": "Citation Domain: Cora [65], CiteSeer [16], PubMed [73], and the large-scale ogbn-arXiv [28]. Co-purchase Domain: ogbn-Tech and ogbn-Home from large-scale co-purchase network [28]. Web Link Domain: Wiki-CS [66].",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "CiteSeer"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-arXiv"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Tech"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Home"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "USES_DATASET",
+        "object": "Wiki-CS"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 GRAVER 模型为了解决微调不稳定性而引入的核心技术概念，并建立 ALIGNED_WITH 关系。",
+    "input": "We propose GRAVER... specifically, to identify transferable units, we analyze and extract key class-specific subgraph patterns by ego-graph disentanglement and validate their transferability both theoretically and empirically.",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Ego-graph disentanglement"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Class-specific subgraph patterns"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Transferable units"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，提取 GRAVER 模型评估中所关注的性能维度（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "Extensive experiments demonstrate the superiority of GRAVER over effectiveness, robustness, and efficiency on downstream few-shot node and graph classification tasks compared with 15 state-of-the-art baselines.",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "ACHIEVED_ON",
+        "object": "Effectiveness"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ACHIEVED_ON",
+        "object": "Robustness"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ACHIEVED_ON",
+        "object": "Efficiency"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ACHIEVED_ON",
+        "object": "Node classification"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ACHIEVED_ON",
+        "object": "Graph classification"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中关于“图词汇表”构建所采用的生成技术概念，并将其与模型关联。",
+    "input": "To enable effective pre-training across diverse domains, we leverage a universal task template based on ego-graph similarity and construct graph vocabularies via graphon-based generative experts.",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graphon-based generative experts"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Generative graph vocabularies"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Ego-graph similarity"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 GRAVER 模型进行对比的代表性多域基准模型，建立 CITED_BY 关系。",
+    "input": "We compare GRAVER with 15 state-of-the-art baselines... including multi-domain graph pre-training models: GCOPE [136], MDGPT [123], and SAMGPT [119].",
+    "output": [
+      {
+        "subject": "GCOPE",
+        "predicate": "CITED_BY",
+        "object": "GRAVER"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "CITED_BY",
+        "object": "GRAVER"
+      },
+      {
+        "subject": "SAMGPT",
+        "predicate": "CITED_BY",
+        "object": "GRAVER"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文中关于“路由机制”的描述，提取涉及的技术组件（Concept）并建立 ALIGNED_WITH 关系。",
+    "input": "To facilitate robust and efficient prompt fine-tuning, we grave the support samples with in-context vocabularies, where the lightweight MoE-CoE network attentively routes knowledge from source domains.",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "MoE-CoE network"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "In-context vocabularies"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Knowledge routing"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“语义对齐”的描述中提取 GRAVER 使用的技术策略，并建立 ALIGNED_WITH 关系。",
+    "input": "To establish a unified representation space, we introduce a set of shared aligners that consequently unify dimension- and semantic-wise features... where LLM(·) is implemented by retrieving feature-related raw texts and enhancing class-aware semantics by large language models (GPT-4).",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "LLM-enhanced text"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Class-aware semantics enhancement"
+      },
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Semantic alignment"
+      }
+    ]
+  },
+  {
+    "instruction": "根据论文对理论部分的总结，提取关于“迁移性”证明的概念及关系。",
+    "input": "Proposition 1 (Vocabulary Transferability). We first analyze and validate the key transferable patterns from an ego-graph disentanglement perspective, rigorously exploring their transferability theoretical foundations and empirical utility.",
+    "output": [
+      {
+        "subject": "GRAVER",
+        "predicate": "ALIGNED_WITH",
+        "object": "Vocabulary Transferability"
+      },
+      {
+        "subject": "Vocabulary Transferability",
+        "predicate": "ALIGNED_WITH",
+        "object": "Ego-graph disentanglement"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GRAVER 模型是在哪篇论文中被提出的？",
+    "output": "MATCH (m:Model {name: 'GRAVER'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 GRAVER 模型在实验中使用的所有数据集。",
+    "output": "MATCH (m:Model {name: 'GRAVER'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找由作者 'Haonan Yuan' 提出的所有模型及其在哪些数据集上进行了实验。",
+    "output": "MATCH (a:Author {name: 'Haonan Yuan'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:USES_DATASET]->(d:Dataset) RETURN m.name, d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "GRAVER 模型与哪些核心研究概念（Concept）相对齐？",
+    "output": "MATCH (m:Model {name: 'GRAVER'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在论文中，有哪些基准模型被引用并与 GRAVER 进行了对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'GRAVER'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型在 'ogbn-arXiv' 数据集上取得了性能指标（Metric）？",
+    "output": "MATCH (d:Dataset {name: 'ogbn-arXiv'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'GRAVER: Generative Graph Vocabularies for Robust Graph Foundation Models Fine-tuning'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有既使用了 'Wiki-CS' 数据集，又对齐了 'Ego-graph disentanglement' 概念的模型。",
+    "output": "MATCH (d:Dataset {name: 'Wiki-CS'})<-[:USES_DATASET]-(m:Model)-[:ALIGNED_WITH]->(c:Concept {name: 'Ego-graph disentanglement'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询作者 'Philip S. Yu' 参与的研究中，提出了哪些对齐了 'Multi-domain pre-training' 概念的模型？",
+    "output": "MATCH (a:Author {name: 'Philip S. Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept {name: 'Multi-domain pre-training'}) RETURN m.name"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning. Xingtong Yu 1, Yuan Fang 2, Zemin Liu 3, Xinming Zhang 1. 1 University of Science and Technology of China, 2 Singapore Management University, 3 National University of Singapore.",
+    "output": [
+      {
+        "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingtong Yu"
+      },
+      {
+        "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+        "predicate": "AUTHORED_BY",
+        "object": "Yuan Fang"
+      },
+      {
+        "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+        "predicate": "AUTHORED_BY",
+        "object": "Zemin Liu"
+      },
+      {
+        "subject": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning",
+        "predicate": "AUTHORED_BY",
+        "object": "Xinming Zhang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we propose HGPROMPT, a novel pre-training and prompting framework to unify not only pre-training and downstream tasks but also homogeneous and heterogeneous graphs via a dual-template design.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "PROPOSED_BY",
+        "object": "HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning"
+      }
+    ]
+  },
+  {
+    "instruction": "从实验设置部分提取 HGPROMPT 模型所评估的数据集，并建立 USES_DATASET 关系。",
+    "input": "We conduct experiments on three benchmark datasets. (1) ACM serves as a citation network, which comprises papers from five conferences... (2) DBLP serves as an all-encompassing bibliographic database... (3) Freebase (Bollacker et al. 2008) is a functional and scalable tuple database.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "USES_DATASET",
+        "object": "ACM"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "USES_DATASET",
+        "object": "DBLP"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "USES_DATASET",
+        "object": "Freebase"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 HGPROMPT 模型引入的核心研究概念，并建立 ALIGNED_WITH 关系。",
+    "input": "Specifically, HGPROMPT considers two target scenarios... we aim to unify not only the template of the tasks, but also the template of graphs, and propose a dual-template design... In HGPROMPT, we introduce a dual-prompt consisting of a feature prompt and a heterogeneity prompt.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dual-template design"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dual-prompt"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Feature prompt"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Heterogeneity prompt"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本内容，识别用于评估模型性能的指标，建立 ACHIEVED_ON 关系。",
+    "input": "The downstream tasks adhere to a k-shot learning setting... We adopt MicroF and MacroF (Pedregosa et al. 2011; Lv et al. 2021) as the evaluation metrics.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "MicroF"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "MacroF"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 HGPROMPT 进行对比的基准模型，建立 CITED_BY 关系。",
+    "input": "We assess the performance of HGPROMPT against state-of-the-art approaches... including GCN, GAT, Simple-HGN, HAN, GraphPrompt, and GPPT.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "HGPROMPT"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "HGPROMPT"
+      },
+      {
+        "subject": "Simple-HGN",
+        "predicate": "CITED_BY",
+        "object": "HGPROMPT"
+      },
+      {
+        "subject": "HAN",
+        "predicate": "CITED_BY",
+        "object": "HGPROMPT"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "CITED_BY",
+        "object": "HGPROMPT"
+      },
+      {
+        "subject": "GPPT",
+        "predicate": "CITED_BY",
+        "object": "HGPROMPT"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 HGPROMPT 模型所涵盖的下游任务类型，建立 ALIGNED_WITH 关系。",
+    "input": "For downstream tasks, we deal with heterogeneous graphs, and focus on two widely deployed tasks following GraphPrompt (Liu et al. 2023b), namely, node classification and graph classification.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node classification"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph classification"
+      }
+    ]
+  },
+  {
+    "instruction": "提取关于“图模板”的技术实现细节概念，并将其与 HGPROMPT 关联。",
+    "input": "In HGPROMPT we propose a unified graph template to convert a heterogeneous graph into multiple homogeneous subgraphs... Hence, a heterogeneous graph is unified with homogeneous graphs, yet the heterogeneity is still discernible.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph template"
+      },
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Heterogeneous to homogeneous conversion"
+      }
+    ]
+  },
+  {
+    "instruction": "根据预训练阶段的描述，识别模型对齐的核心技术任务。",
+    "input": "In our target scenarios, either homogeneous or heterogeneous graphs can be used for pre-training via a link prediction task. The use of link prediction in pre-training stems from the general availability of links in large-scale graphs.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Link prediction"
+      },
+      {
+        "subject": "Link prediction",
+        "predicate": "ALIGNED_WITH",
+        "object": "Self-supervised pre-training"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提到的针对不同预训练背景的模型变体关系。",
+    "input": "Furthermore, we name our model HGPROMPT and HGPROMPT+: HGPROMPT deals with the target scenario where pre-training graphs are homogeneous, while HGPROMPT+ copes with the scenario where pre-training graphs are heterogeneous.",
+    "output": [
+      {
+        "subject": "HGPROMPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Homogeneous pre-training"
+      },
+      {
+        "subject": "HGPROMPT+",
+        "predicate": "ALIGNED_WITH",
+        "object": "Heterogeneous pre-training"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "HGPROMPT 模型在实验中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'HGPROMPT'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "查询 HGPROMPT+ 模型与哪些核心技术概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'HGPROMPT+'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "查找 HGPROMPT 论文的作者，并列出这些作者参与提出的所有模型。",
+    "output": "MATCH (m:Model {name: 'HGPROMPT'})-[:PROPOSED_BY]->(p:Paper)-[:AUTHORED_BY]->(a:Author) MATCH (a)<-[:AUTHORED_BY]-(:Paper)<-[:PROPOSED_BY]-(m2:Model) RETURN DISTINCT a.name, m2.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在 HGPROMPT 论文中被引用的基准模型中，有哪些使用了 'DBLP' 数据集？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'HGPROMPT'}) MATCH (m)-[:USES_DATASET]->(d:Dataset {name: 'DBLP'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "由作者 'Xingtong Yu' 提出的模型在 'ACM' 数据集上取得了哪些指标（Metric）？",
+    "output": "MATCH (a:Author {name: 'Xingtong Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'ACM'}) MATCH (m)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "找出所有既对齐了 'Dual-template design' 又对齐了 'Few-shot learning' 的模型名称。",
+    "output": "MATCH (m:Model)-[:ALIGNED_WITH]->(c1:Concept {name: 'Dual-template design'}), (m)-[:ALIGNED_WITH]->(c2:Concept {name: 'Few-shot learning'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'HGPROMPT: Bridging Homogeneous and Heterogeneous Graphs for Few-shot Prompt Learning'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计与 HGPROMPT 模型对齐的技术概念（Concept）总数。",
+    "output": "MATCH (m:Model {name: 'HGPROMPT'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+  },
+  {
+    "instruction": "哪些被 HGPROMPT 引用对比的模型也与 'Heterogeneous graph pre-training' 概念对齐？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'HGPROMPT'}) MATCH (m)-[:ALIGNED_WITH]->(c:Concept {name: 'Heterogeneous graph pre-training'}) RETURN m.name"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "LLaGA: Large Language and Graph Assistant Runjin Chen 1 Tong Zhao 2 Ajay Jaiswal 1 Neil Shah 2 Zhangyang Wang 1 1 The University of Texas at Austin 2 Snap Inc.",
+    "output": [
+      {
+        "subject": "LLaGA: Large Language and Graph Assistant",
+        "predicate": "AUTHORED_BY",
+        "object": "Runjin Chen"
+      },
+      {
+        "subject": "LLaGA: Large Language and Graph Assistant",
+        "predicate": "AUTHORED_BY",
+        "object": "Tong Zhao"
+      },
+      {
+        "subject": "LLaGA: Large Language and Graph Assistant",
+        "predicate": "AUTHORED_BY",
+        "object": "Ajay Jaiswal"
+      },
+      {
+        "subject": "LLaGA: Large Language and Graph Assistant",
+        "predicate": "AUTHORED_BY",
+        "object": "Neil Shah"
+      },
+      {
+        "subject": "LLaGA: Large Language and Graph Assistant",
+        "predicate": "AUTHORED_BY",
+        "object": "Zhangyang Wang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+    "input": "To this end, we introduce the Large Language and Graph Assistant (LLaGA), an innovative model that effectively integrates LLM capabilities to handle the complexities of graph-structured data.",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "PROPOSED_BY",
+        "object": "LLaGA: Large Language and Graph Assistant"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置段落，提取 LLaGA 模型评估时所使用的所有数据集名称，并建立 USES_DATASET 关系。",
+    "input": "We train and evaluate our model on four widely-recognized graph datasets: ogbn-Arxiv (Hu et al., 2020), ogbn-Products (Hu et al., 2020), Pubmed, and Cora (Yang et al., 2016).",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Arxiv"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Products"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "USES_DATASET",
+        "object": "Pubmed"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 LLaGA 模型为了实现图到文本的转换而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+    "input": "LLaGA achieves this by reorganizing graph nodes to structure-aware sequences and then mapping these into the token embedding space through a versatile projector.",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Structure-aware sequences"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Versatile projector"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Token embedding space"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中关于结构编码的具体模板概念，建立其与模型的 ALIGNED_WITH 关系。",
+    "input": "We developed two node-level templates for analysis on graphs... The first, the Neighborhood Detail Template, provides an in-depth view... The second, the Hop-Field Overview Template, offers a summarized view.",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Neighborhood Detail Template"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Hop-Field Overview Template"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提及的用于对比实验的基准图神经网络模型，并建立 CITED_BY 关系。",
+    "input": "The first category comprises Graph Neural Networks, including GCN, GraphSage, GAT, SGC, and SAGN. The second category encompasses transformer-based graph models, NodeFormer.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      },
+      {
+        "subject": "GraphSage",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      },
+      {
+        "subject": "SGC",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      },
+      {
+        "subject": "SAGN",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      },
+      {
+        "subject": "NodeFormer",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 LLaGA 模型在实验评估中所采用的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "For evaluation metrics, we employ Accuracy for both node classification and link prediction tasks, Sbert score and Description Label Accuracy for the node description task.",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ACHIEVED_ON",
+        "object": "Sbert score"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ACHIEVED_ON",
+        "object": "Description Label Accuracy"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提到的关于结构嵌入增强的技术概念，建立其与模型的 ALIGNED_WITH 关系。",
+    "input": "We further integrate a Laplacian Embedding at each sequence position, enhancing the representation of structural information.",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Laplacian Embedding"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的并行研究或竞争模型（Model），并建立 CITED_BY 关系表示引用对比。",
+    "input": "In addition, we also compare with the concurrent work, GraphGPT (Tang et al., 2023). GraphGPT is a generalizable model designed for solving graph tasks using LLM.",
+    "output": [
+      {
+        "subject": "GraphGPT",
+        "predicate": "CITED_BY",
+        "object": "LLaGA"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“对齐微调”的描述中提取涉及的任务类型（Concept），并建立 ALIGNED_WITH 关系。",
+    "input": "In LLaGA, we employ three key tasks on graphs – node classification, link prediction, and node description – to meticulously tune the projector.",
+    "output": [
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node classification"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Link prediction"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node description"
+      },
+      {
+        "subject": "LLaGA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Alignment Tuning"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《LLaGA: Large Language and Graph Assistant》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'LLaGA: Large Language and Graph Assistant'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "LLaGA 模型是在哪篇论文中被提出的？",
+    "output": "MATCH (m:Model {name: 'LLaGA'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "LLaGA 模型在实验评估中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'LLaGA'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找由作者 'Zhangyang Wang' 参与提出的所有模型及其对应的论文标题。",
+    "output": "MATCH (a:Author {name: 'Zhangyang Wang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "LLaGA 模型与哪些核心技术概念 (Concept) 进行了对齐？",
+    "output": "MATCH (m:Model {name: 'LLaGA'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在 LLaGA 的论文中，有哪些基准模型被引用并进行了对比 (CITED_BY)？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'LLaGA'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询所有使用了 'Cora' 数据集的模型名称及其达成的评估指标 (Metric)。",
+    "output": "MATCH (d:Dataset {name: 'Cora'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《LLaGA: Large Language and Graph Assistant》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'LLaGA: Large Language and Graph Assistant'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有与 'Laplacian Embedding' 概念对齐，且被 LLaGA 引用对比的基准模型。",
+    "output": "MATCH (c:Concept {name: 'Laplacian Embedding'})<-[:ALIGNED_WITH]-(m:Model)-[:CITED_BY]->(:Model {name: 'LLaGA'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 LLaGA 模型一共在多少个不同的数据集上取得了性能结果？",
+    "output": "MATCH (m:Model {name: 'LLaGA'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment. Shuo Wang 1, Bokui Wang 1, Zhixiang Shen 1, Boyan Deng 1, Zhao Kang 1. 1 University of Electronic Science and Technology of China, Chengdu, China.",
+    "output": [
+      {
+        "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+        "predicate": "AUTHORED_BY",
+        "object": "Shuo Wang"
+      },
+      {
+        "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+        "predicate": "AUTHORED_BY",
+        "object": "Bokui Wang"
+      },
+      {
+        "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+        "predicate": "AUTHORED_BY",
+        "object": "Zhixiang Shen"
+      },
+      {
+        "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+        "predicate": "AUTHORED_BY",
+        "object": "Boyan Deng"
+      },
+      {
+        "subject": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment",
+        "predicate": "AUTHORED_BY",
+        "object": "Zhao Kang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析提供的文本，识别其中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "To tackle these challenges, we propose the Multi-Domain Graph Foundation Model (MDGFM), a unified framework designed to effectively align and leverage structural knowledge across domains. Theoretical analyses provide guarantees of MDGFM’s effectiveness.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "PROPOSED_BY",
+        "object": "Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置段落，提取 MDGFM 模型评估时所使用的所有数据集名称，建立 USES_DATASET 关系。",
+    "input": "To ensure a comprehensive comparison, we conduct experiments on six primary datasets, including three homophilic graphs—Cora (Sen et al., 2008), Citeseer (Sen et al., 2008), and Pubmed (Namata et al., 2012)—and three heterophilic graphs—Cornell, Chameleon, and Squirrel (Pei et al., 2020). Additionally, we include Penn94.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Pubmed"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Cornell"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Chameleon"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Squirrel"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "USES_DATASET",
+        "object": "Penn94"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的 MDGFM 模型为了解决拓扑对齐挑战而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+    "input": "First, we introduce a decoupled embedding mechanism incorporating an adaptive balance token that dynamically weighs feature and topology information. To address inherent noise and achieve topology alignment, we integrate a Graph Structure Learning module.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Decoupled embedding mechanism"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Adaptive balance token"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph Structure Learning (GSL)"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Topology alignment"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中关于模型评估指标的描述，识别对应的 Metric 并建立 ACHIEVED_ON 关系。",
+    "input": "We compare our proposed MDGFM against all baselines on 1-shot and K-shot node classification tasks. Each experiment is repeated five times, and we report the average results... Quantitatively, across the seven datasets, MDGFM outperforms the second-best model in mean accuracy.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "ACHIEVED_ON",
+        "object": "Mean accuracy"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ACHIEVED_ON",
+        "object": "Node classification"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提及的用于对比实验的基准图基础模型或预训练方法，并建立 CITED_BY 关系。",
+    "input": "We compare our method against four categories of approaches... Multi-domain Pre-training Methods: these methods integrate multiple source domains during upstream pre-training... For instance, GCOPE (Zhao et al., 2024) and MDGPT (Yu et al., 2025).",
+    "output": [
+      {
+        "subject": "GCOPE",
+        "predicate": "CITED_BY",
+        "object": "MDGFM"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "CITED_BY",
+        "object": "MDGFM"
+      }
+    ]
+  },
+  {
+    "instruction": "根据理论分析部分的描述，识别 MDGFM 遵循的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+    "input": "To minimize the upper error bound, we introduce the concept of invariant graph learning, which is highlighted in our work: Assumption 5.2. Given a graph G, there exists an optimal Φ*(G) satisfying Invariance Property and Sufficient Property.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Invariant graph learning"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Invariance Property"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Sufficient Property"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于特征对齐的描述中提取相关的技术概念，并将其与模型关联。",
+    "input": "To achieve semantic alignment, we propose the concept of domain tokens t_Di, which encode domain-specific characteristics. Specifically, we introduce the shared token t_S which acts as a common semantic anchor to bridge discrepancies between domains.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Domain tokens"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Shared token"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Semantic alignment"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中关于下游迁移策略的概念，识别对应的 Concept 类型。",
+    "input": "To bridge the gap between source and target domains, we propose a dual-stream prompt framework. This framework combines meta prompts, which transfer broadly learned knowledge, with task-specific prompts.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dual-stream prompt framework"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Meta prompt"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Task-specific prompt"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于鲁棒性分析的特定实验概念（Concept）。",
+    "input": "Furthermore, we employ Metattack (Zügner & Günnemann, 2019), an advanced adversarial attack that perturbs the training data. notably, our model is quite stable across all attack scenarios, which can be attributed to our proposed topology alignment.",
+    "output": [
+      {
+        "subject": "MDGFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Adversarial robustness"
+      },
+      {
+        "subject": "Metattack",
+        "predicate": "CITED_BY",
+        "object": "MDGFM"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "MDGFM 模型在实验中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'MDGFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "MDGFM 模型与哪些核心研究概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'MDGFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出由作者 'Zhao Kang' 参与提出的模型名称及其所属的论文标题。",
+    "output": "MATCH (a:Author {name: 'Zhao Kang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出所有在论文中被 MDGFM 引用并作为基准对比（CITED_BY）的模型。",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'MDGFM'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'Multi-Domain Graph Foundation Models: Robust Knowledge Transfer via Topology Alignment'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型既对齐了 'Topology alignment' 概念，又在 'Cornell' 数据集上取得了性能结果？",
+    "output": "MATCH (c:Concept {name: 'Topology alignment'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cornell'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Shuo Wang' 提出的模型所达成的所有评估指标（Metric）。",
+    "output": "MATCH (a:Author {name: 'Shuo Wang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "MDGFM 模型在哪些数据集上评估了 'Mean accuracy' 指标？",
+    "output": "MATCH (m:Model {name: 'MDGFM'})-[:USES_DATASET]->(d:Dataset), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Mean accuracy'}) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 MDGFM 模型一共在多少个不同的数据集上进行了实验验证？",
+    "output": "MATCH (m:Model {name: 'MDGFM'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models. Xingtong Yu, Chang Zhou, Yuan Fang †, and Xinming Zhang †. Singapore Management University, University of Science and Technology of China.",
+    "output": [
+      {
+        "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingtong Yu"
+      },
+      {
+        "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Chang Zhou"
+      },
+      {
+        "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Yuan Fang"
+      },
+      {
+        "subject": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models",
+        "predicate": "AUTHORED_BY",
+        "object": "Xinming Zhang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "In this work, we propose MDGPT, a foundational graph framework for Text-Free Multi-Domain Graph Pre-Training, to facilitate downstream adaptation to both seen and unseen domains.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "PROPOSED_BY",
+        "object": "Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置描述，提取 MDGPT 模型评估时所使用的所有数据集，建立 USES_DATASET 关系。",
+    "input": "We conduct experiments on five benchmark datasets. (1) Cora, (2) Citeseer and (3) Pubmed are citation graphs from different fields... (4) Photo and (5) Computers are both e-commerce networks from Amazon... (6) Reddit is a social network.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Pubmed"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Photo"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Computers"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Reddit"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 MDGPT 模型为了解决多域对齐挑战而引入的核心研究概念（Concept），并建立 ALIGNED_WITH 关系。",
+    "input": "In MDGPT, we propose a series of domain tokens to align node features from different domains. Each domain-specific token is associated with a source domain, serving to bridge the semantic meanings in distinct domains.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Domain tokens"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Multi-domain alignment"
+      },
+      {
+        "subject": "Domain tokens",
+        "predicate": "ALIGNED_WITH",
+        "object": "Semantic unification"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于下游适配的描述中，提取相关的技术概念并建立与模型的 ALIGNED_WITH 关系。",
+    "input": "In MDGPT, we propose dual prompts, consisting of a unifying prompt and a mixing prompt, to align the downstream target domain with the source domains, thus facilitating the transfer of multi-domain knowledge.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dual prompts"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Unifying prompt"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Mixing prompt"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 MDGPT 进行对比的基准模型（Model），建立 CITED_BY 关系表示引用对比。",
+    "input": "We evaluate MDGPT against state-of-the-art approaches... inclusive of GCN, GAT, DGI/InfoGraph, GraphCL, Hassani, GPPT, GPF, GraphPrompt and GCOPE.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "InfoGraph",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "GraphCL",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "Hassani",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "GPPT",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "GPF",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      },
+      {
+        "subject": "GCOPE",
+        "predicate": "CITED_BY",
+        "object": "MDGPT"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 MDGPT 模型在实验评估中所达成的指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "MDGPT surpasses all baseline methods across all settings, outperforming the best competitor by 3.5–37.9% on node classification and 4.3–13.9% on graph classification. Accuracy is reported as the primary metric.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Node classification"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ACHIEVED_ON",
+        "object": "Graph classification"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于特征维度对齐的技术实现手段，建立其与模型的 ALIGNED_WITH 关系。",
+    "input": "A straightforward solution is to use a dimension alignment method to transform the features into consistent dimensions across domains. In our work, each alignment function is implemented using SVD.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dimension alignment"
+      },
+      {
+        "subject": "Dimension alignment",
+        "predicate": "ALIGNED_WITH",
+        "object": "SVD (Singular Value Decomposition)"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于多任务适配的描述中，提取涉及的任务概念及其与模型的关系。",
+    "input": "We conduct two types of downstream task, namely, node classification, and graph classification... we pre-train the graph encoder once and then apply the same pre-trained model for all types of downstream tasks.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Node classification"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Graph classification"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Few-shot adaptation"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中关于异质性鲁棒性的描述，识别对应的 Concept 及其关系。",
+    "input": "To further evaluate the robustness of MDGPT across homophilic and heterophilic graphs, we conduct cross-domain experiments on datasets like Texas, Wisconsin, Cornell, and Squirrel.",
+    "output": [
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Homophily sensitivity"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "ALIGNED_WITH",
+        "object": "Heterophilic graphs"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Texas"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Wisconsin"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Cornell"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "USES_DATASET",
+        "object": "Squirrel"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在论文《Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models》中提出了什么模型？",
+    "output": "MATCH (m:Model)-[:PROPOSED_BY]->(p:Paper {title: 'Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 MDGPT 模型在实验评估中使用的所有数据集名称。",
+    "output": "MATCH (m:Model {name: 'MDGPT'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找由作者 'Yuan Fang' 参与提出的所有模型及其对应的论文标题。",
+    "output": "MATCH (a:Author {name: 'Yuan Fang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "MDGPT 模型与哪些核心技术概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'MDGPT'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在 MDGPT 的论文中，有哪些基准模型被引用并进行了对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'MDGPT'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询所有使用了 'Reddit' 数据集的模型名称及其达成的评估指标（Metric）。",
+    "output": "MATCH (d:Dataset {name: 'Reddit'})<-[:USES_DATASET]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'Text-Free Multi-domain Graph Pre-training: Toward Graph Foundation Models'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有与 'Domain tokens' 概念对齐，且使用了 'Cora' 数据集的模型。",
+    "output": "MATCH (c:Concept {name: 'Domain tokens'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 MDGPT 模型一共在多少个不同的数据集上取得了性能结果？",
+    "output": "MATCH (m:Model {name: 'MDGPT'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS DatasetCount"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立相应的 AUTHORED_BY 关系。",
+    "input": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs. Xingtong Yu University of Science and Technology of China, Chang Zhou University of Science and Technology of China, Yuan Fang Singapore Management University, Xinming Zhang University of Science and Technology of China.",
+    "output": [
+      {
+        "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingtong Yu"
+      },
+      {
+        "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Chang Zhou"
+      },
+      {
+        "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Yuan Fang"
+      },
+      {
+        "subject": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs",
+        "predicate": "AUTHORED_BY",
+        "object": "Xinming Zhang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+    "input": "Hence, in this paper, we propose MultiGPrompt, a novel multi-task pre-training and prompting framework to exploit multiple pretext tasks for more comprehensive pre-trained knowledge.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "PROPOSED_BY",
+        "object": "Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置描述，提取 MultiGPrompt 模型评估时所使用的所有数据集名称，并建立 USES_DATASET 关系。",
+    "input": "We employ six benchmark datasets for evaluation. (1) Cora and (2) Citeseer are both citation graphs. (3) PROTEINS comprises 1,113 protein graphs. (4) ENZYMES, (5) BZR, and (6) COX2 are collections of molecular graphs.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "USES_DATASET",
+        "object": "PROTEINS"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "USES_DATASET",
+        "object": "ENZYMES"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "USES_DATASET",
+        "object": "BZR"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "USES_DATASET",
+        "object": "COX2"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 MultiGPrompt 模型为了解决多任务预训练挑战而引入的核心研究概念（Concept），建立 ALIGNED_WITH 关系。",
+    "input": "First, in pre-training, we design a set of pretext tokens to synergize multiple pretext tasks. Second, we propose a dual-prompt mechanism consisting of composed and open prompts to leverage task-specific and global pre-training knowledge.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Pretext tokens"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Dual-prompt mechanism"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Composed prompt"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Open prompt"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 MultiGPrompt 模型在实验评估中所采用的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "Since the m-shot tasks are balanced classification, we simply evaluate the performance using accuracy, in line with previous works [29, 30, 47]. Accuracy is reported for both node and graph classification.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 MultiGPrompt 进行性能对比的基准模型，建立 CITED_BY 关系表示引用对比。",
+    "input": "We evaluate MultiGPrompt against a spectrum of state-of-the-art methods... End-to-end graph neural networks: GCN and GAT. Graph pre-training models: DGI/InfoGraph and GraphCL. Graph prompt-based learning: GPPT and GraphPrompt.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      },
+      {
+        "subject": "InfoGraph",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      },
+      {
+        "subject": "GraphCL",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      },
+      {
+        "subject": "GPPT",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "CITED_BY",
+        "object": "MultiGPrompt"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 MultiGPrompt 在预训练阶段整合的具体代理任务（Pretext Tasks）概念。",
+    "input": "In our experiments, we leverage three well-known pretext tasks, namely, DGI, GraphCL, and link prediction. MultiGPrompt designs pretext tokens to leverage these tasks in a synergistic manner.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "DGI"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "GraphCL"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Link prediction"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中关于“提示微调”阶段所涉及的技术概念，建立其与模型的关系。",
+    "input": "To optimize the downstream loss, both the unifying prompt and the mixing coefficients for the mixing prompt are tunable, whereby the pre-trained weights remain frozen. This is amenable to few-shot settings.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Prompt tuning"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Frozen pre-trained weights"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Few-shot settings"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“开放提示”的描述中提取相关的技术概念并建立 ALIGNED_WITH 关系。",
+    "input": "We propose the concept of open prompt, which aims to transfer global inter-task knowledge to complement the task-specific knowledge of the composed prompt.",
+    "output": [
+      {
+        "subject": "Open prompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Global inter-task knowledge"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Open prompt"
+      }
+    ]
+  },
+  {
+    "instruction": "根据论文结论，识别模型旨在解决的图表示学习核心挑战。",
+    "input": "In this paper, we explored multi-task pre-training on graphs, aiming to encompass a comprehensive range of knowledge from diverse pretext tasks and adapting to unseen domains.",
+    "output": [
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Multi-task pre-training"
+      },
+      {
+        "subject": "MultiGPrompt",
+        "predicate": "ALIGNED_WITH",
+        "object": "Unseen domains adaptation"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "MultiGPrompt 模型是在哪篇论文中提出的？",
+    "output": "MATCH (m:Model {name: 'MultiGPrompt'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出所有在 MultiGPrompt 论文中被引用并作为对比基准 (CITED_BY) 的模型。",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'MultiGPrompt'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Xingtong Yu' 参与提出的所有模型名称及其发表的论文标题。",
+    "output": "MATCH (a:Author {name: 'Xingtong Yu'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "MultiGPrompt 模型在实验评估中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'MultiGPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计一下数据库中一共有多少位作者参与了《Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs》研究的撰写？",
+    "output": "MATCH (p:Paper {title: 'Multi-GPrompt for Multi-Task Pre-Training and Prompting on Graphs'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有与 'Open prompt' 概念对齐，并使用了 'ENZYMES' 数据集的模型名称。",
+    "output": "MATCH (c:Concept {name: 'Open prompt'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'ENZYMES'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 MultiGPrompt 模型一共在多少个不同的数据集上取得了评估结果？",
+    "output": "MATCH (m:Model {name: 'MultiGPrompt'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS TotalDatasets"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询在 'BZR' 数据集上取得过 'Accuracy' 指标的所有模型有哪些？",
+    "output": "MATCH (m:Model)-[:USES_DATASET]->(d:Dataset {name: 'BZR'}), (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型既对齐了 'Few-shot learning' 概念，又与 'Composed prompt' 技术相关？",
+    "output": "MATCH (m:Model)-[:ALIGNED_WITH]->(c1:Concept {name: 'Few-shot learning'}), (m)-[:ALIGNED_WITH]->(c2:Concept {name: 'Composed prompt'}) RETURN m.name"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取该研究的标题及其所有作者，并建立相应的 AUTHORED_BY 关系。",
+    "input": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK. Peng Wang, An Yang, Rui Men, Junyang Lin, Shuai Bai Zhikang Li, Jianxin Ma, Chang Zhou, Jingren Zhou, Hongxia Yang. DAMO Academy, Alibaba Group.",
+    "output": [
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Peng Wang"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "An Yang"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Rui Men"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Junyang Lin"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Shuai Bai"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Zhikang Li"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Ma"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Chang Zhou"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Jingren Zhou"
+      },
+      {
+        "subject": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK",
+        "predicate": "AUTHORED_BY",
+        "object": "Hongxia Yang"
+      }
+    ]
+  },
+  {
+    "instruction": "分析文本片段，识别文中提出的模型及其所属的论文标题，建立 PROPOSED_BY 关系。",
+    "input": "In this work, we pursue a unified paradigm for multimodal pretraining to break the scaffolds of complex task/modality-specific customization. We propose OFA, a Task-Agnostic and Modality-Agnostic framework that supports Task Comprehensiveness.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "PROPOSED_BY",
+        "object": "OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK"
+      }
+    ]
+  },
+  {
+    "instruction": "根据预训练设置描述，提取 OFA 模型在预训练阶段所使用的图像-文本对数据集名称，并建立 USES_DATASET 关系。",
+    "input": "For the pretraining tasks of image captioning and image-text matching, we collect Conceptual Caption 12M (CC12M), Conceptual Captions (CC3M), SBU, MSCOCO image captions (COCO), and Visual Genome Captions (VG Captions).",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "CC12M"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "CC3M"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "SBU"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "MSCOCO"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "VG Captions"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 OFA 模型旨在实现的三个核心设计属性（Concept），并建立 ALIGNED_WITH 关系。",
+    "input": "We advocate that an omnipotent model should have the following three properties: 1. Task-Agnostic (TA): unified task representation to support different types of tasks... 2. Modality-Agnostic (MA): unified input and output representation... 3. Task Comprehensiveness (TC): enough task variety.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Task-Agnostic (TA)"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Modality-Agnostic (MA)"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Task Comprehensiveness (TC)"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 OFA 在图像描述任务（Image Captioning）中评估所达成的性能指标（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "We adopt the most widely used MSCOCO Image Caption dataset to evaluate the multi-modal generation capability of OFA. We report BLEU-4, METEOR, CIDEr, and SPICE scores on the Karpathy test split.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "ACHIEVED_ON",
+        "object": "BLEU-4"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ACHIEVED_ON",
+        "object": "METEOR"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ACHIEVED_ON",
+        "object": "CIDEr"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ACHIEVED_ON",
+        "object": "SPICE"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 OFA 进行性能对比的单模态或多模态基准模型，建立 CITED_BY 关系表示引用对比。",
+    "input": "OFA achieves comparable performances on unimodal tasks with SOTA pretrained models in language or vision, e.g., RoBERTa, ELECTRA and DeBERTa for natural language understanding... and MoCo-v3, BEiT and MAE for image classification.",
+    "output": [
+      {
+        "subject": "RoBERTa",
+        "predicate": "CITED_BY",
+        "object": "OFA"
+      },
+      {
+        "subject": "ELECTRA",
+        "predicate": "CITED_BY",
+        "object": "OFA"
+      },
+      {
+        "subject": "DeBERTa",
+        "predicate": "CITED_BY",
+        "object": "OFA"
+      },
+      {
+        "subject": "MoCo-v3",
+        "predicate": "CITED_BY",
+        "object": "OFA"
+      },
+      {
+        "subject": "BEiT",
+        "predicate": "CITED_BY",
+        "object": "OFA"
+      },
+      {
+        "subject": "MAE",
+        "predicate": "CITED_BY",
+        "object": "OFA"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“图像补全”和“目标检测”预训练的描述中，提取相关的数据集名称并建立 USES_DATASET 关系。",
+    "input": "Vision data consists of raw images for image infilling and object-labeled images for object detection. For image infilling, we collect raw images from OpenImages, YFCC100M and ImageNet-21K.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "OpenImages"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "YFCC100M"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "USES_DATASET",
+        "object": "ImageNet-21K"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 OFA 模型在技术架构上采用的核心概念及其学习范式，并建立 ALIGNED_WITH 关系。",
+    "input": "OFA follows the instruction-based learning in both pretraining and finetuning stages, requiring no extra task-specific layers for downstream tasks... formed as Seq2Seq generation.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Instruction-based learning"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Seq2Seq generation"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Encoder-decoder framework"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于提高分类任务推理准确性的特定搜索策略（Concept）。",
+    "input": "To process different modalities without task-specific output schema, it is essential to represent data of various modalities in a unified space... we utilize a Trie-based search strategy to ensure that the answer generated is constrained in the candidate set.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Trie-based search strategy"
+      }
+    ]
+  },
+  {
+    "instruction": "提取关于下游模态任务类型的描述，建立其与模型的功能对齐关系。",
+    "input": "OFA is the first attempt to unify the following vision & language, vision-only and language-only tasks... e.g., text-to-image generation, visual grounding, visual question answering (VQA), and language modeling.",
+    "output": [
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Text-to-image generation"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Visual grounding"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Visual question answering (VQA)"
+      },
+      {
+        "subject": "OFA",
+        "predicate": "ALIGNED_WITH",
+        "object": "Language modeling"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "OFA 模型是在哪篇论文中被提出的？",
+    "output": "MATCH (m:Model {name: 'OFA'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 OFA 模型在实验和预训练中使用的所有数据集名称。",
+    "output": "MATCH (m:Model {name: 'OFA'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找作者 'Peng Wang' 参与提出的所有模型及其对应的核心技术概念（Concept）。",
+    "output": "MATCH (a:Author {name: 'Peng Wang'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN m.name, c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型在论文中被引用并与 OFA 进行了对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'OFA'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "OFA 模型在 'MSCOCO' 数据集上取得了哪些评估指标（Metric）的结果？",
+    "output": "MATCH (m:Model {name: 'OFA'})-[:USES_DATASET]->(d:Dataset {name: 'MSCOCO'}), (m)-[:ACHIEVED_ON]->(mt:Metric) RETURN mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计一下数据库中一共有多少位作者参与了《OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK》的研究？",
+    "output": "MATCH (p:Paper {title: 'OFA: UNIFYING ARCHITECTURES, TASKS, AND MODALITIES THROUGH A SIMPLE SEQUENCE-TO-SEQUENCE LEARNING FRAMEWORK'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有与 'Task-Agnostic (TA)' 概念对齐的模型名称及其所属的论文标题。",
+    "output": "MATCH (c:Concept {name: 'Task-Agnostic (TA)'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Chang Zhou' 合作撰写的论文所提出的所有模型及其达成的 'CIDEr' 指标。",
+    "output": "MATCH (a:Author {name: 'Chang Zhou'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric {name: 'CIDEr'}) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 OFA 模型一共对齐了多少个不同的技术设计属性或范式概念（Concept）？",
+    "output": "MATCH (m:Model {name: 'OFA'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+  },
+  {
+    "instruction": "请从文本中提取论文标题及其所有作者，并建立相应的 AUTHORED_BY 关系。",
+    "input": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation Haonan Yuan 1, Qingyun Sun 1, Jiacheng Tao 1, Xingcheng Fu 2, Jianxin Li 1*. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University.",
+    "output": [
+      {
+        "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+        "predicate": "AUTHORED_BY",
+        "object": "Jiacheng Tao"
+      },
+      {
+        "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      },
+      {
+        "subject": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Li"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "In this work, we propose RAG-GFM, a Retrieval-Augmented Generation aided Graph Foundation Model that offloads knowledge from parameters and complements parameterized learning.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "PROPOSED_BY",
+        "object": "RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置描述，提取 RAG-GFM 模型评估时所使用的所有数据集名称，并建立 USES_DATASET 关系。",
+    "input": "We conduct experiments on seven benchmark datasets to highlight RAG-GFM's multi-domain pre-training: Cora, CiteSeer, PubMed, ogbn-arXiv, ogbn-Products, and Wiki-CS.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "USES_DATASET",
+        "object": "CiteSeer"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-arXiv"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Products"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "USES_DATASET",
+        "object": "Wiki-CS"
+      }
+    ]
+  },
+  {
+    "instruction": "识别 RAG-GFM 模型为了解决内存瓶颈而引入的核心研究概念（Concept），并建立 ALIGNED_WITH 关系。",
+    "input": "GFMs remain constrained by in-memory bottlenecks: they attempt to encode knowledge into model parameters... we propose RAG-GFM to offload knowledge from parameters by building externalized knowledge bases: a semantic database and a structural database.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Retrieval-Augmented Generation (RAG)"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "In-memory bottlenecks"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Externalized knowledge bases"
+      },
+      {
+        "subject": "Externalized knowledge bases",
+        "predicate": "ALIGNED_WITH",
+        "object": "Semantic database"
+      },
+      {
+        "subject": "Externalized knowledge bases",
+        "predicate": "ALIGNED_WITH",
+        "object": "Structural database"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，识别 RAG-GFM 模型在实验评估中所关注的性能维度（Metric），并建立 ACHIEVED_ON 关系。",
+    "input": "Extensive experiments demonstrate the superiority of RAG-GFM over effectiveness, robustness, and efficiency on downstream few-shot node and graph classification tasks compared with 15 state-of-the-art baselines.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ACHIEVED_ON",
+        "object": "Effectiveness"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ACHIEVED_ON",
+        "object": "Robustness"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ACHIEVED_ON",
+        "object": "Efficiency"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提及的与 RAG-GFM 进行对比的基准模型名称，并建立 CITED_BY 关系。",
+    "input": "We compare RAG-GFM with 15 state-of-the-art baselines, including vanilla GNNs like GCN and GAT, graph pre-training models like DGI and GraphCL, and multi-domain models such as GCOPE and MDGPT.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "RAG-GFM"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "RAG-GFM"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "RAG-GFM"
+      },
+      {
+        "subject": "GraphCL",
+        "predicate": "CITED_BY",
+        "object": "RAG-GFM"
+      },
+      {
+        "subject": "GCOPE",
+        "predicate": "CITED_BY",
+        "object": "RAG-GFM"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "CITED_BY",
+        "object": "RAG-GFM"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中关于“预训练目标”的描述，提取涉及的技术组件（Concept）并建立 ALIGNED_WITH 关系。",
+    "input": "The overall pre-training objective combines the cross-view information bottleneck loss and the domain-token regularizer to ensure discriminative and transferable representations.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Cross-view information bottleneck loss"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Domain-token regularizer"
+      }
+    ]
+  },
+  {
+    "instruction": "从关于“下游适配”的描述中提取相关的技术策略，并将其与模型关联。",
+    "input": "For each query node, we retrieve k query-answer pairs from both semantic and structural databases, which are fused to form retrieval-augmented prompts for few-shot adaptation.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Retrieval-augmented prompts"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Few-shot adaptation"
+      },
+      {
+        "subject": "Retrieval-augmented prompts",
+        "predicate": "ALIGNED_WITH",
+        "object": "Query-answer pairs"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提到的关于架构实现的细节信息。",
+    "input": "Both semantic and structural encoders in RAG-GFM are implemented as 2-layer GNNs. The semantic encoder maps node attributes to a shared embedding space.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Semantic encoder"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Structural encoder"
+      },
+      {
+        "subject": "Semantic encoder",
+        "predicate": "ALIGNED_WITH",
+        "object": "2-layer GNN"
+      },
+      {
+        "subject": "Structural encoder",
+        "predicate": "ALIGNED_WITH",
+        "object": "2-layer GNN"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于“特征对齐”所使用的具体技术概念。",
+    "input": "To align node features across diverse domains, we utilize LLM-enhanced raw text and a set of learnable domain tokens as part of our alignment projector.",
+    "output": [
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "LLM-enhanced raw text"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Learnable domain tokens"
+      },
+      {
+        "subject": "RAG-GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Alignment projector"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "RAG-GFM 模型是在哪篇论文中被提出的？",
+    "output": "MATCH (m:Model {name: 'RAG-GFM'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 RAG-GFM 模型在实验中使用的所有数据集名称。",
+    "output": "MATCH (m:Model {name: 'RAG-GFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找由作者 'Jianxin Li' 参与提出的模型，并展示这些模型所对齐的核心研究概念（Concept）。",
+    "output": "MATCH (a:Author {name: 'Jianxin Li'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN m.name, c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些基准模型在论文中被引用并与 RAG-GFM 进行了性能对比（CITED_BY）？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'RAG-GFM'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型既对齐了 'Retrieval-Augmented Generation (RAG)' 概念，又在 'ogbn-arXiv' 数据集上进行了评估？",
+    "output": "MATCH (c:Concept {name: 'Retrieval-Augmented Generation (RAG)'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'ogbn-arXiv'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation》共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'RAG-GFM: Overcoming In-Memory Bottlenecks in Graph Foundation Models via Retrieval-Augmented Generation'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Haonan Yuan' 参与研发的模型所达成的所有性能维度指标（Metric）名称。",
+    "output": "MATCH (a:Author {name: 'Haonan Yuan'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN DISTINCT mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有既被 'RAG-GFM' 引用对比，也使用了 'Cora' 数据集的基准模型。",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'RAG-GFM'}) MATCH (m)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 RAG-GFM 模型一共对齐了多少个不同的技术组件或理论概念（Concept）？",
+    "output": "MATCH (m:Model {name: 'RAG-GFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN count(c) AS ConceptCount"
+  },
+  {
+    "instruction": "请阅读以下论文片段，提取论文标题及其作者，并建立 AUTHORED_BY 关系。",
+    "input": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation. Junhua Shi 1, Qingyun Sun 1*, Haonan Yuan 1, Xingcheng Fu 2. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University, Beijing, China.",
+    "output": [
+      {
+        "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+        "predicate": "AUTHORED_BY",
+        "object": "Junhua Shi"
+      },
+      {
+        "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提出的核心模型及其所属论文，建立 PROPOSED_BY 关系。",
+    "input": "In this work, we propose SA 2 GFM, a robust GFM framework that enhances the domain-adaptable representations through Structure-Aware Semantic Augmentation.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "PROPOSED_BY",
+        "object": "SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation"
+      }
+    ]
+  },
+  {
+    "instruction": "从实验设置段落中提取 SA 2 GFM 模型所使用的引文网络数据集，建立 USES_DATASET 关系。",
+    "input": "To highlight multi-domain pre-training capability, we adopt seven benchmark datasets from three domains: Citation: Cora, CiteSeer, PubMed, ogbn-arXiv.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "CiteSeer"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-arXiv"
+      }
+    ]
+  },
+  {
+    "instruction": "根据文本描述，提取 SA 2 GFM 模型使用的非引文领域数据集，建立 USES_DATASET 关系。",
+    "input": "Products: ogbn-Tech, ogbn-Home. Web Page: Wiki-CS.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Tech"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "ogbn-Home"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "USES_DATASET",
+        "object": "Wiki-CS"
+      }
+    ]
+  },
+  {
+    "instruction": "识别模型为了嵌入结构先验而引入的技术概念，建立 ALIGNED_WITH 关系。",
+    "input": "First, to embed the hierarchical structural priors, we transform entropy-based encoding trees into structure-aware textual prompts for feature augmentation.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Entropy-based encoding trees"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Structure-aware textual prompts"
+      }
+    ]
+  },
+  {
+    "instruction": "提取片段中提到的用于特征蒸馏的核心技术机制，并与模型建立 ALIGNED_WITH 关系。",
+    "input": "The enriched inputs are processed by a novel self-supervised Information Bottleneck mechanism that distills the robust and transferable representations through structure-guided compression.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Self-supervised Information Bottleneck"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Structure-guided compression"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的用于缓解负迁移的技术策略，建立 ALIGNED_WITH 关系。",
+    "input": "To mitigate the negative transfer in cross-domain adaptation, we develop an expert adaptive routing mechanism that integrates a mixture-of-experts architecture with a null expert design.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Expert adaptive routing mechanism"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Mixture-of-experts (MoE)"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Null expert design"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验对比部分，提取文中提及的与 SA 2 GFM 进行对比的基准模型，建立 CITED_BY 关系。",
+    "input": "Extensive experiments validate the superiority of SA 2 GFM... compared with 9 state-of-the-art baselines. Baselines: GCN, GAT, DGI, GraphCL, GraphPrompt, MDGPT, GCOPE, GraphBridge, MDGFM.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "DGI",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "GraphCL",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "GraphPrompt",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "MDGPT",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "GCOPE",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "GraphBridge",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      },
+      {
+        "subject": "MDGFM",
+        "predicate": "CITED_BY",
+        "object": "SA 2 GFM"
+      }
+    ]
+  },
+  {
+    "instruction": "识别下游适配模块中采用的结构学习概念，建立 ALIGNED_WITH 关系。",
+    "input": "We propose a fine-tuning module that efficiently optimizes the hierarchical structures through the joint intra- and inter-community structure learning.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Intra-community structure learning"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Inter-community structure learning"
+      },
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ALIGNED_WITH",
+        "object": "Hierarchical structure optimization"
+      }
+    ]
+  },
+  {
+    "instruction": "提取论文中用于衡量模型性能的主要指标，建立 ACHIEVED_ON 关系。",
+    "input": "Extensive experiments validate the superiority of SA 2 GFM over effectiveness and robustness against random noise and adversarial perturbations... Accuracy with standard deviation is used for evaluation.",
+    "output": [
+      {
+        "subject": "SA 2 GFM",
+        "predicate": "ACHIEVED_ON",
+        "object": "Accuracy"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "SA 2 GFM 模型在实验评估中使用了哪些数据集？",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询由作者 'Qingyun Sun' 参与提出的模型所关联的所有核心技术概念（Concept）。",
+    "output": "MATCH (a:Author {name: 'Qingyun Sun'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ALIGNED_WITH]->(c:Concept) RETURN DISTINCT c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "SA 2 GFM 模型与哪些研究概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "在论文中，SA 2 GFM 引用并作为基准对比（CITED_BY）的所有模型有哪些？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'SA 2 GFM'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些模型既对齐了 'Information Bottleneck' 概念，又在 'Cora' 数据集上取得了性能结果？",
+    "output": "MATCH (c:Concept {name: 'Information Bottleneck'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 SA 2 GFM 模型一共在多少个不同的数据集上取得了 'Accuracy' 指标的结果？",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:USES_DATASET]->(d:Dataset) MATCH (m)-[:ACHIEVED_ON]->(mt:Metric {name: 'Accuracy'}) RETURN count(DISTINCT d) AS DatasetCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询作者 'Junhua Shi' 提出的模型所引用的所有基准模型名称。",
+    "output": "MATCH (a:Author {name: 'Junhua Shi'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)<-[:CITED_BY]-(base:Model) RETURN base.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有对齐了 'Expert Adaptive Routing' 概念的模型及其所属的论文标题。",
+    "output": "MATCH (c:Concept {name: 'Expert Adaptive Routing'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  },
+  {
+    "instruction": "请从下文中提取论文标题及其所有作者，并建立 AUTHORED_BY 关系。",
+    "input": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts Zihao Guo 1, Qingyun Sun 1*, Haonan Yuan 1, Xingcheng Fu 2, Min Zhou 3, Yisen Gao 4, Jianxin Li 1. 1 SKLCCSE, School of Computer Science and Engineering, Beihang University, China.",
+    "output": [
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Zihao Guo"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Qingyun Sun"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Haonan Yuan"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Xingcheng Fu"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Min Zhou"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Yisen Gao"
+      },
+      {
+        "subject": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts",
+        "predicate": "AUTHORED_BY",
+        "object": "Jianxin Li"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中提到的核心模型及其发表的论文，建立 PROPOSED_BY 关系。",
+    "input": "In this paper, we propose a novel Graph Mixture of Riemannian Experts (GraphMoRE) framework to effectively tackle topological heterogeneity by personalized fine-grained topology geometry pattern preservation.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "PROPOSED_BY",
+        "object": "GraphMoRE: Mitigating Topological Heterogeneity via Mixture of Riemannian Experts"
+      }
+    ]
+  },
+  {
+    "instruction": "根据实验设置片段，提取模型所使用的所有真实世界数据集，并建立 USES_DATASET 关系。",
+    "input": "Datasets. We conduct experiments on a variety of real-world datasets, including citation networks (Cora (Sen et al. 2008), Citeseer (Kipf and Welling 2017), PubMed (Namata et al. 2012)), airline networks (Airport (Chami et al. 2019)) and co-purchase networks (Photo (Shchur et al. 2018)).",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Cora"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Citeseer"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "PubMed"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Airport"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Photo"
+      }
+    ]
+  },
+  {
+    "instruction": "从文中提取 GraphMoRE 模型引入的核心技术概念，建立 ALIGNED_WITH 关系。",
+    "input": "Specifically, we first propose a topology-aware gating mechanism, consisting of a multi-resolution local topology encoding module to estimate local geometric properties and a gating network which assigns Riemannian expert weights for nodes to route them to corresponding optimal embedding space.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Topology-aware gating mechanism"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Multi-resolution local topology encoding module"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Gating network"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文本中作为对比基准且被 GraphMoRE 引用（CITED_BY）的黎曼流形相关模型。",
+    "input": "To address the limitation of single constant curvature spaces in topological heterogeneity, Q-GCN (Xiong et al. 2022) introduces the pseudo-Riemannian manifold into GNNs. κHGCN (Yang et al. 2023) utilizes discrete curvature to improve message passing.",
+    "output": [
+      {
+        "subject": "Q-GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "κHGCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      }
+    ]
+  },
+  {
+    "instruction": "提取论文提及的模型评估指标，并建立其与模型的 ACHIEVED_ON 关系。",
+    "input": "For the link prediction task, we use Fermi-Dirac decoder where the distance between two nodes in our method is calculated by Eq. (9) and (10). As observed, GraphMoRE achieves the best results on all datasets among 9 baselines, and compared with the runner-up method, we achieve gains in AUC score and AP score.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "AUC score"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "AP score"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的关于“流形混合”的技术概念及其与模型的关系。",
+    "input": "By fusing the outputs of diverse Riemannian experts with learned gating weights, we construct personalized mixed curvature spaces for nodes, effectively embedding the graph into a heterogeneous manifold with varying curvatures at different points.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Personalized mixed curvature spaces"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Heterogeneous manifold"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ALIGNED_WITH",
+        "object": "Riemannian experts"
+      }
+    ]
+  },
+  {
+    "instruction": "根据合成实验部分的描述，提取涉及的合成数据集名称并建立关系。",
+    "input": "Performance on Synthetic Graphs. To further verify the ability to model mixed heterogeneous topologies, we evaluate our method on three different scale synthetic graphs with topological heterogeneity: Syn.Small, Syn.Middle, and Syn.Large.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Syn.Small"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Syn.Middle"
+      },
+      {
+        "subject": "GraphMoRE",
+        "predicate": "USES_DATASET",
+        "object": "Syn.Large"
+      }
+    ]
+  },
+  {
+    "instruction": "提取文中提及的欧几里得空间基准模型，建立 CITED_BY 关系。",
+    "input": "Baselines. We choose a variety of baselines including Euclidean methods and Riemannian methods. GCN (Kipf and Welling 2017), GAT (Veličković et al. 2018), SAGE (Hamilton, Ying, and Leskovec 2017) are representatives of Euclidean GNNs.",
+    "output": [
+      {
+        "subject": "GCN",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "GAT",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      },
+      {
+        "subject": "SAGE",
+        "predicate": "CITED_BY",
+        "object": "GraphMoRE"
+      }
+    ]
+  },
+  {
+    "instruction": "识别文中提到的用于评估嵌入质量的特定指标，建立关系。",
+    "input": "Comparison of Embedding Distortion. Embedding distortion reflects the expressive ability for the graph structure, and lower embedding distortion indicates better preservation of the graph structure. Obviously, GraphMoRE has the lowest average embedding distortion on all datasets.",
+    "output": [
+      {
+        "subject": "GraphMoRE",
+        "predicate": "ACHIEVED_ON",
+        "object": "Embedding distortion"
+      }
+    ]
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "谁是论文《SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation》的所有作者？",
+    "output": "MATCH (p:Paper {title: 'SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation'})-[:AUTHORED_BY]->(a:Author) RETURN a.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "SA 2 GFM 模型是在哪篇论文中被提出的？",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:PROPOSED_BY]->(p:Paper) RETURN p.title"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "列出 SA 2 GFM 模型在实验评估中使用的所有数据集名称。",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:USES_DATASET]->(d:Dataset) RETURN d.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "SA 2 GFM 模型与哪些核心技术概念（Concept）进行了对齐？",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:ALIGNED_WITH]->(c:Concept) RETURN c.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查找由作者 'Junhua Shi' 参与提出的模型，并列出这些模型所达成的性能指标（Metric）。",
+    "output": "MATCH (a:Author {name: 'Junhua Shi'})<-[:AUTHORED_BY]-(p:Paper)<-[:PROPOSED_BY]-(m:Model)-[:ACHIEVED_ON]->(mt:Metric) RETURN m.name, mt.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "找出所有与 'Information Bottleneck' 概念对齐，且在 'Cora' 数据集上进行了评估的模型名称。",
+    "output": "MATCH (c:Concept {name: 'Information Bottleneck'})<-[:ALIGNED_WITH]-(m:Model)-[:USES_DATASET]->(d:Dataset {name: 'Cora'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "哪些被 SA 2 GFM 引用对比（CITED_BY）的基准模型也使用了 'PubMed' 数据集？",
+    "output": "MATCH (m:Model)-[:CITED_BY]->(:Model {name: 'SA 2 GFM'}) MATCH (m)-[:USES_DATASET]->(d:Dataset {name: 'PubMed'}) RETURN m.name"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "统计论文《SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation》一共有多少位署名作者？",
+    "output": "MATCH (p:Paper {title: 'SA 2 GFM: Enhancing Robust Graph Foundation Models with Structure-Aware Semantic Augmentation'})-[:AUTHORED_BY]->(a:Author) RETURN count(a) AS AuthorCount"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "计算 SA 2 GFM 模型一共在多少个不同的数据集上取得了性能结果？",
+    "output": "MATCH (m:Model {name: 'SA 2 GFM'})-[:USES_DATASET]->(d:Dataset) RETURN count(d) AS TotalDatasets"
+  },
+  {
+    "instruction": "请将以下自然语言问题转化为 Neo4j Cypher 查询语句。",
+    "input": "查询所有对齐了 'Robustness' 概念的模型及其所属的论文标题。",
+    "output": "MATCH (c:Concept {name: 'Robustness'})<-[:ALIGNED_WITH]-(m:Model)-[:PROPOSED_BY]->(p:Paper) RETURN m.name, p.title"
+  }
+]
