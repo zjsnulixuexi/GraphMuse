@@ -2,7 +2,7 @@
 
 **Hybrid RAG over Neo4j + local Markdown** — a Chinese Q&A demo that maps natural language to **Cypher**, reads structured facts from **Neo4j**, augments with **keyword-based MD retrieval**, and synthesizes answers with **Qwen2.5 + LoRA**.
 
-> **中文**：基于 **Qwen2.5 LoRA + Neo4j + 本地 Markdown 检索** 的混合检索问答；图侧为 **Text2Cypher + 已入库图数据**，与「从文档自动构图」的狭义 **GraphRAG** 范式不同。详细复盘见 [`PROJECT_REVIEW.md`](./PROJECT_REVIEW.md)。
+> **中文**：基于 **Qwen2.5 LoRA + Neo4j + 本地 Markdown 检索** 的混合检索问答；图侧为 **Text2Cypher + 已入库图数据**。详细复盘见 [`README.md`](./README.md)。
 
 ```mermaid
 flowchart LR
